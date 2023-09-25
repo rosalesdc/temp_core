@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_custom_views
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-08 13:13+0000\n"
+"PO-Revision-Date: 2023-08-08 09:15-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: b_custom_views
+#: model:ir.model.fields,field_description:b_custom_views.field_account_bank_statement_line__payment_journal_id
+#: model:ir.model.fields,field_description:b_custom_views.field_account_move__payment_journal_id
+#: model:ir.model.fields,field_description:b_custom_views.field_account_payment__payment_journal_id
+msgid "Diario"
+msgstr "Diario"
+
+#. module: b_custom_views
+#: model:ir.model.fields,field_description:b_custom_views.field_account_bank_statement_line__journal_id
+#: model:ir.model.fields,field_description:b_custom_views.field_account_move__journal_id
+#: model:ir.model.fields,field_description:b_custom_views.field_account_payment__journal_id
+msgid "Invoice Journal"
+msgstr "Diario Factura"
+
+#. module: b_custom_views
+#: model_terms:ir.ui.view,arch_db:b_custom_views.view_invoice_form_inherit
+msgid "Journal"
+msgstr "Diario"
+
+#. module: b_custom_views
+#: model:ir.model,name:b_custom_views.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento de diario"
+
+#. module: b_custom_views
+#: model:ir.model.fields,field_description:b_custom_views.field_sale_order__margin
+msgid "Margin"
+msgstr "Margen"
+
+#. module: b_custom_views
+#: model:ir.model,name:b_custom_views.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+#. module: b_custom_views
+#: model:ir.model.fields,field_description:b_custom_views.field_sale_order__show_margin
+msgid "Show Margin"
+msgstr "Mostrar Margen Ventas"
+
+#. module: b_custom_views
+#: model:res.groups,name:b_custom_views.group_user_show_sale_margin
+msgid "Show Sale margin"
+msgstr "Mostrar Margen Ventas"
