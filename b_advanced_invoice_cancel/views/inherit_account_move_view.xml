@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- inherited account.move l10n_mx_edi views -->
+        <record id="b_inherit_view_l10n_mx_edi_invoice_form_inherit" model="ir.ui.view">
+            <field name="name">b.inherit.view.l10n_mx_edi.invoice.form.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="l10n_mx_edi.view_l10n_mx_edi_invoice_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_mx_edi_cancel_invoice_id']" position="after">
+                    <field name="reversal_invoice_id" attrs="{'invisible': [('reversal_invoice_id', '=', False)]}"/>
+                    <field name="is_substitution_invoice" invisible="1"/>
+                    <field name="origin_invoice_id" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- inherited account.move views -->
+        <record id="b_inherit_view_move_form_cancelling_invoices" model="ir.ui.view">
+            <field name="name">b.inherit.view.move.form.cancelling.invoices</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='button_draft']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('show_reset_to_draft_button', '=', False),('edi_state', '=', 'cancelled')]}</attribute>
+                </xpath>
+                
+                <xpath expr="//button[@name='button_draft']" position="after">
+                    <!-- TODO this button won't be shown if the current invoice is a substitution invoice, we have not defined a process to substitute a substitution invoice. -->
+                    <button name="create_substituted_invoice" string="Create substituted invoice" type="object" context="{'default_invoice_id': id}" attrs="{'invisible': ['|', '|', '|', '|', '|', '|',('payment_state', 'in', ('in_payment', 'paid', 'reversed')), ('is_substitution_invoice', '=', True), ('l10n_mx_edi_cancel_invoice_id', '!=', False), ('l10n_mx_edi_sat_status', '!=', 'valid'), ('move_type', 'not in', ('out_invoice', 'out_refund')), ('state', '!=', 'posted'), ('edi_state', '!=', 'sent')]}" groups="account.group_account_invoice"/>                    
+                </xpath>
+                <xpath expr="//notebook" position="before">
+                    <!-- message for substituted invoices -->
+                    <div class="alert alert-warning" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', '|', '|', ('is_substitution_invoice', '=', True), ('move_type', 'not in', ('out_invoice', 'out_refund')), ('l10n_mx_edi_cancel_invoice_id', '=', False), ('state', '!=', 'posted')]}">
+This invoice has been substituted by the invoice: <field name="l10n_mx_edi_cancel_invoice_id"/>.
+As this invoice has been substituted, the reason that will be used in the cancelling process is:
+"01" CFDI emitted with errors with relationship.
+                    </div>
+                    <!-- message for substitution invoices -->
+                    <div class="alert alert-warning" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', '|', '|', '|', ('is_substitution_invoice', '=', False), ('l10n_mx_edi_origin', '=', False), ('move_type', 'not in', ('out_invoice', 'out_refund')), ('origin_invoice_id', '=', False), ('state', 'not in', ('draft', 'posted'))]}">
+This invoice substitutes the invoice: <field name="origin_invoice_id"/>.
+At the moment this invoice was created, this fiscal folio of the origin invoice, had to be place on the field
+cfdi origin, with code: 04|fiscal folio, in case it was not, you should to do it, manually.
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

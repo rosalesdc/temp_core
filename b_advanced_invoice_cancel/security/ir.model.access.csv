@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_substituted_invoice_helper,substituted.invoice.helper,model_substituted_invoice_helper,,1,1,1,1

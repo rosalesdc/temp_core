@@ -1,0 +1,219 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="max-width: 100%;">
+        <h2 class="oe_slogan">Advanced invoice EDI cancellation</h2>
+        <h3 class="oe_slogan" style="text-align: justify;">This module adds new features in the EDI cancellation process, for customer invoices.</h3>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Features.<b></b>
+            </div>
+            <div class="oe_span12" style="max-width: 100%;">
+                <p style="text-align: justify;">
+                    <b>FYI:</b>
+                    The examples below were created using the Mexican localization to generate EDI documents and sign them 
+                    at the government's fiscal entity
+                </p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>Reversal entry.</li>
+                    <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>Substitution invoices.</li>
+                    <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>Updated qty invoiced in sales order.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Reversal entry.<b>
+            </div>
+            <div class="oe_span12" style="max-width: 100%;">
+                <p style="text-align: justify;">
+                    This module adds this new feature, every time the SAT cancels a customer invoice, a reversal entry is generated.
+                </p>
+                <p style="text-align: justify;">
+                    <b>NOTE:</b> Reversal entries are those made to reverse a previous entry. In a reversal entry, however,
+                    the accounts and the amounts assigned to them must be used, only the accounts that were 
+                    previously placed as debits must now be placed as credits, and vice versa.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/posted_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    You post a customer invoice, it is signed by the SAT, for any reason you decide to cancel it, as the invoice 
+                    has been signed by the SAT, you have to request the cancellation of the document, using the Request EDI Cancellation button.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/revesed_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    Once the invoice is cancelled by SAT, a reversal entry is automatically created, in order to keep 
+                    the accounting balanced in the period. 
+                    The invoice is marked as reversed because the reversing entry is reconciled with the invoice.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Updated qty invoiced in sales order.<b>
+            </div>
+            <div class="oe_span12" style="max-width: 100%;">
+                <p style="text-align: justify;">
+                    When the invoice is created from a sales order, it is signed by SAT and then, it is cancelled by
+                    SAT, we know that a reversal entry is created, it means that the invoice is cancelled and the qty invoiced
+                    on sale order lines has to discount the invoice lines quantities.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/sale_order.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    We have this sales order, for ordered qty by 1, we will create the invoice for quantity 1.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/sale_order_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    We can observe that the invoice quantity is for 1 and the invoice is related to the sales order.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/qty_invoiced.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    On the sales order line, the qty invoiced is 1, due to the sales order has been invoiced, it is correct, now
+                    we will cancel the invoice.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/sale_invoice_cancelled.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    The invoice is cancelled by SAT and a reversal entry is created and related to the invoice, it means the invoice
+                    is cancelled.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/reinvoice_sale_order.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    As the invoice has been cancelled by a reversal entry, the qty invoice on the sales order line is 0 and we can create
+                    another invoice for the sales order.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Substitution invoices.<b>
+            </div>
+            <div class="oe_span12" style="max-width: 100%;">
+                <p style="text-align: justify;">
+                    This feature helps us to create a new invoice which substited the current invoice, if we got
+                    errors in the current invoice, we can to create the invoice that substitutes it.
+                    To create it, follow the next steps:
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/create_substituted_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    The button CREATE SUBSTITUTED INVOICE, launches an assistant that helps us to create the invoice.
+                    It will be shown, based on the following conditions:
+                </p>
+                <div class="oe_span12" style="max-width: 100%;">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>The invoice payment state, has to be in: progress or paid.</li>
+                        <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>The invoice does not be a substitution invoice.</li>
+                        <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>The SAT status has to be, valid.</li>
+                        <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>The invoice type has to be in: customer invoice or invoice credit note.</li>
+                        <li><i class="fa fa-check-square-o text-primary" style="margin-right:5px;"></i>The invoice state has to be, posted.</li>
+                    </ul>
+                </div>
+                <p style="text-align: justify;">
+                    If any of the conditions are not met, the button won't be shown.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/create_susbtitued_invoice_wizard.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    Once the assistant is shown, a message appears on the body, that indicates us, an draft invoice will be created and, the fiscal folio of the current invoice,
+                    will be related to the substitution invoice using the code 04|fiscal folio, in the field CFDI Origin.
+                    If the current invoice which will be substitued by the new one, has to be the fiscal folio and signed by SAT, otherwise, we will get a raise error at the moment
+                    we try to create the substitution invoice, fiscal folio and valid SAT status are required in this case.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/substitution_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    As you can see, the substitution invoice has the fiscal folio of the source invoice, due to we have to inform to SAT 
+                    that this invoice substitutes the source invoice and it will be cancelled.
+                    A message is shown, indicating that this invoice is being substitued that invoice, once the current invoice is signed, it will
+                    be automatically related to the source invoice in the field Substituted By.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/substited_invoice.png"/>
+                </div>
+                <p style="text-align: justify;">
+                    As we commented it, the substitution invoice was related to the source invoice in the field Substituted By, a message is shown, indicating
+                    that the current invoice has been substituted by that invoice, and it is required to cancel this one, in the cancellation process we used the
+                    reason 01, CFDI emitted with errors with relationship.
+                </p>
+                <p style="text-align: justify;">
+                    Now we have to request the cancellation for the invoice, using the button, Request Cancellation.
+                    If the invoice is correctly cancelled by SAT, the reversal entry is created and related to it, the invoice
+                    is marked as reversed due to the reversal entry. PAC and SAT status are stablished in cancelled.
+                </p>
+                <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                    <img src="screenshots/cancelled_invoice.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section starts-->
+<section class="oe_container">
+    <div class="oe_row" style="max-width:100%;">
+        <hr style="border-top: 1px solid #1C3D59; margin-bottom: 5px;">
+        <div class="oe_span6">
+            <br/>
+            <p style="font-size:16px; text-align: justify;"><b>We are</b> a team of passionate people whose goal is to improve everyone's 
+                life through disruptive products. We build great products to solve your business problems.
+                Our products are designed for small to medium size companies willing to optimize their performance.
+            </p>
+            <div class="oe_span12" style="max-width: 100%;">
+                <h2 class="text-center">Help and Support</h2>
+                <p class="text-center">Please feel free to contact us if you need technical or functional support, also you can find more of our excellent apps in the Odoo store.</p>
+            </div>
+            <br/>
+            <div class="oe_slogan oe_spaced">
+                <span><a data-toggle="tooltip" data-placement="bottom" title="Get Instant Support!" rel="nofollow" href="mailto:soporte@birtum.odoo.com"><i class="fa fa-ticket"></i> Support</a></span>
+                <span><a data-toggle="tooltip" data-placement="bottom" target="_blank" href="#"><i class="fa fa-shopping-cart"></i> Visit our store</a></span>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <a href="https://www.birtum.com"  target="_blank"r>
+                    <img src="birtum.jpg" width="80px" height="auto">
+                </a>
+                <div class="oe_demo_footer oe_centeralign">Meet Us</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section end-->
