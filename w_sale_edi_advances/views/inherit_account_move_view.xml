@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- account: account.move -->
+    <record id="w_inherit_view_move_form_add_custom_fields" model="ir.ui.view">
+        <field name="name">w.inherit.view.move.form.add.custom.fields</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account_edi.view_move_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@id='edi_documents']" position="before">
+                <field name="is_final" invisible="1"/>
+                <field name="advance_from_sale" invisible="1"/>
+                <field name="is_refund" invisible="1"/>
+                <field name="final_no_advances" invisible="1"/>
+                <field name="show_button_related" invisible="1"/>
+                <field name="relate_advances" invisible="1"/>
+                <page string="Related advances" name="cfdi_advance" attrs="{'invisible': [('relate_advances', '=', False)]}">
+                    <field name="related_advances" invisible="1"/>
+                    <button name="action_relate_fiscal_folio" attrs="{'invisible': ['|', '|', '|', ('is_final', '=', True), ('state', '!=', 'draft'), ('move_type', 'not in', ('out_invoice', 'out_refund')), ('advance_ids', '=', [])]}" icon="fa-arrow-right" type="object" string="Related folios" class="btn-link"/>
+                    <field name="advance_ids" nolabel="1" widget="one2many_list" attrs="{'readonly': ['|', ('is_final', '=', True), ('state', '!=', 'draft')], 'invisible': [('relate_advances', '=', False)]}">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="advance_id" options="{'no_create': True}" widget="many2one" domain="[('id', 'not in', parent.related_advances), ('partner_id', '=', parent.partner_id),  ('advance_related', '=', False), ('move_type', '=', 'out_invoice'), ('is_advance', '=', True), ('l10n_mx_edi_sat_status', '=', 'valid')]" required="1"/>
+                            <field name="folio_fiscal"/>
+                            <field name="amount_total" sum="amount_total"/>
+                        </tree>
+                    </field>
+                    <field name="total_advances" attrs="{'invisible': ['|', '|', ('is_refund', '=', True), ('relate_advances', '=', False), ('total_advances', '=', 0)]}"/>
+                </page>
+            </xpath>
+            <xpath expr="//notebook" position="before">
+                <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|','|','|', '|', ('state', '!=', 'draft'), ('is_refund', '=', True), ('final_no_advances', '=', False), ('is_final', '=', False), ('advance_ids', '=', [])]}">
+                    This invoice has related advances, of which a correction must be made, at the time of validating this invoice the amendment is automatically created for the total amount of the advances. You must go to the letter of amendment and in cfdi origin relate this invoice.
+                </div>
+                <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', '|', ('state', '!=', 'draft'), ('is_refund', '=', False), ('advance_ids', '=', [])]}">
+                    This rectifictive comes from an invoice which has related advances, it is recommended that the cfdi origin have related the uuid of the invoice related to this amendment before being validated and signed.
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="w_inherit_account_view_move_form" model="ir.ui.view">
+        <field name="name">w.inherit.account.view.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree/field[@name='discount']" position="attributes">
+                <attribute name="attrs">{'column_invisible': [('parent.is_final', '=', True), ('parent.relate_advances', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tax_totals']" position="before">
+                <field name="total_advances" attrs="{'readonly': True,'invisible': [('relate_advances', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- l10n_mx_edi: account.move -->
+    <record id="w_inherit_view_l10n_mx_edi_invoice_form_inherit" model="ir.ui.view">
+        <field name="name">w.inherit.view.l10n.mx.edi.invoice.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="l10n_mx_edi.view_l10n_mx_edi_invoice_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_mx_edi_usage']" position="after">
+                <field name="is_advance" attrs="{'readonly': ['|', ('advance_from_sale', '=', True), ('state', '!=', 'draft')], 'invisible': ['|', ('move_type', '!=', 'out_invoice'), ('relate_advances', '=', True)]}"/>
+                <field name="relate_advances" attrs="{'invisible': ['|', '|', ('move_type', '!=', 'out_invoice'), ('is_final',  '=', True), ('is_advance', '=', True)], 'readonly': ['|', ('state', '=', 'posted'), ('is_advance', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='l10n_mx_edi_origin']" position="attributes">
+                <attribute name="attrs">{'invisible': [('l10n_mx_edi_cfdi_request', '=', False)], 'required': [('relate_advances', '=', True), ('advance_ids', '=', [])]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='l10n_mx_edi_cfdi_uuid']" position="after">
+                <label for="l10n_mx_edi_cfdi_uuid" attrs="{'invisible': ['|', ('state', 'not in', ('posted', 'cancel')), ('l10n_mx_edi_cfdi_request', '=', False)]}"/>
+                <div class="o_row" name="folio_fiscal" attrs="{'invisible': ['|', ('state', 'not in', ('posted', 'cancel')), ('l10n_mx_edi_cfdi_request', '=', False)]}">
+                    <field name="l10n_mx_edi_cfdi_uuid"/>
+                    <button name="related_folio_to_rectificative" string="Related" class="oe_link" type="object" groups="account.group_account_invoice" attrs="{'invisible': [('show_button_related', '=', False)]}"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='l10n_mx_edi_cfdi_uuid']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
