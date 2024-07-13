@@ -37,37 +37,44 @@ class SoIntegratedData(models.Model):
     name = fields.Char(
         string='Sale Order ARX',
         copy=False,
+        required=True,
         help='ID from ARX',
     )
 
     partner = fields.Json(
         string='Partner',
         copy=False,
+        required=True,
         help='Data to create/update Sale Order Partner',
     )
 
     invoice_address = fields.Json(
         string='Invoice Address',
+        required=True,
         help='Data to create/update invoice address',
     )
 
     shipping_address = fields.Json(
         string='Shipping Address',
+        required=True,
         help='Data to create/update shipping address',
     )
 
-    productos = fields.Json(
-        string='Productos',
+    products = fields.Json(
+        string='Products',
+        required=True,
         help='Data to create/update products',
     )
 
     sale_order = fields.Json(
         string='Sale Order',
+        required=True,
         help='Data to create sale order',
     )
 
     sale_order_line = fields.Json(
         string='Sale Order Line',
+        required=True,
         help='Data to create sale order lines',
     )
 
@@ -92,27 +99,21 @@ class SoIntegratedData(models.Model):
         res = super(SoIntegratedData, self).create(vals_list)
         for record in res:
             logging.info(("Init sale process"))
-            #partner_id, invoice_address_id, shipping_address_id = record.partner_process()
-            logging.info(("Partner_data----------------%s"%(record.name)))
-            logging.info(("Partner_data----------------%s"%(record.partner)))
-            logging.info(("Products_data----------------%s"%(record.productos)))
-            logging.info(("Order_data----------------%s"%(record.sale_order)))
-            logging.info(("Lines_data----------------%s"%(record.sale_order_line)))
-            logging.info(("Payment_data----------------%s"%(record.payment)))
-            logging.info(("END PROCEESS--------------------"))
-            #prods = record.product_process()
-            #logging.info(("Products created"))
-            #order_id = record.sale_order_process(
-            #    partner_id, invoice_address_id, shipping_address_id)
-            #logging.info(("Order created"))
-            #record.order_line_process(order_id.id, prods)
-            #logging.info(("Lines created"))
-            #record.name = order_id.arx_name
-            #order_id.action_confirm()
-            #logging.info(("Order confirmed"))
-            #if self.payment:
-            #    record.payment_process(order_id)
-            #    logging.info(("Payment created"))
+            partner_id, invoice_address_id, shipping_address_id = record.partner_process()
+            logging.info(("Partners created"))
+            prods = record.product_process()
+            logging.info(("Products created"))
+            order_id = record.sale_order_process(
+                partner_id, invoice_address_id, shipping_address_id)
+            logging.info(("Order created"))
+            record.order_line_process(order_id.id, prods)
+            logging.info(("Lines created"))
+            record.name = order_id.arx_name
+            order_id.action_confirm()
+            logging.info(("Order confirmed"))
+            if self.payment:
+                record.payment_process(order_id)
+                logging.info(("Payment created"))
         return res
 
     def partner_process(self):
@@ -155,29 +156,22 @@ class SoIntegratedData(models.Model):
                 shipping_address_id = self.env['res.partner'].create(
                     dict_shipping
                 )
-        logging.info(("end partner FUNCTION----------------"))
         return parent.id, invoice_address_id.id, shipping_address_id.id
 
     def product_process(self):
         '''Validate products data to create/update records
         -Returns a dictionary with code-identifiers so as not to be looked up later.
         '''
-        logging.info(("INIT products FUNCTION----------------%s"%(self.productos)))
         dict_prod = {}
-        for prod in self.productos:
-            logging.warning(("Products -------------1"))
+        for prod in self.products:
             product_id = self.env['product.product'].search(
                 [('default_code', '=', prod['default_code'])])
             if product_id:
-                logging.warning(("Products -------------2"))
                 product_id.write(prod)
-                logging.warning(("Products -------------3"))
             else:
-                logging.warning(("Products -------------4"))
                 product_id = self.env['product.product'].create(
                     prod
                 )
-                logging.warning(("Products -------------5"))
                 # If new product, create a seller
                 self.env['product.supplierinfo'].create(
                     {
@@ -186,10 +180,7 @@ class SoIntegratedData(models.Model):
                         'product_id': product_id.id
                     }
                 )
-                logging.warning(("Products -------------6"))
             dict_prod[product_id.default_code] = product_id.id
-            logging.warning(("Products -------------7"))
-        logging.warning(("Products -------------8"))
         return dict_prod
 
     def sale_order_process(self, partner, inv_address, shipping_address):
