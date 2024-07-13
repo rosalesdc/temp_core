@@ -164,14 +164,19 @@ class SoIntegratedData(models.Model):
         '''
         dict_prod = {}
         for prod in self.products:
+            logging.warning(("Products -------------1"))
             product_id = self.env['product.product'].search(
                 [('default_code', '=', prod['default_code'])])
             if product_id:
+                logging.warning(("Products -------------2"))
                 product_id.write(prod)
+                logging.warning(("Products -------------3"))
             else:
+                logging.warning(("Products -------------4"))
                 product_id = self.env['product.product'].create(
                     prod
                 )
+                logging.warning(("Products -------------5"))
                 # If new product, create a seller
                 self.env['product.supplierinfo'].create(
                     {
@@ -180,7 +185,10 @@ class SoIntegratedData(models.Model):
                         'product_id': product_id.id
                     }
                 )
+                logging.warning(("Products -------------6"))
             dict_prod[product_id.default_code] = product_id.id
+            logging.warning(("Products -------------7"))
+        logging.warning(("Products -------------8"))
         return dict_prod
 
     def sale_order_process(self, partner, inv_address, shipping_address):
