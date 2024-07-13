@@ -56,7 +56,7 @@ class SoIntegratedData(models.Model):
         help='Data to create/update shipping address',
     )
 
-    products = fields.Json(
+    productos = fields.Json(
         string='Products',
         help='Data to create/update products',
     )
@@ -94,7 +94,7 @@ class SoIntegratedData(models.Model):
             logging.info(("Init sale process"))
             #partner_id, invoice_address_id, shipping_address_id = record.partner_process()
             logging.info(("Products_data----------------%s"%(record.partner)))
-            logging.info(("Products_data----------------%s"%(record.products)))
+            logging.info(("Products_data----------------%s"%(record.productos)))
             prods = record.product_process()
             logging.info(("Products created"))
             #order_id = record.sale_order_process(

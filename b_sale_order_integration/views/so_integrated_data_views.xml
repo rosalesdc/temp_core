@@ -10,7 +10,7 @@
                     <field name="partner" optional="show" />
                     <field name="invoice_address" optional="show" />
                     <field name="shipping_address" optional="show" />
-                    <field name="products" optional="show" />
+                    <field name="productos" optional="show" />
                     <field name="sale_order" optional="show" />
                     <field name="sale_order_line" optional="show" />
                     <field name="payment" optional="show" />
