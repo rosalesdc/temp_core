@@ -37,44 +37,37 @@ class SoIntegratedData(models.Model):
     name = fields.Char(
         string='Sale Order ARX',
         copy=False,
-        required=True,
         help='ID from ARX',
     )
 
     partner = fields.Json(
         string='Partner',
         copy=False,
-        required=True,
         help='Data to create/update Sale Order Partner',
     )
 
     invoice_address = fields.Json(
         string='Invoice Address',
-        required=True,
         help='Data to create/update invoice address',
     )
 
     shipping_address = fields.Json(
         string='Shipping Address',
-        required=True,
         help='Data to create/update shipping address',
     )
 
     products = fields.Json(
         string='Products',
-        required=True,
         help='Data to create/update products',
     )
 
     sale_order = fields.Json(
         string='Sale Order',
-        required=True,
         help='Data to create sale order',
     )
 
     sale_order_line = fields.Json(
         string='Sale Order Line',
-        required=True,
         help='Data to create sale order lines',
     )
 
@@ -100,7 +93,7 @@ class SoIntegratedData(models.Model):
         for record in res:
             logging.info(("Init sale process"))
             partner_id, invoice_address_id, shipping_address_id = record.partner_process()
-            logging.info(("Partners created"))
+            logging.info(("Products_data----------------%s"%(record.partner)))
             logging.info(("Products_data----------------%s"%(record.products)))
             prods = record.product_process()
             logging.info(("Products created"))
