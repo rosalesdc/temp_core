@@ -163,7 +163,7 @@ class SoIntegratedData(models.Model):
         '''Validate products data to create/update records
         -Returns a dictionary with code-identifiers so as not to be looked up later.
         '''
-        logging.info(("INIT products FUNCTION----------------"))
+        logging.info(("INIT products FUNCTION----------------%s"%(self.products)))
         dict_prod = {}
         for prod in self.products:
             logging.warning(("Products -------------1"))
