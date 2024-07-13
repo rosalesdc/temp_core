@@ -92,21 +92,21 @@ class SoIntegratedData(models.Model):
         res = super(SoIntegratedData, self).create(vals_list)
         for record in res:
             logging.info(("Init sale process"))
-            partner_id, invoice_address_id, shipping_address_id = record.partner_process()
+            #partner_id, invoice_address_id, shipping_address_id = record.partner_process()
             logging.info(("Products_data----------------%s"%(record.partner)))
             logging.info(("Products_data----------------%s"%(record.products)))
             prods = record.product_process()
             logging.info(("Products created"))
-            order_id = record.sale_order_process(
-                partner_id, invoice_address_id, shipping_address_id)
+            #order_id = record.sale_order_process(
+            #    partner_id, invoice_address_id, shipping_address_id)
             logging.info(("Order created"))
-            record.order_line_process(order_id.id, prods)
+            #record.order_line_process(order_id.id, prods)
             logging.info(("Lines created"))
-            record.name = order_id.arx_name
-            order_id.action_confirm()
+            #record.name = order_id.arx_name
+            #order_id.action_confirm()
             logging.info(("Order confirmed"))
             if self.payment:
-                record.payment_process(order_id)
+            #    record.payment_process(order_id)
                 logging.info(("Payment created"))
         return res
 
