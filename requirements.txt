@@ -1,0 +1,7 @@
+pyunpack
+xmltodict
+lxml
+pyOpenSSL
+zeep
+rstr
+uuid
