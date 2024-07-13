@@ -57,7 +57,7 @@ class SoIntegratedData(models.Model):
     )
 
     productos = fields.Json(
-        string='Products',
+        string='Productos',
         help='Data to create/update products',
     )
 
@@ -93,21 +93,25 @@ class SoIntegratedData(models.Model):
         for record in res:
             logging.info(("Init sale process"))
             #partner_id, invoice_address_id, shipping_address_id = record.partner_process()
-            logging.info(("Products_data----------------%s"%(record.partner)))
+            logging.info(("Partner_data----------------%s"%(record.name)))
+            logging.info(("Partner_data----------------%s"%(record.partner)))
             logging.info(("Products_data----------------%s"%(record.productos)))
-            prods = record.product_process()
-            logging.info(("Products created"))
+            logging.info(("Order_data----------------%s"%(record.sale_order)))
+            logging.info(("Lines_data----------------%s"%(record.sale_order_line)))
+            logging.info(("Payment_data----------------%s"%(record.payment)))
+            #prods = record.product_process()
+            #logging.info(("Products created"))
             #order_id = record.sale_order_process(
             #    partner_id, invoice_address_id, shipping_address_id)
-            logging.info(("Order created"))
+            #logging.info(("Order created"))
             #record.order_line_process(order_id.id, prods)
-            logging.info(("Lines created"))
+            #logging.info(("Lines created"))
             #record.name = order_id.arx_name
             #order_id.action_confirm()
-            logging.info(("Order confirmed"))
-            if self.payment:
+            #logging.info(("Order confirmed"))
+            #if self.payment:
             #    record.payment_process(order_id)
-                logging.info(("Payment created"))
+            #    logging.info(("Payment created"))
         return res
 
     def partner_process(self):
