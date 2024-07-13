@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cfdi_advances,access_cfdi_advances,model_cfdi_advances,base.group_user,1,1,1,1
-access_sale_advance_inv,access_sale_advance_inv,model_sale_advance_inv,base.group_user,1,1,1,1

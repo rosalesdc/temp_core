@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <record id="group_user_show_sale_margin" model="res.groups">
-        <field name="name">Show Sale margin</field>
-    </record>
-</odoo>
