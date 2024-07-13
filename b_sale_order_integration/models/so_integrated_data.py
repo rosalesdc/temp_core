@@ -101,6 +101,7 @@ class SoIntegratedData(models.Model):
             logging.info(("Init sale process"))
             partner_id, invoice_address_id, shipping_address_id = record.partner_process()
             logging.info(("Partners created"))
+            logging.info(("Products_data----------------%s"%(record.products)))
             prods = record.product_process()
             logging.info(("Products created"))
             order_id = record.sale_order_process(
