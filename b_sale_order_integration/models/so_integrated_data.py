@@ -112,7 +112,7 @@ class SoIntegratedData(models.Model):
             order_id.action_confirm()
             logging.info(("Order confirmed"))
             logging.info(("Payment_data----------------%s"%(record.payment)))
-            if self.payment:
+            if record.payment:
                 logging.info(("Payment_INIT----------------"))
                 record.payment_process(order_id)
                 logging.info(("Payment created"))
