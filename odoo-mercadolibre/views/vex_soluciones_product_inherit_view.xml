@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_search_view" model="ir.ui.view">
+        <field name="name">product.template.search.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.product_template_search_form_view_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="meli_sku" string="Meli Sku"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_only_form_view_product" model="ir.ui.view">
+        <field name="name">product.template.view.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='invoicing']" position="after">
+                <page name="woocommerce" string="Mercadolibre">
+                    <group col='2'>
+                        <group>
+                            <field name="meli_server" />
+                            <field name="meli_id" />
+                            <field name="meli_title" />
+                            <field name="meli_sku" />
+                            <field name="meli_site_id" />
+                            <field name="meli_seller_id" />
+                            <field name="meli_category_id" />
+                        </group>
+                        <group>
+                            <field name="meli_user_product_id" />
+                            <field name="meli_official_store_id" />
+                            <field name="meli_price" />
+                            <field name="meli_base_price" />
+                            <field name="meli_original_price" />
+                            <field name="meli_inventory_id" />
+                        </group>
+                        <group>
+                            <field name="meli_currency_id" />
+                            <field name="meli_initial_quantity" />
+                            <field name="meli_sold_quantity" />
+                            <field name="meli_warranty" />
+                            <field name="meli_buying_mode" />
+                            <field name="meli_listing_type_id" />
+                        </group>
+                        <group>
+                            <field name="meli_condition" />
+                            <field name="meli_permalink" />
+                            <field name="meli_thumbnail" />
+                            <field name="meli_accepts_mercadopago" />
+                            <field name="meli_mode" />
+                            <field name="meli_free_shipping" />
+                        </group>
+                        <group>
+                            <field name="meli_logistic_type" />
+                            <field name="meli_status" />
+                            <field name="meli_catalog_product_id" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_template_tree_view_product" model="ir.ui.view">
+        <field name="name">product.template.view.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="meli_id" />
+                <field name="meli_sku" />
+                <field name="meli_logistic_type" />
+                <field name="meli_buying_mode" />
+                <field name="meli_status" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form_meli" model="ir.ui.view">
+        <field name="name">res.partner.form.meli</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='woocommerce']" position="after">
+                <page string="Publicaciones MELI">
+                    <field name="publication_ids">
+                        <tree>
+                            <field name="publication_id"/>
+                            <field name="publication_description"/>
+                            <field name="publication_url"/>
+                            <field name="publication_type"/>
+                            <field name="publication_category"/>
+                            <field name="publication_price"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

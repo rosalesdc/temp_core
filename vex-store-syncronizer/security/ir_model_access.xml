@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_access_vex_instance" model="ir.model.access">
+        <field name="name">model.access.vex.instance</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_vex_instance"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <record id="model_access_vex_restapi_list" model="ir.model.access">
+        <field name="name">model.access.vex.restapi.list</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_vex_restapi_list"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <record id="model_access_vex_meli_logs" model="ir.model.access">
+        <field name="name">model.access.vex.meli.logs</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_vex_meli_logs"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <record id="model_access_vex_import" model="ir.model.access">
+        <field name="name">model.access.vex.import.wizard</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_vex_import_wizard"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <record id="model_access_vex_config_settings" model="ir.model.access">
+        <field name="name">model.access.vex.config.settings</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_vex_config_settings"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <record id="model_access_product_template_units" model="ir.model.access">
+        <field name="name">model.access.product.template.units</field>
+        <field name="model_id" ref="vex-store-syncronizer.model_product_template_units"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>  
+   
+</odoo>

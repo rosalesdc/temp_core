@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Heredar la vista original -->
+    <record id="vex-store-syncronizer_replace_attribute_values" model="ir.ui.view">
+        <field name="name">vex.store.syncronizer.replace.attribute.values</field>
+        <field name="model">product.attribute</field> <!-- Modelo relacionado -->
+        <field name="inherit_id" ref="product.product_attribute_view_form"/> <!-- ID del formulario original -->
+        <field name="arch" type="xml">
+            <!-- Reemplazar la página "Attribute Values" con tu nueva definición -->
+            <xpath expr="//page[@name='attribute_values']" position="replace">
+                <page string="New Attribute Values" name="attribute_values">
+                    <field name="value_ids" widget="one2many" nolabel="1">
+                        <tree string="Values" editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="sku"/> <!-- Nuevo campo después de "name" -->
+                            <field name="display_type" invisible="1"/>
+                            <field name="is_custom" groups="product.group_product_variant"/>
+                            <field name="html_color" attrs="{'column_invisible': [('parent.display_type', '!=', 'color')]}" widget="color"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

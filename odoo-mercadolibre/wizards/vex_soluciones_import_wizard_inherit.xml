@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vex_import_wizard_inherit" model="ir.ui.view">
+        <field name="name">vex.import.wizard.inherit</field>
+        <field name="model">vex.import.wizard</field>
+        <field name="inherit_id" ref="vex-store-syncronizer.vex_import_wizard"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='instance_id']" position="after">
+                <field name="action_mercadolibre" attrs="{'invisible': [('store', '!=', 'mercadolibre')]}"/>
+                <field name="meli_import_unit" attrs="{'invisible': [('store', '!=', 'mercadolibre')]}"/>
+                <field name="meli_code_unit" attrs="{'invisible': [('meli_import_unit', '=', False)], 'required': [('meli_import_unit', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//group[@name='initial_content_import']" position="after">
+                <div attrs="{'invisible': [('store', '!=', 'mercadolibre')]}">
+                    <group>
+                        <field name="meli_stock_import"  attrs="{'invisible': [('action_mercadolibre', '!=', 'product')]}"/>
+                        <field name="meli_import_images" attrs="{'invisible': [('action_mercadolibre', '!=', 'product')]}"/>
+                        <field name="meli_import_images_website" attrs="{'invisible': [('action_mercadolibre', '!=', 'product')]}"/>
+                        <field name="meli_date_from" attrs="{'invisible': [('action_mercadolibre', 'not in', ['customer','order'])], 'required': [('action_mercadolibre', 'in', ['customer','order'])]}"/>
+                        <field name="meli_date_to" attrs="{'invisible': [('action_mercadolibre', 'not in', ['customer','order'])], 'required': [('action_mercadolibre', 'in', ['customer','order'])]}"/>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<odoo>
+    <!-- sat.documents.range.download form view -->
+    <record id="sat_documents_range_download_view_form" model="ir.ui.view">
+        <field name="name">sat.documents.range.download.view.form</field>
+        <field name="model">sat.documents.range.download</field>
+        <field name="arch" type="xml">
+            <form string="Date range selector">
+                <group name="date_range" string="Set a date range">
+                    <group>
+                        <field name="start_date" />
+                    </group>
+                    <group>
+                        <field name="end_date" />
+                    </group>
+                </group>
+                <footer>
+                    <button
+            name="sat_documents_range_download"
+            string="Download"
+            type="object"
+            class="oe_highlight"
+          />
+                    <button string="Cancelar" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <!-- sat.documents.range.download action window -->
+    <record
+    id="sat_documents_range_download_action"
+    model="ir.actions.act_window"
+  >
+        <field name="name">SAT Documents Range Download</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents.range.download</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

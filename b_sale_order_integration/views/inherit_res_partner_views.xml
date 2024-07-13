@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="inherit_res_partner_sync_options" model="ir.ui.view">
+            <field name="name">inherit.res.partner.sync.options</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="id_arx" readonly="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

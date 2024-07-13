@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_l10n_mx_edi_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-05 00:07+0000\n"
+"PO-Revision-Date: 2023-10-05 00:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b_l10n_mx_edi_extended
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_extended.b_inherit_report_invoice_edi_info
+msgid "<span>Tax Amount</span>"
+msgstr "<span>Importe de Impuesto</span>"
+
+#. module: b_l10n_mx_edi_extended
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_extended.b_inherit_report_invoice_edi_info
+msgid "<span>Tax Object</span>"
+msgstr "<span>Objeto de Impuesto</span>"
+
+#. module: b_l10n_mx_edi_extended
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_extended.b_inherit_report_invoice_edi_info
+msgid "<span>Tax</span>"
+msgstr "<span>Impuesto</span>"
+
+#. module: b_l10n_mx_edi_extended
+#: model:ir.model,name:b_l10n_mx_edi_extended.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: b_l10n_mx_edi_extended
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_extended.b_inherit_account_move_view_form_adds_mx_edi_features
+msgid "MX EDI"
+msgstr ""

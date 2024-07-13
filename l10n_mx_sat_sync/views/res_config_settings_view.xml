@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='l10n_mx_edi_certificate_ids']" position="attributes">
+                <attribute name="domain">[('is_esign','=',False)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_config_settings_view_form_inherit_master_data" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.master.data</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="l10n_mx_edi.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='l10n_mx_edi_settings']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" title="">
+                    <div class="o_setting_left_pane">
+                         <div class="row mt16">
+                            <field name="load_data_master_from_xml" string="Load data master from XML"/>
+                        </div>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <span class="o_form_label">Load data master from XML</span>
+                        <div class="text-muted">
+                            In case of error, the missing element will be created from the XML data
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

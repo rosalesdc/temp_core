@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_order_form_sale" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="meli_info" string="MELI Info">
+                    <group col="1">
+                        <field name="meli_code"/>
+                        <field name="meli_order_seller_id"/>
+                        <field name="meli_order_seller_nickname"/>
+                        <field name="meli_order_fulfilled"/>
+                        <!-- <field name="meli_order_buying_mode"/> -->
+                        <field name="meli_order_expiration_date"/>
+                        <field name="meli_order_feedback_sale"/>
+                        <field name="meli_order_feedback_purchase"/>
+                        <field name="meli_order_shipping_id"/>
+                        <field name="meli_order_date_closed"/>
+                        <!-- <field name="meli_order_manufacturing_ending_date"/>
+                        <field name="meli_order_hidden_for_seller"/> -->
+                        <field name="meli_order_date_last_updated"/>
+                        <field name="meli_order_last_updated"/>
+                        <!-- <field name="meli_order_comments"/> -->
+                        <field name="meli_order_pack_id"/>
+                        <field name="meli_order_coupon_id"/>
+                        <field name="meli_order_coupon_amount"/>
+                        <field name="meli_order_shipping_cost"/>
+                        <field name="meli_order_date_created"/>
+                        <!-- <field name="meli_order_application_id"/> -->
+                        <field name="meli_order_pickup_id"/>
+                        <field name="meli_order_status_detail"/>
+                        <field name="meli_order_tag_ids" widget="many2many_tags"/>
+                        <field name="meli_order_buyer_id"/>
+                        <field name="meli_order_buyer_nickname"/>
+                        <field name="meli_order_total_amount"/>
+                        <field name="meli_order_paid_amount"/>
+                        <field name="meli_order_currency_id"/>
+                        <field name="meli_order_status"/>                                                                             
+                        <field name="meli_order_context_application"/>                                                                             
+                        <field name="meli_order_context_product_id"/>                                                                             
+                        <field name="meli_order_context_channel"/>                                                                             
+                        <field name="meli_order_context_site"/>                                                                             
+                        <field name="vex_meli_shipment_id" />
+                        <field name="vex_meli_shipment_type" />
+                        <field name="vex_meli_shipment_logistic_type" />
+                        <field name="vex_meli_shipment_status" />
+                        <field name="vex_meli_shipment_listing_type" />
+                    </group>
+                </page>
+                <page name="meli_payments" string="MELI Payments">
+                    <field name="meli_order_payment_ids">
+                        <tree>
+                            <field name="meli_payment_id"></field>
+                            <field name="meli_payment_operation_type"></field>
+                            <field name="meli_payment_installment_amount"></field>
+                            <field name="meli_payment_overpaid_amount"></field>
+                            <field name="meli_payment_coupon_amount"></field>
+                            <field name="meli_payment_taxes_amount"></field>
+                            <field name="meli_payment_transaction_amount"></field>
+                            <field name="meli_payment_total_paid_amount"></field>
+                            <field name="meli_payment_status"></field>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_order_tree_sale" model="ir.ui.view">
+        <field name="name">sale.order.view.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="meli_code"/>
+                <field name="meli_order_seller_nickname"/>
+                <field name="meli_order_fulfilled"/>
+                <field name="meli_order_shipping_id"/>
+                <field name="meli_order_shipping_cost"/>
+                <field name="meli_order_buyer_nickname"/>
+                <field name="meli_order_status"/>                                                                             
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+<!-- 
+    #meli_order_payment_ids = fields.One2many('meli_order_payment_ids')
+    meli_order_feedback_sale = fields.Char('meli_order_feedback_sale')
+    meli_order_feedback_purchase = fields.Char('meli_order_feedback_purchase')
+    meli_order_context_channel = fields.Char('meli_order_context_channel')
+    meli_order_context_site = fields.Char('meli_order_context_site')
+    meli_order_context_flows = fields.Char('meli_order_context_flows')
+    meli_order_shipping_id = fields.Char('meli_order_shipping_id')
+
+
+ -->

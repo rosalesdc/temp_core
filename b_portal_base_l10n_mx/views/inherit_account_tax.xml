@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherited_account_tax_form_view_transfer_utils" model="ir.ui.view">
+            <field name="name">inherited.account.tax.form.view</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="l10n_mx_edi.view_account_tax_inh_l10n_mx"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_mx_tax_type']" position="after">
+                    <field name="tax_sat_code" string="Tax SAT Code"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

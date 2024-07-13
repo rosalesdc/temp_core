@@ -1,0 +1,756 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_mx_sat_sync
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 13:46+0000\n"
+"PO-Revision-Date: 2023-07-05 09:49-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: Cannot match an appropiate product to concept [%s] %s"
+msgstr ""
+"\n"
+"- %s: No se ha encontrado un producto apropiado para el concepto [%s] %s"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: Cannot match an appropiate tax to concept %s"
+msgstr ""
+"\n"
+"- %s: No se ha encontrado un impuesto apropiado para el concepto %s"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: Is not a valid supplier invoice."
+msgstr ""
+"\n"
+"- %s: Este documento no es una factura de proveedor válida."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: There are multiple records for partner %s - %s."
+msgstr ""
+"\n"
+"- %s: Existen múltiples referencias para el contacto %s - %s."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: There are not records for partner %s - %s."
+msgstr ""
+"\n"
+"- %s: No existen registros para el contacto %s - %s."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid ""
+"\n"
+"- %s: This invoice has been already created."
+msgstr ""
+"\n"
+"- %s: Esta factura ya ha sido creada."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_version__3_3
+msgid "3.3"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_version__4_0
+msgid "4.0"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_bank_statement_line__sat_document_id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__sat_document_id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_payment__sat_document_id
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.account_move_view_form_inherit
+msgid "CFDI"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_company_view_form_inherit
+msgid "CFDI SAT Sync"
+msgstr "Sincronización CFDI SAT"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_company_view_form_inherit
+msgid "CFDI SAT Sync Parametres"
+msgstr "Parámetros de Sincronización del SAT CFDI"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "CFDI type"
+msgstr "Tipo CFDI"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_range_download_view_form
+msgid "Cancelar"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid "Cannot delete the document %s because has the move ID %s related."
+msgstr ""
+"No se puede eliminar el documento %s porque tiene la factura ID %s "
+"relacionada."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.constraint,message:l10n_mx_sat_sync.constraint_sat_documents_unique_name
+msgid "Cannot duplicate CFDI UUID."
+msgstr "No se puede duplicar el mismo UUID de un CFDI."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid "Cannot open CFDI data (%s) beacuse: %s"
+msgstr "No se puede abrir el CFDI (%s) debido a: %s"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid "Cannot open CFDI lines (%s) beacuse: %s"
+msgstr "No se pueden abrir los conceptos del CFDI (%s) debido a: %s"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid "Cannot open CFDI taxes lines (%s) beacuse: %s"
+msgstr "No se pueden abrir los impuestos del CFDI (%s) debido a: %s"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.charge_sat_documents_action
+msgid "Charge SAT Documents"
+msgstr "Documentos SAT Egreso"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Company currency"
+msgstr "Moneda"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.entry_sat_documents_view_tree
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+msgid "Create Invoice"
+msgstr "Crear factura"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.charge_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.entry_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.payment_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.payroll_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.picking_sat_documents_action
+msgid "Create a new SAT Document."
+msgstr "Crear nuevo Documento SAT."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__create_uid
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__create_date
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__create_date
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__currency_id
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_account_bank_statement_line__currency_rate
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_account_move__currency_rate
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_account_payment__currency_rate
+msgid "Currency rate of this invoice"
+msgstr "Taza de cambio de Moneda para esta factura"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_bank_statement_line__custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move_line__custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_payment__custom_rate
+msgid "Custom Rate"
+msgstr "Taza de cambio del cliente"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__date
+msgid "Date"
+msgstr "Fecha emisión"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_range_download_view_form
+msgid "Date range selector"
+msgstr "Selección del rango de fechas"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_tax__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_l10n_mx_edi_certificate__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__display_name
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__display_name
+msgid "Display Name"
+msgstr "Nombre en pantalla"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__cfdi_type
+msgid "Document type"
+msgstr "Tipo de documento"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.server,name:l10n_mx_sat_sync.ir_cron_sdowngload_sat_ir_actions_server
+#: model:ir.cron,cron_name:l10n_mx_sat_sync.ir_cron_sdowngload_sat
+#: model:ir.cron,name:l10n_mx_sat_sync.ir_cron_sdowngload_sat
+msgid "Downgload SAT"
+msgstr "Descargar SAT"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_company_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_range_download_view_form
+msgid "Download"
+msgstr "Descargar"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.server,name:l10n_mx_sat_sync.action_move_cancellation_downgload
+msgid "Download confirmation of cancellation"
+msgstr "Descargar Acuse de Cancelación"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.charge_sat_documents_menu
+msgid "E - Charge"
+msgstr "E - Egresos"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_type__e
+msgid "E - Issued"
+msgstr "E - Egresos"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__end_date
+msgid "End date"
+msgstr "Fecha fin"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.constraint,message:l10n_mx_sat_sync.constraint_sat_documents_range_download_check_dates
+msgid "End date must be higher than start date."
+msgstr "La fecha final debe ser mayor a la fecha inicial seleccionada."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_sat_documents__notes
+msgid ""
+"Enter here the internal notes for this document (ex: Offer sent to "
+"supplier)."
+msgstr "Escriba notas internas para este documento (ej.: Enviar a proveedor)."
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+msgid "Enter here the internal notes for this document."
+msgstr "Escriba notas internas para este documento."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.entry_sat_documents_action
+msgid "Entry SAT Documents"
+msgstr "Documentos SAT Ingreso"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company__l10n_mx_edi_esign_ids
+msgid "FIEL certificate"
+msgstr "Certificado FIEL"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/account_move.py:0
+#: code:addons/l10n_mx_sat_sync/models/res_company.py:0
+#, python-format
+msgid "Files uploaded are not FIEL files."
+msgstr "Los archivos cargados, no corresponden a los archivos FIEL."
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Foreign currency"
+msgstr "Moneda extranjera"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_type__i
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.entry_sat_documents_menu
+msgid "I - Entry"
+msgstr "I - Ingreso"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_tax__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_l10n_mx_edi_certificate__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__id
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__account_tax__l10n_mx_tax_code__003
+msgid "IEPS"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__account_tax__l10n_mx_tax_code__001
+msgid "ISR"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__account_tax__l10n_mx_tax_code__002
+msgid "IVA"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_sat_documents__payment_way_id
+msgid ""
+"Indicates the way the invoice was/will be paid, where the options could be: "
+"Cash, Nominal Check, Credit Card, etc. Leave empty if unkown and the XML "
+"will show 'Unidentified'."
+msgstr ""
+"Indica la forma de pago de la factura, las opciones pueden ser: Efectivo, "
+"cheque, tarjeta de crédito, etc. Si lo desconoce deje en blanco y el CFDI "
+"lo mostrará como Indefinido."
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_l10n_mx_edi_certificate__is_esign
+msgid "Is e-sign?"
+msgstr "¿Es E-Firma?"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__issuing_type__i
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Issued"
+msgstr "Emitido"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__stamp_date
+msgid "Issuing date"
+msgstr "Fecha timbrado"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__issuing_partner
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Issuing partner"
+msgstr "Emisor"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__issuing_partner_vat
+msgid "Issuing partner VAT"
+msgstr "RFC Emisor"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__issuing_type
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Issuing type"
+msgstr "Tipo emisión"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento de diario"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte de diario"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company__last_cfdi_fetch_date
+msgid "Last CFDI fetch date"
+msgstr "Última fecha sincronización CFDI"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_tax____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_l10n_mx_edi_certificate____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download____last_update
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__write_uid
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__write_uid
+msgid "Last Updated by"
+msgstr "Última vez actualizado por"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__write_date
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__write_date
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__move_id
+msgid "Move"
+msgstr "Factura"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_type__n
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.payroll_sat_documents_menu
+msgid "N - Payroll"
+msgstr "N - Nómina"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_type_operation_sat__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/res_company.py:0
+#, python-format
+msgid "Not define"
+msgstr "Sin definir"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__notes
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__number
+msgid "Number"
+msgstr "Folio"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_type__p
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.payment_sat_documents_menu
+msgid "P - Payments"
+msgstr "P - Pagos"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "PPD"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "PUE"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.payment_sat_documents_action
+msgid "Payment SAT Documents"
+msgstr "Documentos SAT Pagos"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__payment_way_id
+msgid "Payment Way"
+msgstr "Forma de pago"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__payment_method
+msgid "Payment method"
+msgstr "Método de pago"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Payment way"
+msgstr "Forma de pago"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.payroll_sat_documents_action
+msgid "Payroll SAT Documents"
+msgstr "Documentos SAT Nómina"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.picking_sat_documents_action
+msgid "Picking SAT Documents"
+msgstr "Documentos SAT Traslados"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Posted"
+msgstr "Publicado"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.entry_sat_documents_view_tree
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_tree
+msgid "Range"
+msgstr "Rango"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__currency_rate
+msgid "Rate"
+msgstr "TC"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__issuing_type__r
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Received"
+msgstr "Recibido"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__receiver_partner
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Receiver partner"
+msgstr "Receptor"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__receiver_partner_vat
+msgid "Receiver partner VAT"
+msgstr "RFC Receptor"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_l10n_mx_edi_certificate
+msgid "SAT Digital Sail"
+msgstr "Sello Digital SAT"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.sat_documents_root_menu
+#: model:res.groups,name:l10n_mx_sat_sync.group_sat_documents
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_form
+msgid "SAT Documents"
+msgstr "Documentos SAT"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.actions.act_window,name:l10n_mx_sat_sync.sat_documents_range_download_action
+msgid "SAT Documents Range Download"
+msgstr "Descarga por rango de Documentos SAT"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_company_view_form_inherit
+msgid "SAT Synchronization"
+msgstr "Sincronización SAT"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_sat_documents
+msgid "SAT documents"
+msgstr "Documentos SAT"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_sat_documents_range_download
+msgid "Sat Documents Range Download Wizard"
+msgstr "Wizard para descarga por rango de Documentos SAT"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_search
+msgid "Search Description"
+msgstr "Descripción búsqueda"
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/account_move.py:0
+#: code:addons/l10n_mx_sat_sync/models/res_company.py:0
+#, python-format
+msgid "Select the correct FIEL files (.cer or .pem)."
+msgstr "Seleccione los archivos FIEL correctamente (.cer o .pem)"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__series
+msgid "Series"
+msgstr "Serie"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_range_download_view_form
+msgid "Set a date range"
+msgstr "Seleccione un rango de fecha"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents_range_download__start_date
+msgid "Start date"
+msgstr "Fecha inicio"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_bank_statement_line__currency_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__currency_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_payment__currency_rate
+msgid "System Currency Rate"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields.selection,name:l10n_mx_sat_sync.selection__sat_documents__cfdi_type__t
+#: model:ir.ui.menu,name:l10n_mx_sat_sync.picking_sat_documents_menu
+msgid "T - Pickings"
+msgstr "T - Traslados"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_tax__l10n_mx_tax_code
+msgid "Tax code"
+msgstr "Código impuesto"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,help:l10n_mx_sat_sync.field_account_tax__l10n_mx_tax_code
+msgid ""
+"The CFDI version 3.3/4.0 have the attribute Impuesto in the tax lines. In "
+"it is indicated the tax that is applied to the base of the tax."
+msgstr ""
+"La versión de CFDI 3.3/4.0 cuenta con el atriburo Impuesto en las líneas de "
+"impuesto. En él es indicado el tipo de impuesto que será aplicado a la base "
+"de la línea."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/sat_documents.py:0
+#, python-format
+msgid "There are %s errors on these documents:%s"
+msgstr "Existen %s errores en los siguientes documentos:%s"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.charge_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.entry_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.payment_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.payroll_sat_documents_action
+#: model_terms:ir.actions.act_window,help:l10n_mx_sat_sync.picking_sat_documents_action
+msgid ""
+"These records are created at dowloading SAT data from the Company "
+"information."
+msgstr ""
+"Estos documentos son creados al sicronizar los CFDI SAT desde la compañía."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/res_company.py:0
+#, python-format
+msgid ""
+"This currency has not could not be read from CFDI. Contact support to fixed."
+msgstr ""
+"La moneda no ha podido ser leída desde el CFDI. Contacte a soporte para "
+"repararlo."
+
+#. module: l10n_mx_sat_sync
+#: code:addons/l10n_mx_sat_sync/models/account_move.py:0
+#, python-format
+msgid "This document has not be canceled."
+msgstr "Este documento no esta cancelado"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.entry_sat_documents_view_tree
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.sat_documents_view_tree
+msgid "Today"
+msgstr "Hoy"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_res_company__type_operation_sat
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_company_view_form_inherit
+msgid "Type SAT Operation"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__name
+msgid "UUID"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_bank_statement_line__not_company_currency
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__not_company_currency
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_payment__not_company_currency
+msgid "Use Custom Currency Rate"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_bank_statement_line__use_custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move__use_custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_move_line__use_custom_rate
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_account_payment__use_custom_rate
+msgid "Use Custom Rate"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__cfdi_version
+msgid "Version"
+msgstr "Versión"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__xml_attachment
+msgid "XML attachment"
+msgstr "Archivo XML"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model.fields,field_description:l10n_mx_sat_sync.field_sat_documents__xml_filename
+msgid "XML filename"
+msgstr "Nombre XML"
+
+#. module: l10n_mx_sat_sync
+#: model:ir.model,name:l10n_mx_sat_sync.model_type_operation_sat
+msgid "type.operation.sat"
+msgstr ""
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_config_settings_view_form_inherit_master_data
+msgid "<span class=\"o_form_label\">Load data master from XML</span>"
+msgstr "<span class=\"o_form_label\">Crear maestros desde XML</span>"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_config_settings_view_form_inherit_master_data
+msgid "Load data master from XML"
+msgstr "Crear maestros desde XML"
+
+#. module: l10n_mx_sat_sync
+#: model_terms:ir.ui.view,arch_db:l10n_mx_sat_sync.res_config_settings_view_form_inherit_master_data
+msgid ""
+"In case of error, the missing element will be created from the XML data"
+msgstr "En caso de error, el elemento faltante se creará a partir de los datos del XML"

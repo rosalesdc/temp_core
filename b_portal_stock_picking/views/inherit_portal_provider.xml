@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="inherit_purchase_orders_stock_picking" inherit_id="purchase.portal_my_purchase_orders">
+            <xpath expr="." position="inside">
+                <t t-call="b_portal_stock_picking.b_website_add_pdf"/>
+            </xpath>
+
+            <xpath expr="//tr[@class='active']/th[4]" position="after">
+                <th>Effective Date Transfer</th>
+                <th>Invoice created</th>
+                <th>Picking</th>
+                <th>Delivery Slip</th>
+                <th id="invoice">Invoice</th>
+                <th id="add_comprobante">Receipt</th>
+            </xpath>
+
+            <xpath expr="//tr/td[4]" position="after">
+                <t t-set="picking_ids" t-value="order.picking_ids.filtered(lambda x: x.state == 'done' and x.picking_type_code == 'incoming')"/>
+                <t t-set="invoice_ids" t-value="order.invoice_ids.filtered(lambda inv: inv.state != 'cancel')"/>
+                <td id="td_date_done">
+                    <span t-if="picking_ids" t-field="picking_ids[0].date_done"/>
+                </td>
+                <td class="td_invoices">
+                    <select class="form-control invoice" name="invoice" placeholder="Select Invoice" required="">
+                        <option value="">Invoice</option>
+                        <t t-foreach="invoice_ids" t-as="invoice">
+                            <option t-att-value="'%s' % (invoice.id,)"
+                                    t-esc="invoice.name if invoice.state != 'draft' else 'Borrador de factura (*%s)' % invoice.id"/>
+                        </t>
+                    </select>
+                </td>
+                <td class="td_picking_ids">
+                    <select class="form-control picking" name="picking" placeholder="Select Picking" required="">
+                        <option value="">Picking</option>
+                        <t t-foreach="picking_ids" t-as="pick">
+                            <option t-att-value="'%s' % (pick.id,)" t-esc="pick.name"/>
+                        </t>
+                    </select>
+                </td>
+                <td id="td_delivery_slip">
+                    <!-- botón para descargar el pdf del albaran -->
+                    <button t-if="picking_ids" class="btn btn-primary b_download_delivery_slip d-none">Download</button>
+                </td>
+                <td class="td_add_invoice">
+                    <button class="btn btn-primary b_add_invoice_buttom d-none" t-att-data-pid="order.id">Crear factura</button>
+                </td>
+                <td id="td_add_pdf">
+                    <button class="btn btn-primary b_add_pdf_btn l d-none">Añadir</button>
+                </td>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

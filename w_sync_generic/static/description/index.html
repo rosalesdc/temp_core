@@ -1,0 +1,308 @@
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="max-width: 100%;">
+        <h2 class="oe_slogan">Synchronizer Odoo-Other System</h2>
+        <h3 class="oe_slogan">Allows you to synchronize table data from an external
+        system with Odoo.</h3>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <h3>Resume</h3>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>This gives us the possibility of having the
+                desired information replicated in two different systems,
+                achieving high integrity. This synchronization consists of
+                sending or receiving the records that were created, modified or
+                deleted in one of the two systems, be it Odoo or the external system,
+                and need to be replicated in the other. This process can be carried
+                out in two modes, by Planned Action (Via Cron) or in Real Time. The
+                Via Cron mode performs the synchronization at a specific date and
+                time, allowing us to establish the frequency with which we want it
+                to be executed. This mode has the advantage that the user does not
+                intervene at any time in the process, which is activated and executed
+                automatically. The Real Time mode is activated when the user makes
+                a creation, modification or deletion of a record whose table is
+                defined in the configuration that requires synchronization.
+                It has the advantage that both systems are up-to-date at all times.</p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <h3>Configuration.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+         <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <b>Settings</b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>The configurations to generate the api key are established in
+                if it is used in Real Time mode and if you want to keep the Logs of
+                every sync.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/settings.png">
+            </div>
+            <ol>
+                <li><b>Api Key for synchronization:</b> It is the secret key that is used to
+                    Synchronization in Real Time from the External System to Odoo.
+                    It is necessary to consume the services (explained later)
+                    send in the Headers this api key that guarantees the permissions.</li>
+                <li><b>Generate Logs:</b> This configuration is for if we want to create a
+                    record with the data of each synchronization and be able to analyze them.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+         <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <b>Web Services</b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>The Web Services to consume and send the information
+                are defined.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/WS.png">
+            </div>
+            <ol>
+                <li><b>Name:</b> Name of the Web Service.</li>
+                <li><b>URL:</b> Url where to obtain the records for a specific type of table.</li>
+                <li><b>Needs confirmation:</b> It is checked if it is necessary to confirm to
+                the external system that the record was inserted, modified or deleted
+                correctly.</li>
+                <li><b>Confirmation URL:</b> Url to send the confirmation. In most cases the
+                url is the same as the one where the record is received, but it may
+                be the case that another is used to confirm, that is why it is this
+                field. You always have to put the Url even if it is the same as to
+                receive.</li>
+                <li><b>Shipping URL:</b> It is similar to the above, in most cases it is the
+                same as for obtaining the registration, in case it is different,
+                it is established here. If it is the same Url, it must also be
+                established. The only case that is left blank is that the
+                synchronization is one-way from the External System to Odoo.</li>
+                <li><b>Needs authentication:</b> In case the consumption of the Web Service
+                requires authentication.</li>
+                <li><b>Authentication Mode:</b> There are two modes, User and Password;
+                or by Api Key.</li>
+                 <li> If the authentication mode is Api Key, the Api Key field is
+                enabled to enter it, in case it is User and Password, these
+                fields are enabled.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <b>Synchronization models</b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>Here you define the models or tables with
+            the fields to be synchronized.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/modelos.png">
+            </div>
+            <ol>
+                <li><b>Name:</b> Name of the model or table.</li>
+                <li><b>Code:</b> Code to define it, it can be any.</li>
+                <li><b>Name fields:</b> Name of the field in the external system.
+                Technical name in the table.</li>
+                <li><b>Code fields:</b> Same as the Name.</li>
+                <li><b>Fields Field type:</b> It is the data type of the field.</li>
+            </ol>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <b>Synchronization Objects</b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>Synchronization Objects: This is where all the settings for syncing
+            are set. One is defined for each model or table. The related WS, which
+            has already been configured above, is set. Synchronization mode is also
+            set, as well as direction and priority. In addition, the fields of the
+            External System are paired with their analog in Odoo.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/objetos.png">
+            </div>
+            <ol>
+                <li><b>Name:</b> Name of the Object, it can be anyone, always making reference
+                to the Odoo model with the external one to know how to identify it.</li>
+                <li><b> Direcctions:</b> There are three options:
+                <ul>
+                    <li>Odoo to External: To send records of this model from Odoo to the
+                                External System.</li>
+                    <li> External to Odoo: To receive records from the External System to Odoo.</li>
+                    <li>Bidirectional: Sent and received from both sides. For this case see the
+                        Synchronization Priority field which is only visible when the
+                        direction is bidirectional.</li>
+                </ul>
+                </li>
+                <li><b>Web Service:</b> The Web Service that we have defined for this model
+                    is selected.</li>
+                <li><b>Synchronization Mode:</b> We define if this model will be synchronized
+                    by Via Cron or in Real time. It is important to clarify that when
+                    Real Time is selected, Odoo can only be selected as External address,
+                    because the Real Time synchronization for the records from the
+                    External System to Odoo is in another configuration.
+                    <ul>
+                        <li><b>Synchronization Priority: </b>
+                            This field is only visible when the
+                            synchronization mode is Via Cron. It is defined to establish the
+                            priority in case there is a record that has been modified both in
+                            Odoo and in the External System, to define which modification prevails.
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Odoo model:</b> The model to be synchronized in Odoo is established.</li>
+                <li><b>Odoo Ref field:</b> It is the reference field in Odoo, it will always
+                 be the external Id field.</li>
+                <li><b>Model removed:</b> This field is only visible when the sync mode is
+                    Via Cron. It must be established if we want the registers deleted
+                    in Odoo to also be deleted in the External System.
+                    When establishing it, a single option is listed, that is the
+                    one we must select.</li>
+                 <li><b>External Model:</b> We select the External Model homologous to contacts.
+                     We have already configured this in the Synchronization Models section.</li>
+                 <li><b>External Ref. Field:</b> It is the reference field in the External System,
+                it is among the fields that we define in the Synchronization Model
+                for this model. It must be the Id of the record in the External System.</li>
+                <li><b>Domain and Limit:</b> This is used if we define a domain of the records
+                in Odoo that we want to synchronize. For example. In Odoo,
+                in the res.partner model, there are all the contacts, clients,
+                companies, etc. If we only wanted to synchronize customers it
+                would be [('customer', '=', True)]. The limit is used to define the
+                number of records in each synchronization if it is Via Cron mode.</li>
+                 <li><b>Odoo field:</b> Corresponds to the fields in Odoo that we want to
+                synchronize and match with its counterpart. The External ID field
+                should never be missing.</li>
+                <li><b>External Field:</b> Corresponds to the fields in the External System.
+                They are already defined in the Synchronization Model, it only remains
+                to pair them.</li>
+                <li><b>Reference Field: </b> This is very important, it should only be established
+                if the field that we want to synchronize is relational, that is, it
+                is One2many, Many2many or Many2one. It is the field by which the
+                records are related.</li>
+            </ol>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/apis.png">
+            </div>
+            <ol>
+                <li value=14>It is a note where it is explained what should be sent in the Header of each
+                    petition. The previously generated api key and the Content Type must be
+                    application / json.
+                </li>
+                <li><b>Action: </b>It is the action that you want to perform in Odoo, 'Create',
+                    'Write' or 'Unlink' a record.
+                </li>
+                <li><b>Method: </b>It is the method to use in the request. POST, PUT, DELETE.
+                </li>
+                 <li><b>URL: </b>Dirección a realizar la petición.
+                </li>
+                <li><b>Description: </b>Description to pass parameters or not.
+                </li>
+                <li><b>Active: </b>Activate or deactivate the Web Service.
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <h3>Change control</h3>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>Here is a history of all the synchronizations that have been made,
+            showing its traceability.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/log.png">
+            </div>
+            <ol>
+                <li><b>Traceability:</b> Shows the direction of synchronization.</li>
+                <li><b> Type of action:</b> Shows the type of action, Create, Modify or Delete.</li>
+                <li><b>External ID:</b> It is the External ID in the record in questio.</li>
+                <li><b>Odoo ID:</b> Odoo ID of the record in question.</li>
+                <li><b>Name:</b> Name of the action.</li>
+                <li><b>Title:</b> Name of the record in question.</li>
+                <li><b>Origin values:</b> It is a dictionary with the values ​​it receives
+                from the origin of that synchronization.</li>
+                 <li><b>Values to the destination:</b> It is a dictionary with the values ​​
+                that are sent to the destination of that synchronization.</li>
+                <li><b>Modification Date:</b> Date the record was modified.</li>
+                <li><b>Synchronization Date:</b> Date when the synchronization was carried out.</li>
+                <li><b>Status:</b> Status of the synchronization, Successful or Failed.</li>
+                <li><b>Error Message:</b> It is the message that is thrown if the status
+                was Failed.</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<!-- footer section starts-->
+<section class="oe_container">
+    <div class="oe_row" style="max-width:100%;">
+        <hr style="border-top: 1px solid #00aae7; margin-bottom: 5px;">
+        <div class="oe_span6">
+            <br/>
+            <p style="font-size:16px; text-align: justify;">We are a team of passionate people whose goal is to improve everyone's
+                life through disruptive products. We build great products to solve your business problems.
+                Our products are designed for small to medium size companies willing to optimize their performance.
+            </p>
+            <div class="oe_span12" style="max-width: 100%;">
+                <h2 class="text-center">Help and Support</h2>
+                <p class="text-center">Please feel free to contact us if you need technical or functional support, also you can find more of our excellent apps in the Odoo store.</p>
+            </div>
+            <br/>
+            <div class="oe_slogan oe_spaced">
+                <span><a data-toggle="tooltip" data-placement="bottom" title="Get Instant Support!" rel="nofollow" href="mailto:soportemx@odoomail.telematel.com"><i class="fa fa-ticket"></i> Support</a></span>
+                <span><a data-toggle="tooltip" data-placement="bottom" target="_blank" href="https://apps.odoo.com/apps/modules/browse?search=wedoo"><i class="fa fa-shopping-cart"></i> Visit our store</a></span>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <a href="https://www.wedoo.tech"  target="_blank"r>
+                    <img src="wedoo.jpeg" width="80px" height="auto">
+                </a>
+                <div class="oe_demo_footer oe_centeralign">Meet Us</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section end-->

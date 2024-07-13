@@ -1,0 +1,219 @@
+{
+    "id": 1,
+    "partner": {
+        "name": "Juan Pérez Serás",
+        "id_arx": 10,
+        "company_type": "person",
+        "type": "contact",
+        "vat": "ROCD990508KB9",
+        "street": "9 sur",
+        "street_number": "665",
+        "street_number2": "8",
+        "l10n_mx_edi_colony": "Centro",
+        "l10n_mx_edi_locality_id": 207,
+        "city": "Puebla",
+        "state_id": 505,
+        "zip": "72000",
+        "country_id": 156,
+        "phone": "2222825069",
+        "l10n_mx_edi_curp": "ROTH020414MQRJMLA1",
+        "category_id": [
+            1,
+            2,
+            3
+        ],
+        "website": "https://odoo.com",
+        "email": "jp@odoo.com",
+        "property_payment_term_id": 1,
+        "ref": "Referencia",
+        "industry_id": 13,
+        "l10n_mx_edi_fiscal_regime": "601",
+        "user_id": 2
+    },
+    "invoice_address": {
+        "name": "Juan Pérez Facturación",
+        "id_arx": 11,
+        "company_type": "person",
+        "type": "invoice",
+        "vat": "JPCD990508KB8",
+        "street": "10 sur",
+        "street_number": "666",
+        "street_number2": "9",
+        "l10n_mx_edi_colony": "Héroes",
+        "l10n_mx_edi_locality_id": 207,
+        "city": "Puebla",
+        "state_id": 505,
+        "zip": "72000",
+        "country_id": 156,
+        "phone": "2222825070",
+        "l10n_mx_edi_curp": "ROTH020414MQRJMLA2",
+        "category_id": [
+            1
+        ],
+        "website": "https://odoo.com/facturacion",
+        "email": "jp_facturacion@odoo.com",
+        "property_payment_term_id": 1,
+        "ref": "Referencia Facturación",
+        "industry_id": 13,
+        "l10n_mx_edi_fiscal_regime": "601",
+        "user_id": 2
+    },
+    "shipping_address": {
+        "name": "Juan Pérez Dirección Entrega",
+        "id_arx": 12,
+        "company_type": "person",
+        "type": "delivery",
+        "vat": "JPCD990508KN9",
+        "street": "11 sur",
+        "street_number": "667",
+        "street_number2": "10",
+        "l10n_mx_edi_colony": "Zaragoza",
+        "l10n_mx_edi_locality_id": 208,
+        "city": "Puebla",
+        "state_id": 505,
+        "zip": "72000",
+        "country_id": 156,
+        "phone": "2222825072",
+        "l10n_mx_edi_curp": "ROTH020414MQRJMLA3",
+        "category_id": [
+            2
+        ],
+        "website": "https://odoo.com/entrega",
+        "email": "jp_entrega@odoo.com",
+        "property_payment_term_id": 1,
+        "ref": "Referencia Entrega",
+        "industry_id": 13,
+        "l10n_mx_edi_fiscal_regime": "601",
+        "user_id": 2
+    },
+    "products": [
+        {
+            "name": "My Product",
+            "sale_ok": true,
+            "purchase_ok": true,
+            "detailed_type": "product",
+            "categ_id": 1,
+            "default_code": "arx00001",
+            "barcode": "arx00001",
+            "weight": 1.89,
+            "list_price": 100.5,
+            "taxes_id": [
+                18
+            ],
+            "product_tag_ids": [
+                1
+            ],
+            "standard_price": 80.5,
+            "uom_id": 1,
+            "uom_po_id": 1,
+            "invoice_policy": "order",
+            "currency_id": 34,
+            "supplier_taxes_id": [
+                20
+            ],
+            "purchase_method": "purchase",
+            "route_ids": [
+                1
+            ],
+            "volume": 50.5,
+            "sale_delay": 6,
+            "property_account_income_id": 22,
+            "property_account_expense_id": 46,
+            "property_account_creditor_price_difference": 48,
+            "unspsc_code_id": 6
+        },
+        {
+            "name": "My Product2",
+            "sale_ok": true,
+            "purchase_ok": true,
+            "detailed_type": "product",
+            "categ_id": 1,
+            "default_code": "arx00002",
+            "barcode": "arx00002",
+            "weight": 1.89,
+            "list_price": 100.5,
+            "taxes_id": [
+                18
+            ],
+            "product_tag_ids": [
+                1
+            ],
+            "standard_price": 80.5,
+            "uom_id": 1,
+            "uom_po_id": 1,
+            "invoice_policy": "order",
+            "currency_id": 34,
+            "supplier_taxes_id": [
+                20
+            ],
+            "purchase_method": "purchase",
+            "route_ids": [
+                1
+            ],
+            "volume": 50.5,
+            "sale_delay": 6,
+            "property_account_income_id": 22,
+            "property_account_expense_id": 46,
+            "property_account_creditor_price_difference": 48,
+            "unspsc_code_id": 6
+        }
+    ],
+    "sale_order": {
+        "arx_name": "ARX SALE 4",
+        "validity_date": "2024-07-20",
+        "date_order": "2024-07-11",
+        "pricelist_id": 1,
+        "payment_term_id": 1,
+        "user_id": 2,
+        "team_id": 1,
+        "client_order_ref": "Referencia Demo",
+        "tag_ids": [
+            1
+        ],
+        "warehouse_id": 1,
+        "picking_policy": "direct",
+        "commitment_date": "2024-07-20",
+        "origin": "Origin Doc",
+        "campaign_id": 1,
+        "medium_id": 1
+    },
+    "sale_order_line": [
+        {
+            "product_id": "arx00001",
+            "name": "Descripción Producto 1",
+            "product_uom_qty": 2,
+            "product_uom": 1,
+            "price_unit": 100,
+            "tax_id": [
+                18
+            ],
+            "discount": 10,
+            "customer_lead": 1.5
+        },
+        {
+            "product_id": "arx00002",
+            "name": "Descripción Producto 2",
+            "product_uom_qty": 1,
+            "product_uom": 1,
+            "price_unit": 50,
+            "tax_id": [
+                18
+            ],
+            "discount": 0,
+            "customer_lead": 2.5
+        }
+    ],
+    "payment": {
+        "arx_name": "ARX-PAY00001",
+        "is_internal_transfer": false,
+        "payment_type": "inbound",
+        "amount": 100.5,
+        "currency_id": 34,
+        "date": "2024-07-12",
+        "ref": "ARX-REF",
+        "journal_id": 8,
+        "payment_method_line_id": 1,
+        "partner_bank_id": 1,
+        "l10n_mx_edi_payment_method_id": 3
+    }
+}

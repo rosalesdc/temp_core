@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="0">
+
+        <record id="vex_config_settigns" model="vex.config.settings">
+            <field name="frequency">once</field>
+        </record>
+    
+    </data>
+
+</odoo>

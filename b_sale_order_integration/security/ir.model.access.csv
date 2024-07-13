@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_so_integrated_data,sync_so_integrated_data,model_so_integrated_data,,1,1,1,1

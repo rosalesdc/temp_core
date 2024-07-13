@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="b_website_add_xml">
+            <div id="b_add_xml_modal" class="modal background-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="b_Head">
+                            <h4 class="modal-title" id="b_h1_purchase_order_name">P00000</h4>
+                            <button class="close" data-dismiss="modal" id="b_close_add_xml">&amp;times</button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="col-sm-12">Cargar desde fichero XML</h4>
+                            <div class="oe_import_box col-sm-12">
+                                <div class="col-sm-12">
+                                    <h5>
+                                        <span style="color:#F00;">
+                                            <b>*</b>
+                                        </span>
+                                        Seleccione un CFDI 3.3
+                                    </h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input oe_import_file" id="b-my-file-selector-portal"/>
+                                            <label class="custom-file-label" for="my-file-selector" id="b-label-file-selector" style="overflow: hidden;">Choose
+                                                file
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12"/> <!-- For keep layout -->
+                            <!-- NOTE -->
+                            <div style="margin-top: 20px;" class="oe_import_box col-sm-12">
+                                <div class="col-sm-12">
+                                    <h5>
+                                        <b>
+                                            <span style="color:#F00;">* CAMPOS REQUERIDOS</span>
+                                        </b>
+                                    </h5>
+                                    <ul style="list-style-position: inside;padding-left: 0;margin-top: 10px;">
+                                        <li>
+                                            <b>
+                                                <i style="color:#777;font-size: 15px;">Seleccione solo ficheros xml.</i>
+                                            </b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="b-submit-portal" class="col-sm-12" style="margin-top: 20px;">
+                                <input id="b_submit_button_portal" class="btn btn-primary" type="submit" value="Envíar"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="b_message_modal" class="modal background-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="Head">
+                            <p class="modal-title" id="b_title_response">Info</p>
+                            <button class="close" data-dismiss="modal">&amp;times</button>
+                        </div>
+                        <div id="b_messages" class="modal-body">
+                            <p id="message_response">Response</p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="b_website_add_pdf">
+            <div id="b_add_pdf_modal" class="modal background-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="b_Head">
+                            <h4 class="modal-title" id="b_add_pdf_invoice_name">P00000</h4>
+                            <button class="btn-close" data-dismiss="modal" id="b_add_pdf_close"/>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <h4 class="col-sm-12">Cargar fichero PDF</h4>
+                                <input accept=".pdf" class="form-control" type="file" id="b_add_pdf_file_selector"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="custom-file-label" for="b_add_pdf_file_selector" id="b_add_pdf_file_selector_label"
+                                       style="overflow: hidden;">
+                                </label>
+                            </div>
+                            <div class="col-sm-12"/> <!-- For keep layout -->
+                        </div>
+                        <div class="modal-footer">
+                            <div id="b-submit-portal" class="col-sm-12" style="margin-top: 20px;">
+                                <input id="b_add_pdf_submit_button" class="btn btn-primary" type="submit" value="Envíar"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+    </data>
+</odoo>

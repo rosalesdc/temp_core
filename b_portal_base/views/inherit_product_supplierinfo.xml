@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <record id="product_provider_info_tree_view" model="ir.ui.view">
+            <field name="name">product.provider.info.tree.view</field>
+            <field name="model">product.provider.info</field>
+            <field name="arch" type="xml">
+                <tree string="Provider Information">
+                    <field name="partner_id"/>
+                    <field name="product_sku"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_provider_info_form_view" model="ir.ui.view">
+            <field name="name">product.provider.info.form.view</field>
+            <field name="model">product.provider.info</field>
+            <field name="arch" type="xml">
+                <form string="Provider Information">
+                    <group string="Information">
+                        <field name="partner_id"/>
+                        <field name="product_sku"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="sku_product_provider_info_tree" model="ir.ui.view">
+            <field name="name">sku.product.provider.info</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <group name="bill" position="before">
+                    <group string="Provider Information for Product Variants">
+                        <label for="provider_ids"/>
+                        <div>
+                            <field name="provider_ids"/>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</odoo>

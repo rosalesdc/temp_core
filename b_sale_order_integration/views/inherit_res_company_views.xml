@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="inherit_res_company_sync_options" model="ir.ui.view">
+            <field name="name">inherit.res.company.sync.options</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[last()]" position="after">
+                    <page name="extra_sync_optios_page" string="Sync extra options">
+                        <group cols="4" name="gruop_extra_sync">
+                            <group>
+                                <field name="main_supplier"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<odoo>
+    <!-- sat.documents tree view -->
+    <record id="entry_sat_documents_view_tree" model="ir.ui.view">
+        <field name="name">sat.documents.view.tree</field>
+        <field name="model">sat.documents</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <header>
+                    <button
+            string="Create Invoice"
+            name="create_invoice"
+            type="object"
+            class="oe_highlight"
+          />
+                    <button
+            string="Today"
+            name="download_today_sat_documents"
+            type="object"
+          />
+                    <button
+            string="Range"
+            name="range_sat_documents_action"
+            type="object"
+          />
+                </header>
+                <field name="date" />
+                <field name="stamp_date" optional="hide" />
+                <field name="name" />
+                <field name="issuing_partner_vat" optional="hide" />
+                <field name="issuing_partner" optional="show" />
+                <field name="receiver_partner_vat" optional="hide" />
+                <field name="receiver_partner" optional="hide" />
+                <field name="currency_id" />
+                <field name="currency_rate" />
+                <field name="amount" />
+                <field name="payment_way_id" optional="hide" />
+                <field name="payment_method" optional="hide" />
+                <field name="move_id" optional="hide" />
+                <field name="notes" optional="hide" />
+                <field name="cfdi_type" />
+                <field name="issuing_type" />
+                <field name="cfdi_version" optional="hide" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record id="sat_documents_view_tree" model="ir.ui.view">
+        <field name="name">sat.documents.view.tree</field>
+        <field name="model">sat.documents</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <header>
+                    <button
+            string="Today"
+            name="download_today_sat_documents"
+            type="object"
+          />
+                    <button
+            string="Range"
+            name="range_sat_documents_action"
+            type="object"
+          />
+                </header>
+                <field name="date" />
+                <field name="stamp_date" optional="hide" />
+                <field name="name" />
+                <field name="issuing_partner_vat" optional="hide" />
+                <field name="issuing_partner" optional="show" />
+                <field name="receiver_partner_vat" optional="hide" />
+                <field name="receiver_partner" optional="hide" />
+                <field name="currency_id" />
+                <field name="currency_rate" />
+                <field name="amount" />
+                <field name="payment_way_id" optional="hide" />
+                <field name="payment_method" optional="hide" />
+                <field name="move_id" optional="hide" />
+                <field name="notes" optional="hide" />
+                <field name="cfdi_type" />
+                <field name="issuing_type" />
+                <field name="cfdi_version" optional="hide" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <!-- sat.documents form view -->
+    <record id="sat_documents_view_form" model="ir.ui.view">
+        <field name="name">sat.documents.view.form</field>
+        <field name="model">sat.documents</field>
+        <field name="arch" type="xml">
+            <form string="SAT Documents" create="0">
+                <header>
+                    <button
+            string="Create Invoice"
+            name="create_invoice"
+            type="object"
+            class="oe_highlight"
+            attrs="{'invisible':['|','|',('move_id','!=',False),('cfdi_type','not in',['I', 'E']),('issuing_type','!=','R')]}"
+          />
+                    <field
+            name="cfdi_type"
+            widget="statusbar"
+            statusbar_visible="0"
+            readonly="1"
+          />
+                </header>
+                <sheet>
+                    <field name="issuing_type" invisible="1" readonly="1" />
+                    <widget
+            name="web_ribbon"
+            title="Issued"
+            bg_color="bg-info"
+            attrs="{'invisible': [('issuing_type', '=', 'R')]}"
+          />
+                    <widget
+            name="web_ribbon"
+            title="Received"
+            bg_color="bg-danger"
+            attrs="{'invisible': [('issuing_type', '=', 'I')]}"
+          />
+                    <group>
+                        <group>
+                            <field name="name" readonly="1" />
+                            <label for="issuing_partner" />
+                            <div name="issuing_partner_div" class="d-flex">
+                                <field name="issuing_partner" readonly="1" />
+                                <span
+                  class="oe_inline o_form_label mx-3 oe_read_only"
+                > - </span>
+                                <field
+                  name="issuing_partner_vat"
+                  readonly="1"
+                />
+                            </div>
+                            <label for="receiver_partner" />
+                            <div name="receiver_partner_div" class="d-flex">
+                                <field name="receiver_partner" readonly="1" />
+                                <span
+                  class="oe_inline o_form_label mx-3 oe_read_only"
+                > - </span>
+                                <field
+                  name="receiver_partner_vat"
+                  readonly="1"
+                />
+                            </div>
+                            <field name="series" readonly="1" />
+                            <field name="number" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="date" readonly="1" />
+                            <field name="stamp_date" readonly="1" />
+                            <field
+                name="xml_attachment"
+                filename="xml_filename"
+                readonly="1"
+              />
+                            <field
+                name="xml_filename"
+                invisible="1"
+                readonly="1"
+              />
+                            <field
+                name="move_id"
+                attrs="{'invisible':[('move_id','=',False)]}"
+              />
+                            <field name="cfdi_version" />
+                        </group>
+                        <group>
+                            <field name="payment_way_id" readonly="1" />
+                            <field name="payment_method" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="currency_id" readonly="1" />
+                            <field name="currency_rate" readonly="1" />
+                            <field name="amount" readonly="1" />
+                        </group>
+                    </group>
+                    <separator string="Notes" />
+                    <field
+            name="notes"
+            nolabel="1"
+            placeholder="Enter here the internal notes for this document."
+          />
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- sat.documents search view -->
+    <record id="sat_documents_view_search" model="ir.ui.view">
+        <field name="name">sat.documents.view.search</field>
+        <field name="model">sat.documents</field>
+        <field name="arch" type="xml">
+            <search string="Search Description">
+                <field name="name" filter_domain="[('name', 'ilike', self)]" />
+                <field
+          name="issuing_partner"
+          filter_domain="[('issuing_partner', 'ilike', self)]"
+        />
+                <field
+          name="issuing_partner_vat"
+          filter_domain="[('issuing_partner_vat', 'ilike', self)]"
+        />
+                <field
+          name="receiver_partner"
+          filter_domain="[('receiver_partner', 'ilike', self)]"
+        />
+                <field
+          name="receiver_partner_vat"
+          filter_domain="[('receiver_partner_vat', 'ilike', self)]"
+        />
+                <field
+          name="move_id"
+          filter_domain="[('move_id', 'ilike', self)]"
+        />
+                <separator />
+                <filter
+          string="Draft"
+          name="state_draft_filter"
+          domain="[('move_id', '=', False)]"
+        />
+                <filter
+          string="Posted"
+          name="state_posted_filter"
+          domain="[('move_id', '!=', False)]"
+        />
+                <separator />
+                <filter
+          name="date_filter"
+          date="date"
+          default_period="this_month"
+        />
+                <separator />
+                <filter
+          string="Issued"
+          name="issued_filter"
+          domain="[('issuing_type', '=', 'I')]"
+        />
+                <filter
+          string="Received"
+          name="received_filter"
+          domain="[('issuing_type', '=', 'R')]"
+        />
+                <separator />
+                <filter
+          string="PPD"
+          name="payment_method_ppd_filter"
+          domain="[('payment_method','=','PPD')]"
+        />
+                <filter
+          string="PUE"
+          name="payment_method_pue_filter"
+          domain="[('payment_method','=','PUE')]"
+        />
+                <separator />
+                <filter
+          string="Company currency"
+          name="company_currency_filter"
+          domain="[('currency_id.name','=','MXN')]"
+        />
+                <filter
+          string="Foreign currency"
+          name="foreign_currency_filter"
+          domain="[('currency_id.name','!=','MXN')]"
+        />
+                <separator />
+                <filter
+          string="Issuing partner"
+          name="issuing_partner_filter"
+          domain="[]"
+          context="{'group_by': 'issuing_partner_vat'}"
+        />
+                <filter
+          string="Receiver partner"
+          name="receiver_partner_filter"
+          domain="[]"
+          context="{'group_by': 'receiver_partner_vat'}"
+        />
+                <filter
+          string="Issuing type"
+          name="issuing_type_filter"
+          domain="[]"
+          context="{'group_by': 'issuing_type'}"
+        />
+                <filter
+          string="CFDI type"
+          name="type_filter"
+          domain="[]"
+          context="{'group_by': 'cfdi_type'}"
+        />
+                <filter
+          string="Payment way"
+          name="payment_way_filter"
+          domain="[]"
+          context="{'group_by': 'payment_way_id'}"
+        />
+                <filter
+          string="Currency"
+          name="currency_filter"
+          domain="[]"
+          context="{'group_by': 'currency_id'}"
+          groups="base.group_multi_currency"
+        />
+            </search>
+        </field>
+    </record>
+    <!-- sat.documents action window -->
+    <record id="entry_sat_documents_action" model="ir.actions.act_window">
+        <field name="name">Entry SAT Documents</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="entry_sat_documents_view_tree" />
+        <field
+      name="context"
+    >{'search_default_date_filter':1, 'search_default_state_draft_filter':1,'search_default_received_filter':1}</field>
+        <field name="domain">[('cfdi_type','=','I')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new SAT Document.
+            </p><p>
+                These records are created at dowloading SAT data from the Company information.
+            </p>
+        </field>
+    </record>
+    <record id="charge_sat_documents_action" model="ir.actions.act_window">
+        <field name="name">Charge SAT Documents</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_date_filter':1}</field>
+        <field name="domain">[('cfdi_type','=','E')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new SAT Document.
+            </p><p>
+                These records are created at dowloading SAT data from the Company information.
+            </p>
+        </field>
+    </record>
+    <record id="payment_sat_documents_action" model="ir.actions.act_window">
+        <field name="name">Payment SAT Documents</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_date_filter':1}</field>
+        <field name="domain">[('cfdi_type','=','P')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new SAT Document.
+            </p><p>
+                These records are created at dowloading SAT data from the Company information.
+            </p>
+        </field>
+    </record>
+    <record id="payroll_sat_documents_action" model="ir.actions.act_window">
+        <field name="name">Payroll SAT Documents</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_date_filter':1}</field>
+        <field name="domain">[('cfdi_type','=','N')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new SAT Document.
+            </p><p>
+                These records are created at dowloading SAT data from the Company information.
+            </p>
+        </field>
+    </record>
+    <record id="picking_sat_documents_action" model="ir.actions.act_window">
+        <field name="name">Picking SAT Documents</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sat.documents</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_date_filter':1}</field>
+        <field name="domain">[('cfdi_type','=','T')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new SAT Document.
+            </p><p>
+                These records are created at dowloading SAT data from the Company information.
+            </p>
+        </field>
+    </record>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem
+    id="sat_documents_root_menu"
+    name="SAT Documents"
+    parent="account_accountant.menu_accounting"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="5"
+  />
+    <menuitem
+    id="entry_sat_documents_menu"
+    name="I - Entry"
+    parent="sat_documents_root_menu"
+    action="entry_sat_documents_action"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="1"
+  />
+    <menuitem
+    id="charge_sat_documents_menu"
+    name="E - Charge"
+    parent="sat_documents_root_menu"
+    action="charge_sat_documents_action"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="2"
+  />
+    <menuitem
+    id="payment_sat_documents_menu"
+    name="P - Payments"
+    parent="sat_documents_root_menu"
+    action="payment_sat_documents_action"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="3"
+  />
+    <menuitem
+    id="payroll_sat_documents_menu"
+    name="N - Payroll"
+    parent="sat_documents_root_menu"
+    action="payroll_sat_documents_action"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="4"
+  />
+    <menuitem
+    id="picking_sat_documents_menu"
+    name="T - Pickings"
+    parent="sat_documents_root_menu"
+    action="picking_sat_documents_action"
+    groups="l10n_mx_sat_sync.group_sat_documents"
+    sequence="5"
+  />
+</odoo>

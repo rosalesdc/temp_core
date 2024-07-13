@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="meli_action_products" model="vex.restapi.list">
+            <field name="name">Products</field>
+            <field name="model">product.template</field>
+            <field name="argument">products</field>
+            <field name="automatic">True</field>
+            <field name="export">True</field>
+            <field name="importv">True</field>
+        </record>
+
+        <record id="meli_action_fee" model="vex.restapi.list">
+            <field name="name">Fee Lines</field>
+            <field name="model">product.pricelist</field>
+            <field name="argument">fee</field>
+            <field name="automatic">False</field>
+            <field name="export">False</field>
+            <field name="importv">False</field>
+        </record>
+
+        <record id="meli_action_categories" model="vex.restapi.list">
+            <field name="name">Categories</field>
+            <field name="model">product.category</field>
+            <field name="argument">categories</field>
+            <field name="automatic">False</field>
+            <field name="export">False</field>
+            <field name="importv">True</field>
+        </record>
+
+        <record id="meli_action_customers" model="vex.restapi.list">
+            <field name="name">Customers</field>
+            <field name="model">res.partner</field>
+            <field name="argument">customers</field>
+            <field name="automatic">False</field>
+            <field name="export">False</field>
+            <field name="importv">False</field>
+        </record>
+
+        <record id="meli_action_orders" model="vex.restapi.list">
+            <field name="name">Orders</field>
+            <field name="model">sale.order</field>
+            <field name="argument">orders</field>
+            <field name="automatic">True</field>
+            <field name="export">False</field>
+            <field name="importv">True</field>
+            <field name="per_page">3</field>
+        </record>
+
+        <record id="meli_action_attributes" model="vex.restapi.list">
+            <field name="name">Attributes</field>
+            <field name="model">product.attribute</field>
+            <field name="argument">attributes</field>
+            <field name="automatic">True</field>
+            <field name="export">False</field>
+            <field name="importv">False</field>
+        </record>
+
+    </data>    
+</odoo>

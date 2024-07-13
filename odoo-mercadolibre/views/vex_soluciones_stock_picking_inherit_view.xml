@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_picking_form_meli_shipping" model="ir.ui.view">
+        <field name="name">stock.picking.form.meli</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+                <xpath expr="//page[@name='note']" position="after">
+                    <page string="MELI SHIPPING">
+                       <group>
+                            <field name="vex_meli_shipment_id"/>
+                            <field name="vex_meli_shipment_type"></field>
+                            <field name="vex_meli_shipment_logistic_type"></field>
+                            <field name="vex_meli_shipment_status"></field>
+                            <field name="vex_meli_shipment_listing_type"></field>                            
+                       </group>
+                    </page>
+                    <page name="label" string="Shipment Label">
+                        <button name="print_ticket" type="object"
+                            class="oe_stat_button btn-primary" icon="fa-spinner" attrs="{'invisible': [('vex_meli_shipment_status', '!=', 'ready_to_ship')]}">
+                                Print Shipment Label
+                        </button>
+                        <field name="shipment_label" widget='pdf_viewer' nolabel="1"/>
+                    </page>                      
+                </xpath>
+            </field>
+    </record>
+
+
+    <record id="vpicktree_stock" model="ir.ui.view">
+        <field name="name">stock.picking.view.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="vex_meli_shipment_id"></field>
+                <field name="vex_meli_shipment_type" invisible="1"></field>
+                <field name="vex_meli_shipment_logistic_type"></field>
+                <field name="vex_meli_shipment_status"></field>
+                <field name="vex_meli_shipment_listing_type" invisible="1"></field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

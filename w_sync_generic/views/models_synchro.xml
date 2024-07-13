@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="models_synchro_tree_view" model="ir.ui.view">
+        <field name="name">models.synchro.tree</field>
+        <field name="model">models.synchro</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="models_synchro_form_view" model="ir.ui.view">
+        <field name="name">models.synchro.form</field>
+        <field name="model">models.synchro</field>
+        <field name="arch" type="xml">
+            <form string="Model Synchro">
+                <sheet>
+                    <group col="8">
+                        <field name="name" colspan="4"/>
+                        <field name="code" colspan="4"/>
+                    </group>
+                    <newline/>
+                    <notebook>
+                        <page string="Fields">
+                            <field name="fields_ids" nolabel="1">
+                                <tree editable="bottom" >
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="type"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_models_synchro_url" model="ir.actions.act_window">
+        <field name="name">Models Synchro</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">models.synchro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Models"
+        id="menu_models_config"
+        parent="syncro_menu_config"
+        action="action_models_synchro_url"
+        sequence="2"/>
+</odoo>

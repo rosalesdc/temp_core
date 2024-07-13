@@ -1,0 +1,101 @@
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="max-width: 100%;">
+        <h2 class="oe_slogan">Global Invoice MX EDI</h2>
+        <h3 class="oe_slogan">Helps you to generate a global invoice.</h3>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Generate a global invoice.<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                In order to generate a global invoice we have to take into account the following conditions, fist;
+                mark the check "Global invoice" at the invoice form and fill the rest of fields that are required
+                when this field is marked.
+            </p>
+            <ul>
+                <li>Periodicity: Field required to record the period to which it corresponds the global voucher information. When the value of this field is "05" the Fiscal Regime field it should be "621".</li>
+                <li>Months: The key of the month or months to which corresponds to the information of the operations carried out with the public in general.</li>
+                <li>Year: The year to which the information corresponds to a Global Invoice. The registered value must be equal to the current year or the year immediately preceding considering the registered in the Date of issue of the voucher.</li>
+            </ul>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/gloabal_invoice.png">
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                If you mark the invoice as a Global invoice and you select a partner tha does not have informatation that
+                a global invoice requires, a message apprears at the invoice form, indicating that the Global invoice requires
+                certain information to be generated.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/wrong_partner.png">
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                If you have not corrected the information of the customer and try to confirm the invoice, valition message will be
+                shown to avoid the post of the invoice and again, the message indicates that you have to correct the partner information.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/raise_message.png">
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                If everything is correct, you confirm the invoice and if the informatation required for the CFDI is too correct,
+                the CFDI with the global information node will be generated and sign by SAT.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/correct_invoice.png">
+            </div>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshot/cfdi.png">
+                At the CFDI(XML) the InformacionGlobal is added.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- footer section starts-->
+<section class="oe_container">
+    <div class="oe_row" style="max-width:100%;">
+        <hr style="border-top: 1px solid #1C3D59; margin-bottom: 5px;">
+        <div class="oe_span6">
+            <br />
+            <p style="font-size:16px; text-align: justify;"><b>We are</b> a team of passionate people whose goal is to
+                improve everyone's
+                life through disruptive products. We build great products to solve your business problems.
+                Our products are designed for small to medium size companies willing to optimize their performance.
+            </p>
+            <div class="oe_span12" style="max-width: 100%;">
+                <h2 class="text-center">Help and Support</h2>
+                <p class="text-center">Please feel free to contact us if you need technical or functional support, also
+                    you can find more of our excellent apps in the Odoo store.</p>
+            </div>
+            <br />
+            <div class="oe_slogan oe_spaced">
+                <span><a data-toggle="tooltip" data-placement="bottom" title="Get Instant Support!" rel="nofollow"
+                        href="mailto:soporte@birtum.odoo.com"><i class="fa fa-ticket"></i> Support</a></span>
+                <span><a data-toggle="tooltip" data-placement="bottom" target="_blank" href="#"><i
+                            class="fa fa-shopping-cart"></i> Visit our store</a></span>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <a href="https://www.birtum.com" target="_blank" r>
+                    <img src="birtum.jpg" width="80px" height="auto">
+                </a>
+                <div class="oe_demo_footer oe_centeralign">Meet Us</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section end-->

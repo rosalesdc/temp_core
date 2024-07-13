@@ -1,0 +1,1486 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_fast_invoicing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-08 13:24+0000\n"
+"PO-Revision-Date: 2023-08-08 09:40-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.dismissible_alert
+msgid ""
+"\". Maybe that\n"
+"                        order is already invoiced. Contact your admin."
+msgstr ""
+"\".\n"
+"                            Puede ser que ese pedido ya esté facturado.\n"
+"                            Contacte con el responsable."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.not_allowed_to_invoice_alert
+msgid ""
+"\". is not allowed to invoice, The\n"
+"                        invoice issuance time has expired. Contact your admin."
+msgstr ""
+"\". no esta permitida de facturar, El\n"
+"                        tiempo de facturación configurado para facturar se ha vencido. Póngase en contacto con su administrador."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.not_confirmed_alert
+msgid ""
+"\". is not confirmed. Contact your\n"
+"                        admin."
+msgstr ""
+"\".\n"
+"                            no está confirmado.\n"
+"                            Póngase en contacto con su administrador."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "% discount"
+msgstr "Dto %"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.sale_order_portal_content_inherit_fast_invoicing
+msgid ""
+"<em>\n"
+"                        For SAT dispose, domicile field is removed because is not required\n"
+"                    </em>"
+msgstr ""
+"<em>\n"
+"                            Por disposición del SAT, se elimina el campo del domicilio al no ser obligatorio\n"
+"                        </em>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_order_page
+msgid "<i class=\"fa fa-check\"/> Make invoice"
+msgstr ""
+"<i class=\"fa fa-check\"/>\n"
+"                                        Facturar"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<i class=\"fa fa-download mr-1\" role=\"img\" aria-label=\"Download\" title=\"Download\"/>"
+msgstr "<i class=\"fa fa-download mr-1\" role=\"img\" aria-label=\"Descargar\" title=\"Descargar\"/>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "<i class=\"fa fa-download\"/> Download pdf"
+msgstr ""
+"<i class=\"fa fa-download\"/>\n"
+"                                                Descargar pdf"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "<i class=\"fa fa-download\"/> Download xml"
+msgstr ""
+"<i class=\"fa fa-download\"/>\n"
+"                                                Descargar xml"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_order_page
+msgid "<i class=\"fa fa-edit\"/> Generate invoice"
+msgstr ""
+"<i class=\"fa fa-edit\"/>\n"
+"                                        Generar Factura"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid ""
+"<i class=\"fa fa-fw fa-check\"/>\n"
+"                                    <b>Paid</b>"
+msgstr ""
+"<i class=\"fa fa-fw fa-check\"/>\n"
+"                                        <b>Pagar</b>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid ""
+"<i class=\"fa fa-fw fa-clock-o\"/>\n"
+"                                    <b>Waiting Payment</b>"
+msgstr ""
+"<i class=\"fa fa-check\"/>\n"
+"                                        Esperando Pago"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "<i class=\"fa fa-send\"/> Send by Email"
+msgstr ""
+"<i class=\"fa fa-send\"/>\n"
+"                                                   Enviar por Email"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid ""
+"<span class=\"col-xs-4 col-md-3 col-form-label\">\n"
+"                            Reference to Invoice\n"
+"                        </span>"
+msgstr ""
+"<span class=\"col-xs-4 col-md-3 col-form-label\">\n"
+"                                Referencia a Facturar\n"
+"                            </span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "<span class=\"o_form_label\">Default VAT number</span>"
+msgstr "<span class=\"o_form_label\">RFC por defecto</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "<span class=\"o_form_label\">Default partner</span>"
+msgstr "<span class=\"o_form_label\">Contacto por defecto</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "<span class=\"o_form_label\">Limits times to invoice</span>"
+msgstr "<span class=\"o_form_label\">Límite de tiempo para facturar</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "<span class=\"o_form_label\">Notification channels</span>"
+msgstr "<span class=\"o_form_label\">Canal de Notificaciones</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">City</span>"
+msgstr "<span class=\"s_website_form_label_content\">Ciudad</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">Country</span>"
+msgstr "<span class=\"s_website_form_label_content\">Pais</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid ""
+"<span class=\"s_website_form_label_content\">Email</span>\n"
+"                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Correo</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid ""
+"<span class=\"s_website_form_label_content\">Fiscal Regime</span>\n"
+"                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Régimen Fiscal</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">Mobile</span>"
+msgstr "<span class=\"s_website_form_label_content\">Movil</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid ""
+"<span class=\"s_website_form_label_content\">Name</span>\n"
+"                                        <span class=\"s_website_form_mark\"> *</span>"
+msgstr ""
+"<span class=\"s_website_form_label_content\">Nombre</span>\n"
+"                                                <span class=\"s_website_form_mark\"> *</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">Phone</span>"
+msgstr "<span class=\"s_website_form_label_content\">Teléfono</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">State</span>"
+msgstr "<span class=\"s_website_form_label_content\">Estado</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">Street</span>"
+msgstr "<span class=\"s_website_form_label_content\">Calle</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "<span class=\"s_website_form_label_content\">Zip</span>"
+msgstr "<span class=\"s_website_form_label_content\">CP</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid ""
+"<span>\n"
+"                                    Amount\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                        Valor\n"
+"                                    </span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid ""
+"<span>\n"
+"                                    Total Price\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                        Precio Total\n"
+"                                    </span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<span>Discount</span>"
+msgstr "<span>Descuento</span>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong class=\"d-block mb-1\">Invoice</strong>"
+msgstr "<strong class=\"d-block mb-1\">Factura</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Direccion:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong>Amount tax</strong>"
+msgstr "<strong>Impuestos</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.sale_order_portal_content_inherit_fast_invoicing
+msgid "<strong>CFDI Use</strong>"
+msgstr "<strong>Uso del CFDI</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.sale_order_portal_content_inherit_fast_invoicing
+msgid "<strong>Email:</strong>"
+msgstr "<strong>Correo:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong>Name:</strong>"
+msgstr "<strong>Nombre:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Fecha de orden:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.sale_order_portal_content_inherit_fast_invoicing
+msgid "<strong>Phone:</strong>"
+msgstr "<strong>Teléfono:</strong>"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.sale_order_portal_content_inherit_fast_invoicing
+msgid "<strong>VAT:</strong>"
+msgstr "<strong>RFC:</strong>"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Acquisition of merchandise"
+msgstr "Adquisición de mercancías"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__amount
+msgid "Amount"
+msgstr "Importe"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_bank_statement_line__auto_invoice_partner
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_move__auto_invoice_partner
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment__auto_invoice_partner
+msgid "Auto Invoice Partner"
+msgstr "Contacto de Auto Factura"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_bank_statement_line__auto_invoice_vat
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_move__auto_invoice_vat
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment__auto_invoice_vat
+msgid "Auto Invoice Vat"
+msgstr "RFC Auto Factura"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_bank_statement_line__auto_payment_policy
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_move__auto_payment_policy
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment__auto_payment_policy
+msgid "Auto Payment Policy"
+msgstr "Plazo de pago"
+
+#. module: b_fast_invoicing
+#: model:ir.actions.server,name:b_fast_invoicing.action_auto_invoice_server
+msgid "Auto invoice"
+msgstr "Autofacturar"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Buscar"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Can not access to requested order. Check access!"
+msgstr "No se puede acceder al pedido solicitado. Verifique el acceso con su administrador!"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Can not find or create partner with that information!"
+msgstr "No se pudo registrar sus datos en nuestro sistema, verifique nuevamente!"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Can not send email. Contact your admin."
+msgstr "No se pudo enviar el Email. Por favor contacte con el responsable."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__account_payment_manual__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Channels to notify the issues in auto invoice process."
+msgstr "Canales para notificar los problemas en el proceso de facturación automática."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.actions.act_window,help:b_fast_invoicing.act_account_payment_view
+msgid "Click to create a new Payment."
+msgstr "Click para crear un nuevo Pago."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.progress_wizard
+msgid "Client"
+msgstr "Cliente"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.dismissible_alert_null
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Equipo de cómputo y accesorios"
+msgstr "Equipo de cómputo y accesorios"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Constructions"
+msgstr "Construcciones"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Create a time limit to grant invoiced in portal."
+msgstr "Crea un tiempo límite para realizar la factura desde el portal."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__payment_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_company__fi_generic_vat_number
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_config_settings__fi_generic_vat_number
+msgid "Default Invoicing VAT"
+msgstr "RFC de facturación por defecto"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_company__fi_res_partner
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_config_settings__fi_res_partner
+msgid "Default partner"
+msgstr "Contacto por defecto"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Default partner for generic invoice process."
+msgstr "Contacto predeterminado para el proceso de factura genérica."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Default partner used to invoice orders."
+msgstr "Contacto predeterminado utilizado para facturar pedidos."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Default vat number for generic invoice process."
+msgstr "RFC predeterminado para el proceso de factura genérica."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones."
+msgstr "Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Details"
+msgstr "Detalles"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Dados, troqueles, moldes, matrices y herramental"
+msgstr "Dados, troqueles, moldes, matrices y herramental"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__res_company__define_time_create_invoice__not_deny
+msgid "Do not set limit"
+msgstr "No imponer límites"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_pos_config__domain
+msgid "Domain"
+msgstr "Dominio Sitio Web"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "Don't leave yet,<br />it's still loading..."
+msgstr "No te vayas todavía,<br />aún se está cargando..."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Donativos"
+msgstr "Donativos"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "Download"
+msgstr "Descargar"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__account_payment_manual__state__draft
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_account_payment_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_account_payment_search
+msgid "Draft Payments"
+msgstr "Pagos en borrador"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "El número de RFC es requerido para realizar la auto factura."
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "El número de RFC es requerido para realizar la autofactura."
+msgstr "El número de RFC es requerido para realizar la auto factura."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Email"
+msgstr "Correo"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Email send successfully!"
+msgstr "Email enviado satisfactoriamente!"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "Enviado !"
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "Error: "
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Failed making invoice, maybe there is no line to invoice!"
+msgstr "No se pudo crear la factura, puede ser que no existan líneas para facturar!"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "Failed making payment. Contact your admin."
+msgstr "No se puedo validar el pago de su factura. Contacte con el administrador para realizar el pago lo antes posible."
+
+#. module: b_fast_invoicing
+#: model:website.menu,name:b_fast_invoicing.menu_website_fast_invoicing_id
+msgid "Fast Invoicing"
+msgstr "Autofactura"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Fast invoicing"
+msgstr "Auto Facturación"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Fiscal Regime"
+msgstr "Régimen Fiscal"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_account_invoice_filter
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_pos_order_filter
+msgid "From AF"
+msgstr "De autofactura"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_bank_statement_line__from_auto_invoice
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_move__from_auto_invoice
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment__from_auto_invoice
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_pos_order__from_auto_invoice
+msgid "From Auto Invoice"
+msgstr "Desde autofactura"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "From here you can do the VAT search for contacts."
+msgstr "Desde esta pantalla puede buscar los contactos y registrarlos segun el RFC."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "From here you can start search sale orders to be invoiced."
+msgstr "Desde esta pantalla puede buscar los pedidos de ventas que desea facturar."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Gastos funerales"
+msgstr "Gastos funerales"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_account_invoice_filter
+msgid "General Public"
+msgstr "Público en general"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Gastos en general"
+msgstr "Gastos en general"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_pos_pos_inv_ref_form
+msgid "Generate Ref"
+msgstr "Generar Referencia"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Generic"
+msgstr "Genérico"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__message_has_error
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/xml/inherit_pos_ticket.xml:0
+#, python-format
+msgid "If you want to invoice this order visit:"
+msgstr "Si desea facturar este pedido visite:"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__l10n_mx_edi_payment_method_id
+msgid "Indicates the way the payment was/will be received, where the options could be: Cash, Nominal Check, Credit Card, etc."
+msgstr ""
+"Indica la forma en que el pago fue/será recibido, donde las opciones pueden ser: Efectivo, Cheque Nominal, Tarjeta de Crédito, "
+"etc."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.progress_wizard
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__invoice_count
+msgid "Invoice Count"
+msgstr "# Facturas"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_error
+msgid "Invoice Error"
+msgstr "Error en Factura"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "Invoice View"
+msgstr "Vista Factura"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/inherit_account_payment_model.py:0
+#, python-format
+msgid "Invoice {} added to payment."
+msgstr "Factura {} adicionada al pago."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/manual_account_payment_model.py:0
+#, python-format
+msgid "Invoice(s)"
+msgstr "Factura(s)"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__invoice_ids
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_pos_order__invoicing_ref
+msgid "Invoicing Ref"
+msgstr "Referencia Facturación"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Invoicing for"
+msgstr "Facturación para"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento de diario"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0 code:addons/b_fast_invoicing/static/src/xml/throbber.xml:0
+#, python-format
+msgid "Loading..."
+msgstr "Cargando..."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Lot"
+msgstr "Lote"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Make Invoice"
+msgstr "Facturar"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__res_company__define_time_create_invoice__month
+msgid "Make invoice in the same month"
+msgstr "Realizar la factura el mismo mes"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__res_company__define_time_create_invoice__x_days
+msgid "Make invoice x days after sale"
+msgstr "Realizar la factura antes del día x despues"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Gastos de transportación escolar obligatoria"
+msgstr "Gastos de transportación escolar obligatoria"
+
+#. module: b_fast_invoicing
+#: model:ir.ui.menu,name:b_fast_invoicing.menu_act_account_payment_view
+msgid "Manual payments"
+msgstr "Pagos manuales"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Massive Sale Orders Fast invoicing"
+msgstr "Pedidos de venta masivos Facturación rápida"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "Maybe you should consider reloading the application by pressing F5..."
+msgstr "Tal vez debería considerar recargar la aplicación presionando F5..."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Gastos médicos por incapacidad o discapacidad"
+msgstr "Gastos médicos por incapacidad o discapacidad"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Primas por seguros de gastos médicos"
+msgstr "Primas por seguros de gastos médicos"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Honorarios médicos, dentales y gastos hospitalarios."
+msgstr "Honorarios médicos, dentales y gastos hospitalarios."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__communication
+msgid "Memo"
+msgstr "Circular"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Name"
+msgstr "Nombre"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.dismissible_alert_null
+msgid "Need to add a sale order reference before."
+msgstr "Necesita agregar una referencia de orden de venta antes."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Próximo evento del calendario de actividades"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.dismissible_alert
+msgid "No sale order found with criteria \""
+msgstr "No se ha encontrado ningún pedido con el criterio \""
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_company__fi_notification_channel_ids
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_config_settings__fi_notification_channel_ids
+msgid "Notification channels"
+msgstr "Canales de notificación"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_has_error_counter
+msgid "Number of errors"
+msgstr "# de errores"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Mobilario y equipo de oficina por inversiones"
+msgstr "Mobilario y equipo de oficina por inversiones"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "One of the parts of the number are invalid or unknown."
+msgstr "Una de las partes del número es incorrecta o desconocida."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.progress_wizard
+msgid "Order"
+msgstr "Orden"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__order_count
+msgid "Order Count"
+msgstr "# Pedidos"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_order_page
+msgid "Order View"
+msgstr "Orden"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__order_ids
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+msgid "Orders"
+msgstr "# Pedidos"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Otra maquinaria y equipo"
+msgstr "Otra maquinaria y equipo"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__partner_id
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_tree
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.view_account_payment_search
+msgid "Payment"
+msgstr "Pago"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__payment_count
+msgid "Payment Count"
+msgstr "# Pagos"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__l10n_mx_edi_payment_method_id
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_pos_payment_method__l10n_mx_edi_payment_method_id
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Payment Way"
+msgstr "Forma de pago"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/manual_account_payment_model.py:0
+#, python-format
+msgid "Payment(s)"
+msgstr "Pago (s)"
+
+#. module: b_fast_invoicing
+#: model:ir.actions.act_window,name:b_fast_invoicing.act_account_payment_view
+#: model:ir.model,name:b_fast_invoicing.model_account_payment
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__payment_ids
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.account_payment_view_form
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Pagos por servicios educativos (colegiaturas)"
+msgstr "Pagos por servicios educativos (colegiaturas)"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_company__define_time_create_invoice
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_config_settings__define_time_create_invoice
+msgid "Picking Policy"
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/manual_account_payment_model.py:0
+#, python-format
+msgid "Please set a positive amount."
+msgstr "Por favor, ingrese un importe positivo."
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del punto de venta"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del PdV"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Métodos de pago de Punto de venta "
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Products"
+msgstr "Productos"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/b_fast_invoicing.js:0
+#, python-format
+msgid "RFC"
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)."
+msgstr "Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación)."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "Register Partner"
+msgstr "Registrar Contacto"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+msgid "Registred"
+msgstr "Registrar"
+
+#. module: b_fast_invoicing
+#: model:res.groups,name:b_fast_invoicing.group_reserve_payment
+msgid "Reserve payment for sale order"
+msgstr "Pago de reserva para orden de venta"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Devoluciones, descuentos o bonificaciones"
+msgstr "Devoluciones, descuentos o bonificaciones"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_error
+msgid "Sale Order"
+msgstr "Orden venta"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment__reserved_order_id
+msgid "Sale order"
+msgstr "Pedido de venta"
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/manual_account_payment_model.py:0
+#, python-format
+msgid "Sales Order(s)"
+msgstr "Pedido de venta(s)"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Comunicaciones satelitales"
+msgstr "Comunicaciones satelitales"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.progress_wizard
+msgid "Search"
+msgstr "Buscar"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_header
+msgid "Search View"
+msgstr "Buscar"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_pos_order__access_token
+msgid "Security Token"
+msgstr "Token de seguridad"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_view
+msgid "Send"
+msgstr "Enviar"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "Still loading..."
+msgstr "Sigue cargando..."
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "Still loading...<br />Please be patient."
+msgstr "Todavía cargando...<br />Tenga paciencia."
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "Take a minute to get a coffee,<br />because it's loading..."
+msgstr "Tómese un minuto para tomar un café,<br />porque se está cargando..."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.report_invoice_document
+msgid "Tax ID"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment__reserved_order_id
+msgid "Technical field used to reserve a payment to sale order."
+msgstr "Campo técnico utilizado para reservar el pago a un pedido de venta."
+
+#. module: b_fast_invoicing
+#: model:ir.model,name:b_fast_invoicing.model_account_payment_manual
+msgid "Technical module to separate payments."
+msgstr "Modelo para dividir pagos."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Comunicaciones telefónicas"
+msgstr "Comunicaciones telefónicas"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Terms &amp; Conditions"
+msgstr "Términos &amp; Condiciones"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "The client has been created successfully"
+msgstr "El contacto ha sido creado con exito"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "The number has an invalid format."
+msgstr "El número tiene un formato incorrecto."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "The number has an invalid length."
+msgstr "El número tiene un tamaño incorrecto."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "The number\"s checksum or check digit is invalid."
+msgstr "La suma de verificación del número o la verificación de dígitos es incorrecta."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.not_allowed_to_invoice_alert
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.not_confirmed_alert
+msgid "The sale order \""
+msgstr "La orden de venta\""
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/inherit_account_payment_model.py:0
+#, python-format
+msgid "There are more than one auto invoices with different VAT number."
+msgstr "Existe más de una factura con número de RFC distinto."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/inherit_account_invoice_model.py:0
+#, python-format
+msgid "There is no a generic vat number defined for massive invoicing!"
+msgstr "No existe un número de rfc genérico definido para la facturación masiva!"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "This invoice has been created by user {}"
+msgstr "Esta factura ha sido creada por el usuario {}"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_order_page
+msgid ""
+"This order is invoiced with\n"
+"                                number"
+msgstr "Este pedido se factura con el número"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/models/inherit_account_invoice_model.py:0
+#, python-format
+msgid "This payment is reserved for SO %s"
+msgstr "Este pago está reservado para el pedido de venta %s"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid ""
+"To complete the invoicing specify the following info. After write\n"
+"                                your VAT click in Search\n"
+"                                button to find any coincidence and fill the data automatically."
+msgstr ""
+"Para completar la facturación especifique la siguiente información. Después de escribir su RFC, haga clic en Buscar\n"
+"                                    botón para encontrar cualquier coincidencia y rellenar los datos automáticamente."
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Por definir"
+msgstr "Por definir"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Equipo de transporte"
+msgstr "Equipo de transporte"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.pos_order_content
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "Uso de CFDI"
+msgstr ""
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.client_header
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "VAT"
+msgstr "RFC"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.res_config_settings_view_form_fast_invoice
+msgid "VAT number used to invoice orders."
+msgstr "RFC utilizado para facturar pedidos."
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields.selection,name:b_fast_invoicing.selection__account_payment_manual__state__posted
+msgid "Validated"
+msgstr "Validado"
+
+#. module: b_fast_invoicing
+#. odoo-python
+#: code:addons/b_fast_invoicing/controllers/controllers.py:0
+#, python-format
+msgid "Aportaciones voluntarias al SAR"
+msgstr "Aportaciones voluntarias al SAR"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_analytic_account__website_id
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_account_payment_manual__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,help:b_fast_invoicing.field_account_payment_manual__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: b_fast_invoicing
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_company__limit_days_to_invoice
+#: model:ir.model.fields,field_description:b_fast_invoicing.field_res_config_settings__limit_days_to_invoice
+msgid "X Days"
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/js/misc.js:0
+#, python-format
+msgid "You may not believe it,<br />but the application is actually loading..."
+msgstr "Puede que no lo creas,<br />pero la aplicación se está cargando..."
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoicing_invoicing_modal
+msgid "close"
+msgstr "cerrar"
+
+#. module: b_fast_invoicing
+#: model_terms:ir.ui.view,arch_db:b_fast_invoicing.invoice_error
+msgid "not invoiced."
+msgstr ""
+
+#. module: b_fast_invoicing
+#. odoo-javascript
+#: code:addons/b_fast_invoicing/static/src/xml/inherit_pos_ticket.xml:0
+#, python-format
+msgid "using this reference:"
+msgstr "utilizando esta referencia:"

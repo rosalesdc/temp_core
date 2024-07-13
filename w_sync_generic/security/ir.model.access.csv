@@ -1,0 +1,13 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_history_synchro,access_history_synchro,model_history_synchro_log,,1,0,1,0
+access_model_external,access_model_external,model_model_external,,1,1,1,1
+access_synchro_obj,access_synchro_obj,model_synchro_obj,,1,1,1,1
+access_web_service_url,access_web_service_url,model_web_service_url,,1,1,1,1
+access_models_synchro,access_models_synchro,model_models_synchro,,1,1,1,1
+access_fields_synchro,access_fields_synchro,model_fields_synchro,,1,1,1,1
+access_model_records_unlinked,access_model_records_unlinked,model_model_records_unlinked,,1,0,0,0
+access_web_service_header_line,access_web_service_header_line,model_web_service_header_line,,1,1,1,1
+access_web_service_api_rest,access_web_service_api_rest,model_web_service_api_rest,,1,1,1,1
+access_ir_model_all,access_ir_model_all,base.model_ir_model,,1,1,1,1
+access_ir_model_fields_all,access_ir_model_fields_all,base.model_ir_model_fields,,1,1,1,1
+access_function_trigger_all,access_function_trigger_all,model_function_trigger,,1,1,1,1

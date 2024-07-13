@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vex_config_settings_view_tree" model="ir.ui.view">
+        <field name="name">vex.config.settings.view.tree</field>
+        <field name="model">vex.config.settings</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="store" />
+                <field name="instance_id" domain="[('store','=', store)]"/>
+                <field name="frequency" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="vex_config_settings_view_form" model="ir.ui.view">
+        <field name="name">vex.config.settings.view.form</field>
+        <field name="model">vex.config.settings</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group col="2">
+                        <group name="import_synchronization" string="Import Synchronization">
+                            <field name="store" />
+                            <field name="instance_id" domain="[('store','=', store)]"/>
+                            <field name="frequency"/>
+                        </group>
+                        <group name="export_synchronization" string="Export Synchronization">
+                            <field name="export_to"  widget="many2many_tags"/>
+                            <field name="export_stock" />
+                            <field name="export_price" />
+                        </group>
+
+                        <!-- <group name="price_import_synchronization" string="Price Import Synchronization">
+                        
+                        </group>
+                        <group name="price_export_synchronization" string="Price Export Synchronization">
+                            <field name="export_to_price" widget="many2many_tags"/>
+                        </group> -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

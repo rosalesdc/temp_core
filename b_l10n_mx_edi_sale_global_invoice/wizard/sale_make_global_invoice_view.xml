@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="b_sale_make_global_invoice_form_view" model="ir.ui.view">
+            <field name="name">b.sale.make.global.invoice.form.view</field>
+            <field name="model">sale.make.global.invoice</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="filters">
+                            <group>
+                                <field name="date_from" widget="date"/>
+                                <field name="date_to" widget="date"/>
+                                <field name="team_id" options="{'no_create_edit': True}"/>
+                                <field name="l10n_mx_edi_payment_method_id"/>
+                                <field name="l10n_mx_edi_valid_global_partner_invoice" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="currency_id" options="{'no_create_edit': True}"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="partner_id" required="1"/>
+                            </group>
+                        </group>
+                        <div class="alert alert-danger" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', ('partner_id', '=', False), ('l10n_mx_edi_valid_global_partner_invoice', '=', True)]}">
+                            The selected partner has no the correct information stablished by SAT. Please correct the required information.<br/>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fa fa-check-square-o text-primary" style="margin-right:5px;"/>
+                                    The name has to be PUBLICO EN GENERAL
+                                </li>
+                                <li>
+                                    <i class="fa fa-check-square-o text-primary" style="margin-right:5px;"/>
+                                    The VAT has to be XAXX010101000
+                                </li>
+                            </ul>
+                        </div>
+                        <group string="Fields for global invoice" attrs="{'invisible': [('l10n_mx_edi_valid_global_partner_invoice', '=', False)]}">
+                            <field name="l10n_mx_edi_periodicidad" attrs="{'required': [('l10n_mx_edi_valid_global_partner_invoice', '=', True)]}"/>
+                            <field name="l10n_mx_edi_meses" attrs="{'required': [('l10n_mx_edi_valid_global_partner_invoice', '=', True)]}"/>
+                            <field name="l10n_mx_edi_global_information_year" attrs="{'required': [('l10n_mx_edi_valid_global_partner_invoice', '=', True)]}"/>
+                        </group>
+                        <field name="sale_order_ids"
+                                   attrs="{'invisible': [('sale_order_ids', '=', [])]}"
+                                   context="{'tree_view_ref': 'sale.view_order_tree'}"/>
+                    </sheet>
+                    <footer style="text-align:left">
+                        <button name="action_invoice_generate" type="object" string="Create Invoice" class="btn btn-sm btn-primary" attrs="{'invisible': [('sale_order_ids', '=', [])]}"/>
+                        <button special="cancel" string="CANCEL"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="b_sale_make_global_invoice_action" model="ir.actions.act_window">
+            <field name="name">Global invoice</field>
+            <field name="res_model">sale.make.global.invoice</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem 
+            id="b_sale_make_global_invoice_menu_root"
+            name="Global invoice"
+            action="b_sale_make_global_invoice_action"
+            parent="sale.menu_sale_invoicing"
+            groups="sales_team.group_sale_salesman,sales_team.group_sale_salesman_all_leads,sales_team.group_sale_manager"
+            sequence="25"/>
+    </data>
+</odoo>

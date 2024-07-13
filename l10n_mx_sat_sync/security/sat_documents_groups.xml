@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<odoo>
+        <record id="group_sat_documents" model="res.groups">
+            <field name="name">SAT Documents</field>
+        </record>
+        <!-- Multicompany rules -->
+        <record id="sat_documents_multicompany_rule" model="ir.rule">
+            <field name="name">SAT Documents multi-company</field>
+            <field name="model_id" ref="model_sat_documents" />
+            <field
+      name="domain_force"
+    >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+            <field
+      name="groups"
+      eval="[(4, ref('l10n_mx_sat_sync.group_sat_documents'))]"
+    />
+        </record>
+</odoo>

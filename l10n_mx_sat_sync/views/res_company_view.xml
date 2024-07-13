@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_company_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.company.view.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page
+          name="sat_sync"
+          string="CFDI SAT Sync"
+          groups="l10n_mx_sat_sync.group_sat_documents"
+        >
+                    <separator string="SAT Synchronization" />
+                    <group>
+                        <field
+              name="l10n_mx_edi_esign_ids"
+              context="{'default_is_esign':True}"
+            />
+                    </group>
+                    <group cols="4">
+                        <group>
+                            <field name="last_cfdi_fetch_date" />
+                        </group>
+                        <group>
+                            <button
+                name="download_cfdi_invoices"
+                class="oe_stat_button"
+                string="Download"
+                type="object"
+              />
+                        </group>
+                    </group>
+                    <separator string="Type SAT Operation" />
+                    <group>
+                        <field name="type_operation_sat" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

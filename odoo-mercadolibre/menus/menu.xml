@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_view_vex_restapi_list_meli" model="ir.actions.act_window">
+        <field name="name">Control Panel</field>
+        <field name="res_model">vex.restapi.list.meli</field>
+        <field name="view_mode">kanban,form</field>
+    </record>
+
+    <record model="ir.actions.client" id="welcome">
+        <field name="name">Dashboard</field>
+        <field name="tag">odoo-mercadolibre.welcome</field>
+    </record>
+
+    <menuitem 
+        id="main_mercadolibre_dashboard_menu_meli"
+        name="Mercadolibre"
+        action="odoo-mercadolibre.action_view_vex_restapi_list_meli"
+        web_icon="odoo-mercadolibre,static/img/icon.png"
+    />
+    
+    <menuitem 
+            name="Dashboard" 
+            id="vex-w-s-dashboard-meli" 
+            parent="main_mercadolibre_dashboard_menu_meli" 
+            action="odoo-mercadolibre.welcome" 
+            sequence="1" />
+
+</odoo>

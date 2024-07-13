@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <record forcecreate="True" id="cron_synchro_data_odoo_external_system" model="ir.cron">
+        <field name="name">Synchronize all data between Odoo and other systems</field>
+        <field name="active" eval="False" />
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">20</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="model_synchro_obj"/>
+        <field name="state">code</field>
+        <field name="code">model.run_via_cron()</field>
+    </record>
+</odoo>

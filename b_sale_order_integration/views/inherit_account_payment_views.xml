@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="inherit_account_payment_sync_options" model="ir.ui.view">
+            <field name="name">inherit.account.payment.sync.options</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group1']/field[last()]" position="after">
+                    <field name="sale_order_id" readonly="1" />
+                    <field name="arx_name" readonly="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

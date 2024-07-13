@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vex_soluciones_instance_view_kanban" model="ir.ui.view">
+        <field name="name">vex.soluciones.instance.view.kanban</field>
+        <field name="model">vex.instance</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="instance_status" invisible="True"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-4 d-flex justify-content-center align-content-center">
+                                    <div class="o_kanban_image oe_kanban_avatar_smallbox" style="align-items: center !important;">
+                                        <field name="image" widget="image"/>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <div class="kanban-name" style="font-size: 16px;"><field name="name"/></div>
+                                </div>
+                                <div class="col-2 d-flex justify-content-end align-content-end">
+                                    <div class="kanban-status">
+                                        <div t-if="record.instance_status">
+                                            <t t-if="record.instance_status.raw_value == 'activo'">
+                                                <i class="fa fa-circle text-success"></i>
+                                            </t>
+                                            <t t-if="record.instance_status.raw_value == 'inactive'">
+                                                <i class="fa fa-circle text-danger"></i>
+                                            </t>
+                                        </div>
+                                        <t t-else="">
+                                            Estado no definido
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="vex_soluciones_instance_view_form" model="ir.ui.view">
+        <field name="name">vex.soluciones.instance.view.form</field>
+        <field name="model">vex.instance</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <field name="status" invisible="1"/>
+    
+                    <div class="step-wizard">
+                        <ul class="step-wizard-list">
+                            <li class="step-wizard-item li_introduction current-item">
+                                <span class="progress-count">1</span>
+                                <span class="progress-label">Introduction</span>
+                            </li>
+                            <li class="step-wizard-item li_initial_settings">
+                                <span class="progress-count">2</span>
+                                <span class="progress-label">Initial settings</span>
+                            </li>
+                            <li class="step-wizard-item li_keys">
+                                <span class="progress-count">3</span>
+                                <span class="progress-label">Keys</span>
+                            </li>
+                            <li class="step-wizard-item li_settings">
+                                <span class="progress-count">4</span>
+                                <span class="progress-label">Settings</span>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="general_content mt-5 mb-5">
+                        <div class="introduction" attrs="{'invisible': [('status', '!=', 'introduction')]}">
+                            <div class="content_introduction">
+                                <div class="row mt-2 mb-2">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="oe_title">
+                                                <div class="col-9">
+                                                    <span class="" style="font-size: 18px; color: black;">Instance name</span>
+                                                    <h1 class="mt-2">
+                                                        <field name="name"/>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 d-flex justify-content-end">
+                                                <field id="imageInstance" name="image" string="Logotipo" widget="image" readonly="0" style="border:none !important; width:100px; border:1px solid black;"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+            
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="" style="font-size: 16px; color: black;">Hello! First of all, tell us which store would you like to connect?</span>
+                                    </div>
+                                </div>
+                                <group class="mt-3 mb-3">
+                                    <group>
+                                        <field name="store"/>
+                                    </group>
+                                    <group>
+                                        
+                                    </group>
+                                </group>
+                                
+                            </div>
+                        </div>
+                        <div class="initial_settings" attrs="{'invisible': [('status', '!=', 'initial_settings')]}">
+                            <div name="content_initial_settings"></div>
+                        </div>
+                        <div class="keys" attrs="{'invisible': [('status', '!=', 'keys')]}">
+                            <div name="content_keys"></div>
+                        </div>
+                        <div class="settings" attrs="{'invisible': [('status', '!=', 'settings')]}">
+                            <div name="content_settings"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="row instance_vex_buttons">
+                        <div class="col-6 d-flex justify-content-start">
+                            <button name="back_instance" type="object" class="btn btn-danger btn-instance" attrs="{'invisible': [('status', '==', 'introduction')]}" onclick="updateStep('back')">Back</button>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <button name="next_instance" type="object" class="btn btn-success btn-instance" attrs="{'invisible': [('status', '==', 'settings')]}" onclick="updateStep('next')">Next</button>
+                        </div>
+                    </div>
+                </sheet>
+
+                <script type="text/javascript">
+                    function updateStep(direction) {
+                        var stepList = document.querySelector('.step-wizard-list');
+                        var currentStep = stepList.querySelector('.current-item');
+                        var currentIndex = Array.from(stepList.children).indexOf(currentStep);
+                
+                        if (direction === 'back' &amp;&amp; currentIndex &gt; 0) {
+                            currentIndex--;
+                        } else if (direction === 'next' &amp;&amp; currentIndex &lt; stepList.children.length - 1) {
+                            currentIndex++;
+                        }
+                
+                        currentStep.classList.remove('current-item');
+                        stepList.children[currentIndex].classList.add('current-item');
+                    }
+                </script>
+            </form>
+        </field>
+    </record>
+
+    <!-- Herdando vista form para agregar el atributo -->
+    <record id="vex_soluciones_instance_view_form_inherited" model="ir.ui.view">
+        <field name="name">vex.soluciones.instance.view.form.inherited</field>
+        <field name="model">vex.instance</field>
+        <field name="inherit_id" ref="vex_soluciones_instance_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="js_class">vex_instance_form_view</attribute>
+            </xpath>
+        </field>
+    </record>
+    
+    
+</odoo>

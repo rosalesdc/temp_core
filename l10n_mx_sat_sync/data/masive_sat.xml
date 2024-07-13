@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record forcecreate='True' id="ir_cron_sdowngload_sat" model="ir.cron">
+      <field name="name">Downgload SAT</field>
+      <field name="user_id" ref="base.user_root" />
+      <field name="model_id" ref="model_res_company" />
+      <field name="state">code</field>
+      <field name="code">model.download_cfdi_invoices_cron()</field>
+      <field name="active" eval="True" />
+      <field name="interval_number">1</field>
+      <field name="interval_type">days</field>
+      <field name="numbercall">-1</field>
+      <field
+      name="nextcall"
+      eval="(datetime.utcnow() + timedelta(days=1)).strftime('%Y-%m-%d 17:00:00')"
+    />
+    </record>
+</odoo>

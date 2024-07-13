@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vex_import_wizard" model="ir.ui.view">
+        <field name="name">vex.import.wizard</field>
+        <field name="model">vex.import.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group name="initial_content_import">
+                            <field name="store" />
+                            <field name="instance_id" domain="[('store','=', store)]"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <div class="row w-100 d-flex justify-content-end mr-1">
+                        <div class="col-2 d-flex justify-content-end p-0">
+                            <button type="object" name="synchronize" class="btn btn-primary ml-3">SYNCHRONIZE</button>
+                        </div>
+                    </div>  
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="vex-store-syncronizer.welcome" owl="1">
+        <div class="o_action_manager custom-whatsapp-suite" bis_skin_checked="1" style="overflow: auto !important;">
+            <div class="o_dashboard_view container mt-5">
+                <div class="o_dashboard_header mb-4 text-center">
+                    <h1>Dashboard</h1>
+                    <p>Mercadolibre</p>
+                </div>
+                <!-- Botón para activar el modal -->
+
+
+                <div class="grid-stack" style="max-height:100vh; overflow-y:scroll">
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content ">
+                            <div class="text-center canvas-container ">
+                                <i class="fa fa-users fa-3x text-primary" aria-hidden="true"></i>
+                                <h6 class="mt-2">Sessions</h6>
+                                <p style="font-size: 24px; font-weight: bold;">20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content">
+                            <div class="text-center canvas-container ">
+                                <i class="fa fa-comments fa-3x text-success" aria-hidden="true"></i>
+                                <h6 class="mt-2">Total Messages</h6>
+                                <p style="font-size: 24px; font-weight: bold;">25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content">
+                            <div class="text-center canvas-container">
+                                <i class="fa fa-hourglass-start fa-3x text-warning" aria-hidden="true"></i>
+                                <h6 class="mt-2">Average Time</h6>
+                                <p style="font-size: 24px; font-weight: bold;">120 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content">
+                            <div class="text-center canvas-container ">
+                                <i class="fa fa-user-plus fa-3x text-danger" aria-hidden="true"></i>
+                                <h6 class="mt-2">Leads Saved</h6>
+                                <p style="font-size: 24px; font-weight: bold;">7</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content">
+                            <div class="text-center canvas-container">
+                                <i class="fa fa-users fa-3x text-info" aria-hidden="true"></i>
+                                <h6 class="mt-2">Agents</h6>
+                                <p style="font-size: 24px; font-weight: bold;">10</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item d-none" gs-w="2" gs-h="2">
+                        <div class="grid-stack-item-content">
+                            <div class="text-center canvas-container">
+                                <i class="fa fa-comments fa-3x text-primary" aria-hidden="true"></i>
+                                <h6 class="mt-2">Click to Chat</h6>
+                                <p style="font-size: 24px; font-weight: bold;">150</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GRAPH -->
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="categoriasProductosChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="productosSincronizadosChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="line1"></canvas>
+                        </div>
+                    </div>
+                    <!-- GRAPH -->
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="pie1"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="doughnut1"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="radar1"></canvas>
+                        </div>
+                    </div>
+                    <!-- GRAPH -->
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="bar1"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="polarArea1"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="3">
+                        <div class="grid-stack-item-content card-body">
+                            <canvas t-ref="bubble1"></canvas>
+                        </div>
+                    </div>
+                    <!-- BOX -->
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="card card-body shadow grid-stack-item-content">
+                            <h5 class="card-title text-center fa-2x">Marketing</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="titleInput" placeholder="Title" t-model="state.title"/>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="descriptionTextarea" placeholder="Description" t-model="state.description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control" id="segmentSelect" t-model="state.selectedSegment" t-on-change="selectSegment">
+                                    <option value="">Select a segment</option>
+                                    <t t-foreach="state.segments" t-as="segment" t-key="segment.id">
+                                        <option t-att-value="segment.id" t-att-selected="segment.id === state.selectedSegment?.id">
+                                            <t t-esc="segment.name"/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary" t-on-click="onMassMessageSent">Enviar Mensajes Masivos</button>
+
+                        </div>
+
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="grid-stack-item-content">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fa-2x">Operadores en vivo</h5>
+                                <ul class="list-group list-group-scrollable p-2">
+                                    <li class="list-group-item" style="border: none;" t-foreach="state.segments" t-as="segment" t-key="segment.id">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="d-flex align-items-center">
+                                                <!-- Contenedor del operador con posicionamiento relativo -->
+                                                <div class="position-relative">
+                                                    <!-- Imagen del operador -->
+                                                    <img t-att-src="'/web/image?model=res.partner&amp;field=avatar_128&amp;id=' + segment.id" alt="Operator Image" class="rounded-circle" style="width: 45px; height: 45px; object-fit: cover;" loading="lazy"/>
+
+                                                    <!-- Badge de mensajes no leídos, posicionado en la parte superior derecha de la imagen -->
+                                                    <span class="badge bg-success text-white position-absolute" style="top: 0; right: 0; transform: translate(50%, -50%); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">5</span>
+                                                </div>
+
+                                                <div class="ms-3">
+                                                    <!-- Nombre del operador y último mensaje -->
+                                                    <h6 t-esc="segment.name" class="mb-0"></h6>
+                                                    <small class="text-muted">"Quisiera más información..."</small>
+                                                </div>
+                                            </div>
+
+                                            <!-- Icono y estado del operador -->
+                                            <!-- <span t-att-class="{'text-success': segment.isOnline, 'text-secondary': !segment.isOnline}">
+        
+                                            </span> -->
+                                            <!-- <i class="fa" t-att-class="{'fa-circle': segment.isOnline, 'fa-circle-o': !segment.isOnline}"></i> -->
+                                            <!-- <span class="badge bg-success" t-esc="segment.unreadMessages" style="border-radius: 50%;"></span> -->
+                                            <!-- <span class="badge bg-success" style="border-radius: 50%;">5</span> -->
+
+                                            <!-- <t t-if="segment.isOnline">Online</t>
+                                                <t t-else="">Offline</t> -->
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-stack-item" gs-w="4" gs-h="4">
+                        <div class="grid-stack-item-content">
+                            <div class="card-body">
+                                <h5 class="card-title text-center fa-2x">Carritos abandonados</h5>
+                                <ul class="list-group list-group-scrollable">
+                                    <!-- Ejemplo STATE-->
+                                    <!-- <li class="list-group-item" t-foreach="state.abandonedCarts" t-as="cart" t-key="cart.id">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h6 t-esc="cart.customerName"></h6>
+                                            <p>Abandonado el: <span t-esc="cart.abandonedDate"></span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <span class="badge bg-warning">Pendiente</span>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary">Contactar</button>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                    <!-- Ejemplo de carrito abandonado 1 -->
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6>Juan Pérez</h6>
+                                                <p>Abandonado el: <span>2024-03-19</span>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="badge bg-warning">Pendiente</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary">Contactar</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- Ejemplo de carrito abandonado 2 -->
+                                    <li class="list-group-item">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h6>Maria López</h6>
+                                                <p>Abandonado el: <span>2024-03-18</span>
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <span class="badge bg-warning">Pendiente</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary">Contactar</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TABLE -->
+                    <div class="grid-stack-item" gs-w="12" gs-h="4">
+                        <div class="grid-stack-item-content" style="padding: 25px;">
+                            <!-- Filters, Search, and Category Selection Section -->
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="mb-0">User Information Table</h5>
+                                <div>
+                                    <input type="text" class="form-control mr-2" id="searchInput" placeholder="Search for names..." style="width: 200px; display: inline-block;"/>
+                                    <select class="custom-select mx-1" id="statusFilter" style="width: 150px;">
+                                        <option value="">All Status</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Inactive">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Table -->
+                            <table class="table table-hover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>@johndoe</td>
+                                        <td>Active</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jane</td>
+                                        <td>Doe</td>
+                                        <td>@janedoe</td>
+                                        <td>Inactive</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Jim</td>
+                                        <td>Beam</td>
+                                        <td>@jimbeam</td>
+                                        <td>Active</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </t>
+
+</templates>

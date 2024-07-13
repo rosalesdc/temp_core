@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_inherit_b_custom_site_shop"
+        inherit_id="sale.report_saleorder_document">
+        <xpath expr="//p[@id='fiscal_position_remark']" position="after">
+            <div>
+                <span>Para facturar: </span> <a t-att-url="doc.get_invoicing_url()"><span t-esc="doc.get_invoicing_url()"/></a><br/>
+                <span>Referencia de factura: </span><span t-esc="doc.invoicing_ref"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vex_instance_view_form_inherit" model="ir.ui.view">
+        <field name="name">vex_instance_view_form_inherit</field>
+        <field name="model">vex.instance</field>
+        <field name="inherit_id" ref="vex-store-syncronizer.vex_soluciones_instance_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='content_initial_settings']" position="after">
+                <div attrs="{'invisible': [('store', '!=', 'mercadolibre')]}">
+                    <group col="2">
+                        <group>
+                            <field name="meli_app_id" /> <!-- attrs="{'required': [('status', '==', 'initial_settings')]}" -->
+                            <field name="meli_secret_key" />
+                            <field name="meli_redirect_uri" />
+                            <field name="meli_country" />
+                            <field name="meli_default_currency"/>
+                        </group>
+                        <div class="col-6"> 
+                            <div class="row">     
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label for="field_nick"><strong>Nick</strong></label>
+                                        </div>
+                                        <div class="col-10">
+                                            <field name="meli_nick" id="field_nick"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3 mb-3">
+                                    <button name="get_user" type="object" class="btn btn-primary" icon="fa-spinner"> GET USER ID</button>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label for="field_user_id"><strong>User ID</strong></label>
+                                        </div>
+                                        <div class="col-10">
+                                            <field name="meli_user_id" id="field_user_id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </group>
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='content_keys']" position="after">
+                <div class="col-12" attrs="{'invisible': [('store', '!=', 'mercadolibre')]}">
+                    <group>
+                        <field name="meli_url_get_server_code" widget="url"/>
+                        <field name="meli_server_code"/>
+                    </group>
+                    <div class="row">     
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 mt-3 mb-3">
+                                    <button name="get_token" type="object" class="btn btn-primary" icon="fa-spinner"> GET TOKEN</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <group>
+                        <field name="meli_access_token"/>
+                        <field name="meli_refresh_token"/>
+                    </group>         
+                </div> 
+            </xpath>
+            <xpath expr="//div[@name='content_settings']" position="after">
+                <div attrs="{'invisible': [('store', '!=', 'mercadolibre')]}">
+                    <div class="row">
+                        <div class="col-6">
+                            <group>
+                                <field name="meli_registered_domain" />
+                                <field name="meli_url_license" />
+                                <field name="meli_license_secret_key" />
+                                <field name="meli_license_key" />
+                            </group>
+                        </div>
+                        <div class="col-6">
+                            <group>
+                                <field name="meli_location_id" />
+                                <field name="meli_company" />
+                                <field name="meli_warehouse" />
+                                <field name="meli_active_automatic" />
+                            </group>
+                        </div>
+                    </div>
+                    <group col="2">
+                        <group string="Do you want to allow the import of?">
+                            <field name="meli_import_product" string="Products"/>
+                            <field name="meli_import_product_dropshipping"  attrs="{'invisible': [('meli_import_product', '==', False)]}"/>
+                            <field name="meli_import_order" string="Orders"/>
+                            <field name="meli_to_bring_order" attrs="{'invisible': [('meli_import_order', '==', False)]}"  string="Status Orders"/>
+                            <field name="meli_create_invoice" attrs="{'invisible': [('meli_to_bring_order', '!=', 'order')]}"/>
+                            <field name="meli_invoice_status" attrs="{'invisible': [('meli_create_invoice', '!=', True)]}"/>
+                            <!-- <field name="meli_import_category" /> -->
+                        </group>
+        
+                        <group string="Do you want to allow the export of?">
+                            <field name="meli_export_product" />
+                        </group>
+                    </group>
+                    <group col="2">
+                        <group string="Import price rule">
+                            <field name="meli_behavior_price_rule" />
+                            <field name="meli_import_price_list" />
+                            <field name="meli_import_increase_or_discount" attrs="{'invisible': [('meli_import_price_list', '==', False)], 'required': [('meli_import_price_list', '==', True)]}"/>
+                            <field name="meli_import_type_amount"  attrs="{'invisible': [('meli_import_price_list', '==', False)], 'required': [('meli_import_price_list', '==', True)]}"/>
+                            <field name="meli_import_amount"  attrs="{'invisible': [('meli_import_price_list', '==', False)]}"/>
+                        </group>
+        
+                        <group string="Export price rule">
+                            <field name="meli_export_price_list" />
+                            <field name="meli_export_increase_or_discount"  attrs="{'invisible': [('meli_export_price_list', '==', False)], 'required': [('meli_export_price_list', '==', True)]}"/>
+                            <field name="meli_export_type_amount"  attrs="{'invisible': [('meli_export_price_list', '==', False)], 'required': [('meli_export_price_list', '==', True)]}"/>
+                            <field name="meli_export_amount"  attrs="{'invisible': [('meli_export_price_list', '==', False)], 'required': [('meli_export_price_list', '==', True)]}"/>
+                        </group>
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

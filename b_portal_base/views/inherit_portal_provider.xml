@@ -1,0 +1,72 @@
+<odoo>
+    <data>
+        <template id="website_import_xml_div">
+            <div id="add_xml_modal" class="modal background-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="Head">
+                            <h4 class="modal-title" id="h1_purchase_order_name">P00000</h4>
+                            <span style="display: none;" id="s_purchase_order_id"></span>
+                            <button class="close" data-dismiss="modal" id="close_span_add_xml">&amp;times</button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="col-sm-12">Load from XML or compressed file</h4>
+                            <div class="oe_import_box col-sm-6">
+                                <div class="col-sm-12">
+                                    <h5><span style="color:#F00;"><b>*</b></span> Select a CFDI</h5>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input oe_import_file" id="my-file-selector-portal"/>
+                                        <label class="custom-file-label" for="my-file-selector" id="label-file-selector" style="overflow: hidden;">Choose file</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12" /> 
+                            <div id="submit-portal" class="col-sm-12" style="margin-top: 20px;">
+                                <input id="submit_button_portal" class="btn btn-primary" type="submit" value="Submit" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message_modal" class="modal background-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" id="Head">
+                            <h4 class="modal-title" id="title_response">Info</h4>
+                            <button class="close" data-dismiss="modal" id="close_span">&amp;times</button>
+                        </div>
+                        <div id="messages" class="modal-body">
+                            <p id="message_response">Response</p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </template>
+
+        <template id="inherit_purchase_orders_w_website_ai" inherit_id="purchase.portal_my_purchase_orders">
+            <xpath expr="//tr[@class = 'active']/th[4]" position="replace">
+                <th>Num Invoices</th>
+                <th class="text-right">Total</th>
+                <th>Invoice</th>
+            </xpath>
+            <xpath expr="//tr/td[4]" position="replace">
+                <td><a t-attf-href="/my/invoices/#{str(order.invoice_ids.id) if order.invoice_count == 1 else ''}"><span t-esc="order.invoice_count"/></a></td>
+                <td class="text-right"><span t-field="order.amount_total"/></td>
+                <td id="td_add_xml" > 
+                    <button class="btn btn-primary" id="add_xml_button">Add XML
+                        <input type="hidden" name="order_name" t-att-value="order.name"/>
+                        <input type="hidden" name="order_id" t-att-value="order.id"/>
+                    </button> 
+                </td>
+            </xpath>
+            <xpath expr="//t[@t-if='orders']" position="before">
+                <t t-call="portal_provider.website_import_xml_div"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

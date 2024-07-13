@@ -1,0 +1,249 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_portal_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-18 20:56+0000\n"
+"PO-Revision-Date: 2023-10-18 20:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "An error has been ocurred"
+msgstr "Un error ha ocurrido"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_import_csv
+msgid "Cerrar"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_import_csv
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "Error"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Export CSV"
+msgstr ""
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "File no content"
+msgstr "Archivo sin contenido"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "File type not accepted"
+msgstr "Tipo de archivo no aceptado"
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__id
+msgid "ID"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Id"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_import_csv
+msgid "Import"
+msgstr "Importa"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Import CSV"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.product_provider_info_form_view
+msgid "Information"
+msgstr "Información"
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_my_products
+msgid "My Products"
+msgstr "Mis Productos"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Nombre"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model,name:b_portal_base.model_product_product
+msgid "Product Variant"
+msgstr "Variantes de producto"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.b_portal_base_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_home_my_products
+msgid "Products"
+msgstr "Productos"
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_product__provider_ids
+#: model_terms:ir.ui.view,arch_db:b_portal_base.product_provider_info_form_view
+#: model_terms:ir.ui.view,arch_db:b_portal_base.product_provider_info_tree_view
+msgid "Provider Information"
+msgstr "Información del proveedor"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.sku_product_provider_info_tree
+msgid "Provider Information for Product Variants"
+msgstr "Información del proveedor para variantes de productos"
+
+#. module: b_portal_base
+#: model:ir.model.fields,help:b_portal_base.field_product_product__provider_ids
+msgid "Provider information for this product."
+msgstr "Información del proveedor de este producto."
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__partner_id
+msgid "Provider."
+msgstr "Proveedor."
+
+#. module: b_portal_base
+#: model:ir.model.fields,field_description:b_portal_base.field_product_provider_info__product_sku
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "SKU"
+msgstr ""
+
+#. module: b_portal_base
+#: model:ir.model.fields,help:b_portal_base.field_product_provider_info__product_sku
+msgid "SKU for this product and this provider."
+msgstr "SKU para este producto y este proveedor"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "Success"
+msgstr "Satisfactorio"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "Sucess"
+msgstr "Satisfactorio"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/models/inherit_product.py:0
+#, python-format
+msgid "The SKU and partner already exist."
+msgstr "El SKU y el partner ya existen."
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "The SKU field is empty."
+msgstr "El campo SKU esta vacio"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "The SKU has been successfully updated"
+msgstr "El SKU ha sido actualizado correctamente"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "The SKU is the same as the system. It was not updated."
+msgstr "El SKU es el mismo que el del sistema. No fue actualizado"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "The SKUs has been updated"
+msgstr "Los SKUs han sido actualizados"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_my_products
+msgid "There are currently no products for your account."
+msgstr "Actualmente no hay productos para su cuenta."
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Unidad de Medida"
+msgstr ""
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_products_list
+msgid "Update"
+msgstr "Actualiza"
+
+#. module: b_portal_base
+#: model_terms:ir.ui.view,arch_db:b_portal_base.portal_base_import_csv
+msgid "Update product SKU's"
+msgstr "Actualizar SKU del producto"
+
+#. module: b_portal_base
+#. odoo-python
+#: code:addons/b_portal_base/controllers/portal.py:0
+#, python-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#. module: b_portal_base
+#: model:ir.model,name:b_portal_base.model_product_provider_info
+msgid "product.provider.info"
+msgstr ""

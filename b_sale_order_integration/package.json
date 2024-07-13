@@ -1,0 +1,15 @@
+{
+    "json-comments": {
+        "tips": "Please install the JsonComments plugin to enable commenting functionality for JSON files, see: https://github.com/zhangfisher/json_comments_extension",
+        "static/description/json_so_integrated_data_products.json": {
+            "invoice_address.type": "Para dirección de Facturación el type siempre es invoice",
+            "partner.type": "Para contacto Padre el type siempre es contact",
+            "invoice_address.id_arx": "Cada contacto debe tener un identificador diferente sea dirección de entrega o facturación",
+            "shipping_addes.type": "Para dirección de entrega, el type siempre es delivery",
+            "shipping_addres.type": "Para dirección de Entrega, el type siempre es delivery",
+            "shipping_address.type": "Para dirección de entrega el type siempre es delivery",
+            "sale_order_lines[0].product_id": "Se recibe el default code, pero al procesar se intercambia por el id (arx no tiene los ids)",
+            "sale_order_line[0].product_id": "Se recibe el default code, pero al procesar se intercambia por el id (arx no tiene los ids)"
+        }
+    }
+}

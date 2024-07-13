@@ -1,0 +1,217 @@
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced" style="max-width: 100%;">
+        <h2 class="oe_slogan">Transfer Utils | Portal Provider</h2>
+        <h3 class="oe_slogan">Easy CFDI Import For Providers</h3>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Features.</b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p></p>
+            <ul class="list-unstyled">
+                <li><i class="fa fa-check text-primary" style="margin-right:5px;"></i>Create or attach CFDI to an invoice from purchase order.</li>
+                <li><i class="fa fa-check text-primary" style="margin-right:5px;"></i>Multiple validations to make the creation of invoices safe.</li>
+                <li><i class="fa fa-check text-primary" style="margin-right:5px;"></i>Updating the SKU of the products from the portal.</li>
+                <li><i class="fa fa-check text-primary" style="margin-right:5px;"></i>Import and export the list of products for mass update.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Configuration<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>To start to use this module, you have to configure the option in this module.
+            </p>
+            <ul>
+                <li>This configuration is used to set the default state of odoo invoice.</li>
+            </ul>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/config.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Product Configuration<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                You need to add the vendor and the SKU (product identifier) ​​to the product variant.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/product_configuration.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-danger">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Important<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                The concepts in XML needs the attribute 'NoIdentificacion' and product sku in odoo for invoice validation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Validations<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                By default there are the following validations.
+            </p>
+            <p>
+                The same as the transfer utils module.
+            </p>
+            <ul>
+                <li>XML structure.</li>
+                <li>Existence in the SAT.</li>
+                <li>Related UUID.</li>
+            </ul>
+            <p>
+                To search and attach there are the following validations.
+            </p>
+            <ul>
+                <li>Existence and validation of the partner.</li>
+                <li>Price and quantity.</li>
+                <li>Total amount of the invoice.</li>
+                <li>That the quantity invoiced and quantity received match the xml to be invoiced.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Create or Attach Multiple CFDI to a Purchase Order Invoices<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                For attach CFDI to a purchase order invoice there is the option of importing massively through a compressed file or individually with an xml file.
+                This from odoo portal.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/my_purchase.png">
+            </div>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/import_xml.png">
+            </div>
+            <p>
+                For all xml the modal will display the import result.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/result.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row" style="max-width: 100%;">
+        <div class="oe_span12" style="max-width: 100%;">
+            <div class="alert alert-info">
+                <i class="fa fa-arrow-circle-o-right"></i>
+                <b>Update SKUs Products<b></b>
+            </div>
+        </div>
+        <div class="oe_span12" style="max-width: 100%;">
+            <p>
+                We added a new page to update the SKUs of the supplier's products. Here you can update each product variant manually or do a mass update using a csv.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/my_products_portal.png">
+            </div>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/my_products.png">
+            </div>
+            <p>
+                For any result of the update, a notification will be displayed on the side of the page.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/update_sku_btn.png">
+            </div>
+            <p>
+                To export in csv with all the products you just have to click on the button to start the download.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/export_csv.png">
+            </div>
+            <p>
+                To import it is necessary the same format that is given when exporting the csv. By selecting the file and clicking the import button, the SKUs will automatically be updated.
+            </p>
+            <div class="oe_demo oe_picture oe_screenshot" style="max-height: 100%;">
+                <img src="screenshots/import_csv.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- footer section starts-->
+<section class="oe_container">
+    <div class="oe_row" style="max-width:100%;">
+        <hr style="border-top: 1px solid #00aae7; margin-bottom: 5px;">
+        <div class="oe_span6">
+            <br/>
+            <p style="font-size:16px; text-align: justify;"><b>We are</b> a team of passionate people whose goal is to improve everyone's 
+                life through disruptive products. We build great products to solve your business problems.
+                Our products are designed for small to medium size companies willing to optimize their performance.
+            </p>
+            <div class="oe_span12" style="max-width: 100%;">
+                <h2 class="text-center">Help and Support</h2>
+                <p class="text-center">Please feel free to contact us if you need technical or functional support, also you can find more of our excellent apps in the Odoo store.</p>
+            </div>
+            <br/>
+            <div class="oe_slogan oe_spaced">
+                <span><a data-toggle="tooltip" data-placement="bottom" title="Get Instant Support!" rel="nofollow" href="mailto:soportemx@odoomail.telematel.com"><i class="fa fa-ticket"></i> Support</a></span>
+                <span><a data-toggle="tooltip" data-placement="bottom" target="_blank" href="https://apps.odoo.com/apps/modules/browse?search=wedoo"><i class="fa fa-shopping-cart"></i> Visit our store</a></span>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <a href="https://www.wedoo.tech"  target="_blank"r>
+                    <img src="birtum.jpg" width="80px" height="auto">
+                </a>
+                <div class="oe_demo_footer oe_centeralign">Meet Us</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section end-->

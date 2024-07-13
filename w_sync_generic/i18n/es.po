@@ -1,0 +1,1087 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* w_sync_generic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-27 21:19+0000\n"
+"PO-Revision-Date: 2021-07-27 17:20-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid ""
+"<strong>Add in each request.</strong><br/>\n"
+"                                    <strong>Header : {\"Apikey\":\"xxxxxxxxxxx\",\"Content-Type\":\"application/json\"}</strong>"
+msgstr ""
+"<strong>Adicione en cada petición.</strong><br/>\n"
+"                                    <strong>Header : {\"Apikey\":\"xxxxxxxxxxx\",\"Content-Type\":\"application/json\"}</strong>"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "A record with this Id (%s) already exists, you cannot duplicate it, you can only submit a modification."
+msgstr "Un registro con Id (%s) ya existe, no puede duplicarlo, solo puede enviar una modificación."
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "API"
+msgstr ""
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "API Key is invalid!"
+msgstr "API Key es inválido!"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_res_config_settings__api_key
+msgid "API Secret key"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.module.category,description:w_sync_generic.module_category_w_sync
+#: model:ir.module.category,name:w_sync_generic.module_category_w_sync
+msgid "APP SYNC"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.ui.menu,name:w_sync_generic.menu_wedoo_app_synchro
+msgid "APP Synchro"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__action
+msgid "Action"
+msgstr "Acción"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__action_type
+msgid "Action Type"
+msgstr "Tipo de acción"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__active
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__activ
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: w_sync_generic
+#: model:res.groups,name:w_sync_generic.group_w_sync_administrator
+msgid "Administrator"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__api_ids
+msgid "Api"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__api_key
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_url__authentication_mode__api_key
+msgid "Api Key"
+msgstr ""
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "Api key not configurated in system!"
+msgstr "Api key no configurada en el sistema!"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__authentication_mode
+msgid "Authentication Mode"
+msgstr "Modo de Autenticación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__direction__bidirectional
+msgid "Bidirectional"
+msgstr "Bidireccional"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__action__insert
+msgid "CREATE"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_web_service_url__need_confirmation
+msgid "Check if the WS need a return of confirmation"
+msgstr "Marque si el WS necesita un retorno de confirmación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_web_service_url__need_authentication
+msgid "Check if the WS need authentication"
+msgstr "Marque si el WS necesita autenticación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__code
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__code
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__external_model_name
+msgid "Code"
+msgstr "Código"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de Configuración"
+
+#. module: w_sync_generic
+#: model:ir.ui.menu,name:w_sync_generic.syncro_menu_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__action_type__create
+#, python-format
+msgid "Create"
+msgstr "Crear"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Create %s"
+msgstr "Crear %s"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__create_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__create_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__method__del
+msgid "DELETE"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__date_sync
+msgid "Date Sync"
+msgstr "Fecha Sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__date_write
+msgid "Date Write"
+msgstr "Fecha Modificación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__date_write
+msgid "Date it was modificated the record."
+msgstr "Fecha en la que fue modificado el registro."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__date_sync
+msgid "Date it was realizated the synchronization."
+msgstr "Fecha en la que fue realizada la sincronización."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__date_last_synchro
+msgid "Datetime last synchro"
+msgstr "Fecha última sincronización"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Last synchro"
+msgstr "Última sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__description
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__description
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__description
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Description"
+msgstr "Descripción"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__direction
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_basemodel_extend__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__display_name
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__domain
+msgid "Domain"
+msgstr "Dominio"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__error_message
+msgid "Error Message"
+msgstr "Mensaje de error"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__external_id
+msgid "External"
+msgstr "Id. Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__external_field
+msgid "External Field"
+msgstr "Campo Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__external_id
+msgid "External Id"
+msgstr "Id. Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__external_model
+msgid "External Model"
+msgstr "Modelo Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__direction__ext2odoo
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__synchro_priority__ext2odoo
+msgid "External to Odoo"
+msgstr "Externo a Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__trace__external-odoo
+msgid "External-Odoo"
+msgstr "Externo-Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__state__failed
+msgid "Failed"
+msgstr "Fallido"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__type
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__type
+msgid "Field Type"
+msgstr "Tipo de campo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__external_id
+msgid "Field to know the ID record of External system."
+msgstr "Campo para conocer el ID del registro en el sistema externo."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__odoo_id
+msgid "Field to know the ID record of Odoo."
+msgstr "Campo para conocer el Id del registro en Odoo."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__name
+msgid "Field to know the model of the changes."
+msgstr "Campo para conocer el modelo de los cambios."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__action_type
+msgid "Field to know the operation in the synchronization."
+msgstr "Campo para conocer la operación en la sincronización."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__trace
+msgid "Field to know the traceability of synchronization."
+msgstr "Campo para conocer la trazabilidad en la sincronización."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__fields_ids
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.models_synchro_form_view
+msgid "Fields"
+msgstr "Campos"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_fields_synchro
+msgid "Fields synchro"
+msgstr "Campos sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__method__get
+msgid "GET"
+msgstr ""
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.w_sync_res_config_settings_view_form
+msgid "Generate Api Secret Key"
+msgstr "Generar Api Secret Key"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_res_config_settings__generate_logs
+msgid "Generate Logs"
+msgstr "Generar Logs"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.w_sync_res_config_settings_view_form
+msgid "Generate Logs for the synchronization process"
+msgstr "Generar Logs en el proceso de sincronización."
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.web_service_url_form_view
+msgid "Header Lines"
+msgstr "Cabeceras"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__header_line_ids
+msgid "Headers"
+msgstr "Cabeceras"
+
+#. module: w_sync_generic
+#: model:ir.ui.menu,name:w_sync_generic.data_synchro
+msgid "History Synchronization"
+msgstr "Control de cambios realizados"
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_history_synchro
+msgid "History Syncronizations"
+msgstr "Control de cambios realizados"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_history_synchro_log
+msgid "History synchro"
+msgstr "Historial Sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_basemodel_extend__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__id
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__id
+msgid "ID"
+msgstr ""
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Id ext"
+msgstr "Id. Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_synchro_obj__synchro_mode
+msgid ""
+"If Via Cron is selected, the synchronization will be executed by means of a planned action at the desired time, if Real Time is "
+"selected, the synchronization will be carried out in real time."
+msgstr ""
+"Si Via Cron es seleccionado, la sincronización será ejecutada por una acción planificada en el tiempo deseado, si En Tiempo Real "
+"es selecionado, la sincronización será llevada a cabo en tiempo real."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "Invalid/Missing Api Key!"
+msgstr "Inválida/Ausente Api Key!"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__name
+msgid "Key"
+msgstr "Clave"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_basemodel_extend____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line____last_update
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__write_uid
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__write_date
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__limit
+msgid "Limit"
+msgstr "Límite"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "Login Failed: %r"
+msgstr "Login Fallido: %r"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__error_message
+msgid "Message of error if the syncronization was failed."
+msgstr "Mensaje de error si la sincronización falló."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__method
+msgid "Method"
+msgstr "Método"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__model_id
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__model
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_model_records_unlinked
+msgid "Model Records Unlinked"
+msgstr "Modelo de Registros Eliminados"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.models_synchro_form_view
+msgid "Model Synchro"
+msgstr "Modelo de Sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__model_unlinked
+msgid "Model Unlinked"
+msgstr "Modelo Eliminado"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_model_external
+msgid "Model external"
+msgstr "Modelo externo"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_ir_model
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__models_ids
+#: model:ir.ui.menu,name:w_sync_generic.menu_models_config
+msgid "Models"
+msgstr "Modelos"
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_models_synchro_url
+msgid "Models Synchro"
+msgstr "Modelos de sincronización"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Models and fields"
+msgstr "Modelos y campos"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_models_synchro
+msgid "Models synchro"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__model
+msgid "Name of model associate to log."
+msgstr "Nombre del modelo asociado al log."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__title
+msgid "Name of the record that has been syncronized."
+msgstr "Nombre del modelo que ha sido sincronizado."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_model_records_unlinked__name
+msgid "Name of the record."
+msgstr "Nombre del registro."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__need_authentication
+msgid "Need authentication"
+msgstr "Necesita autenticación."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__need_confirmation
+msgid "Need confirmation"
+msgstr "Necesita confirmación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__obj_sync_id
+msgid "Obj Sync"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__odoo_id
+msgid "Odoo"
+msgstr "Id. Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__name_f
+msgid "Odoo Field"
+msgstr "Campo Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_records_unlinked__odoo_id
+msgid "Odoo Id"
+msgstr "Id. Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__odoo_model
+msgid "Odoo Model"
+msgstr "Modelo Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__direction__odoo2ext
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__synchro_priority__odoo2ext
+msgid "Odoo to External"
+msgstr "Odoo a Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__trace__odoo-external
+msgid "Odoo-External"
+msgstr "Odoo-Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__operator
+msgid "Operator"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_synchro_obj__domain
+msgid "Optional domain filtering of the destination data, as a Python expression"
+msgstr "Filtro de dominio opcional de los datos de destino, escrito como una expresión Python."
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__method__post
+msgid "POST"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__method__put
+msgid "PUT"
+msgstr ""
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Pass dict of values in data."
+msgstr "Pase un diccionario con los valores en data."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__password
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__priority
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__synchro_mode__real_time
+msgid "Real Time"
+msgstr "Tiempo Real"
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_model_record_unlinked
+msgid "Records Unlinked"
+msgstr "Registros Eliminados"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__reference_field
+msgid "Reference Field"
+msgstr "Campo Referencia"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__activo
+msgid "Active"
+msgstr "Enlazado"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__details
+msgid "Details"
+msgstr "Detalles de errores encontrados"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__reference_field_ext
+msgid "Reference Field Ext"
+msgstr "Campo Ref. Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__reference_field_odoo
+msgid "Reference Field Odoo"
+msgstr "Campo Ref. Odoo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_model_external__reference_field
+msgid "Reference field to relational fields"
+msgstr "Campo referencia a campo relacional"
+
+#. module: w_sync_generic
+#: model:ir.ui.menu,name:w_sync_generic.menu_wedoo_synchro_search
+msgid "Search"
+msgstr "Búsqueda"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_synchro_obj__ws_url_id
+msgid "Select the WS to conect with External system."
+msgstr "Seleccione el WS para conectar con el Sistema Externo."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_fields_synchro__sequence
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__sequence
+#: model:ir.model.fields,field_description:w_sync_generic.field_models_synchro__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__session_id
+msgid "Session"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_synchro_obj__synchro_priority
+msgid "Set synchronization priority"
+msgstr "Establecer prioridad de sincronización"
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_w_sync_generic_config_settings
+#: model:ir.ui.menu,name:w_sync_generic.menu_w_sync_generic_general_settings
+msgid "Settings"
+msgstr "Ajustes"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__state
+msgid "State"
+msgstr "Estado"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__state__success
+msgid "Success"
+msgstr "Satisfactorio"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Sync service now"
+msgstr "Sincronice ahora"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Synchro"
+msgstr "Sincronizar"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__synchro_mode
+msgid "Synchro Mode"
+msgstr "Modo Sincronización"
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_synchro_obj_url
+#: model:ir.ui.menu,name:w_sync_generic.menu_synchro_obj_config model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Synchro Objects"
+msgstr "Objetos de Sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__synchro_priority
+msgid "Synchro Priority"
+msgstr "Prioridad de sincronización"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.w_sync_res_config_settings_view_form
+msgid "Synchronization Api Key"
+msgstr "Api Key para la sincronización"
+
+#. module: w_sync_generic
+#: model:ir.actions.server,name:w_sync_generic.cron_synchro_data_odoo_external_system_ir_actions_server
+#: model:ir.cron,cron_name:w_sync_generic.cron_synchro_data_odoo_external_system
+#: model:ir.cron,name:w_sync_generic.cron_synchro_data_odoo_external_system
+msgid "Synchronize all data between Odoo and other systems"
+msgstr "Sincroniza los datos entre Odoo y cualquier otro Sistema Externo"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_model_external__syncro_id
+msgid "Syncro"
+msgstr "Sincronizar"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The URL to send is not defined."
+msgstr "El Servicio Web para esta acción no está activo."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "The Web Service for this action is not active."
+msgstr "El Servicio Web para esta acción no está activo."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The Web Service not confirm the record sent."
+msgstr "El Servicio Web no confirmó el registro enviado."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The Web Service to send confirmation is not define in web service %s"
+msgstr "El Servicio Web para enviar la confirmación no esta definido en el WS %s"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The Web Service to send data is not define in synchro object %s"
+msgstr "El Servicio Web para enviar el data no está definido en el objeto de sincronización %s"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The Web Service to synchro data is not defined in synchro object %s"
+msgstr "El Servicio Web para enviar el data no está definido en el objeto de sincronización %s"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The field %s could not be found"
+msgstr "El campo %s no fue encontrado"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/inherit_model.py:0
+#, python-format
+msgid "The following error occurred when contacting the server. %s"
+msgstr "El siguiente error ocurrió cuando se contactaba con el servidor. %s"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The record not exist in Odoo."
+msgstr "El registro no existe en Odoo."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "The record with Id (%s) not exist in Odoo."
+msgstr "EL registro con Id (%s) no existe en Odoo."
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/controllers/main.py:0
+#, python-format
+msgid "There is no Synchronization Object configured for this model."
+msgstr "No existe un Objeto de Sincronización configurado para este modelo."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__title
+msgid "Title"
+msgstr "Título"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__trace
+msgid "Trace"
+msgstr "Trazabilidad"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__action__delete
+msgid "UNLINK"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__url_confirmation
+msgid "URL Confirmation"
+msgstr "URL Confirmación"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_web_service_url__url
+msgid "URL Web Service"
+msgstr "URL Servicio Web"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__url_send
+msgid "URL to Send"
+msgstr "URL Envío"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Unknown"
+msgstr "Desconocido"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__action_type__unlink
+msgid "Unlink"
+msgstr "Eliminar"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Unlink %s"
+msgstr "Eliminar %s"
+
+#. module: w_sync_generic
+#: model:ir.ui.menu,name:w_sync_generic.menu_model_record_unlinked
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.model_record_unlinked_form_view
+msgid "Unlinked Records"
+msgstr "Registros Eliminados"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_api_rest__name
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__url
+msgid "Url"
+msgstr "URL"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_url__authentication_mode__user_pass
+msgid "User and Password"
+msgstr "Usuario y Contraseña"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_url__username
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__values_from_origin
+msgid "Values From Origin"
+msgstr "Valores del origen"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_history_synchro_log__values_to_destiny
+msgid "Values To Destiny"
+msgstr "Valores al destino"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Values changed"
+msgstr "Campos modificados"
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__values_from_origin
+msgid "Values received from the origin in the synchronization."
+msgstr "Valores recibidos desde el origen de la sincronización."
+
+#. module: w_sync_generic
+#: model:ir.model.fields,help:w_sync_generic.field_history_synchro_log__values_to_destiny
+msgid "Values sents to the destiny in the synchronization."
+msgstr "Valores enviados al destino de la sincronización."
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__synchro_obj__synchro_mode__via_cron
+msgid "Via Cron"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__web_service_api_rest__action__update
+msgid "WRITE"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields,field_description:w_sync_generic.field_synchro_obj__ws_url_id
+msgid "WS to receive"
+msgstr "Servicio Web"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.w_sync_res_config_settings_view_form
+msgid "W_SYNC_GENERIC"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_web_service_url
+#: model:ir.model.fields,field_description:w_sync_generic.field_web_service_header_line__web_service_id
+#: model:ir.ui.menu,name:w_sync_generic.menu_web_service_url_config
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.web_service_url_form_view
+msgid "Web Service"
+msgstr "Servicios Web"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_web_service_api_rest
+msgid "Web Service Api Rest"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_web_service_header_line
+msgid "Web Service Header Lines"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.actions.act_window,name:w_sync_generic.action_web_service_url
+msgid "Web Services"
+msgstr "Servicio Web"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__history_synchro_log__action_type__write
+#, python-format
+msgid "Write"
+msgstr "Modificar"
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid "Write %s"
+msgstr "Modificar %s"
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_basemodel_extend
+msgid "basemodel.extend"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__binary
+msgid "binary"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__boolean
+msgid "boolean"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__char
+msgid "char"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__date
+msgid "date"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__datetime
+msgid "datetime"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__float
+msgid "float"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__html
+msgid "html"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__integer
+msgid "integer"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__many2many
+msgid "many2many"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__many2one
+msgid "many2one"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__many2one_reference
+msgid "many2one_reference"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__monetary
+msgid "monetary"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__one2many
+msgid "one2many"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__reference
+msgid "reference"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__selection
+msgid "selection"
+msgstr ""
+
+#. module: w_sync_generic
+#: model:ir.model,name:w_sync_generic.model_synchro_obj
+msgid "synchro obj"
+msgstr "Objeto de sincronización"
+
+#. module: w_sync_generic
+#: model:ir.model.fields.selection,name:w_sync_generic.selection__fields_synchro__type__text
+msgid "text"
+msgstr ""
+
+#. module: w_sync_generic
+#: code:addons/w_sync_generic/models/synchro.py:0
+#, python-format
+msgid ""
+"<p>The following error was generated when calling the function %s:</p> \n"
+"<b>%s</b>"
+msgstr ""
+"<p>El siguiente error fue generado al ejecutar la función %s:</p> \n"
+"<b>%s</b>"
+
+#. module: w_sync_generic
+#: model_terms:ir.ui.view,arch_db:w_sync_generic.synchro_obj_form_view
+msgid "Python Function"
+msgstr "Función en Python"

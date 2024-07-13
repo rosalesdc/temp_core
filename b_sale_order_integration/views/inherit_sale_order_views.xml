@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="inherit_sale_order_sync_data" model="ir.ui.view">
+            <field name="name">inherit.sale.order.sync.data</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                    <field name="arx_name" readonly="1" />
+                    <field name="payment_arx" readonly="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

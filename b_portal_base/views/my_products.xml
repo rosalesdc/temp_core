@@ -1,0 +1,122 @@
+<odoo>
+    <data>
+
+        <template id="b_portal_base_breadcrumbs" name="Portal Breadcrumbs" inherit_id="portal.portal_breadcrumbs">
+            <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+                <li t-if="page_name == 'products' or products" class="col-lg-2" t-attf-class="breadcrumb-item active">
+                    <a t-if="cure" t-attf-href="/my/products">Products</a>
+                    <t t-else="">Products</t>
+                </li>
+            </xpath>
+        </template>
+
+        <template id="portal_base_import_csv">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Update product SKU's</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="myForm">
+                                <div class="mb-3">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <!-- <input name="csv-file-selector" id="portal-csv-file-selector" accept=".csv" class="form-control" type="file"/>-->
+                                    <input name="csvFile" id="csvFile" accept=".csv" class="form-control" type="file"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" id="label-csv-file-selector" style="overflow: hidden;"/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="import_btn_csv_portal" class="btn btn-primary" type="submit">Import</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="portal_base_products_list" name="Portal: Product List">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Import CSV</button>
+                    <!--<t t-call="b_portal_base.portal_base_import_csv_template"/>-->
+                    <!--<button class="btn btn-primary" id="product_import_csv">Import CSV</button>-->
+                    <a itemprop="url" href="/export_product_csv" class="btn btn-primary btn_cta">Export CSV</a>
+                </div>
+            </div>
+            <t t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th style="width:10%">Id</th>
+                        <th class="text-right" style="width:50%">Nombre</th>
+                        <th class="text-right" style="width:15%">Unidad de Medida</th>
+                        <th class="text-right" style="width:20%">SKU</th>
+                        <th class="text-right" style="width:5%"></th>
+                    </tr>
+                </thead>
+                <t t-foreach="products" t-as="product">
+                    <t t-set="seller_id" t-value="product.provider_ids.filtered(lambda p: p.partner_id.id == partner_id)"/>
+                    <tr>
+                        <td class="text-left">
+                            <t t-esc="product.id"/>
+                        </td>
+                        <td class="text-left">
+                            <t t-esc="product.name"/>
+                        </td>
+                        <td class="text-left">
+                            <t t-esc="product.uom_name"/>
+                        </td>
+                        <td class="text-left">
+                            <input type="text" class="form-control form-control-sm"
+                                   t-att-id="product.id"
+                                   t-att-value="seller_id.product_sku"
+                                   t-att-placeholder="seller_id.product_sku or 'ABC-123'"
+                                   name="product_sku"/>
+                        </td>
+                        <td class="text-left">
+                            <button class="btn btn-primary" name="update_sku" t-att-id="product.id">
+                                Update
+                            </button>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+            <t t-call="b_portal_base.portal_base_import_csv"/>
+        </template>
+
+        <template id="portal_base_my_products" name="Portal: My Products">
+            <t t-call="portal.portal_layout">
+                <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+                <t t-call="portal.portal_searchbar">
+                    <t t-set="title">My Products</t>
+                </t>
+
+                <t t-if="not products">
+                    <div class="alert alert-warning mt8" role="alert">
+                        There are currently no products for your account.
+                    </div>
+                </t>
+                <t t-else="">
+                    <t t-call="b_portal_base.portal_base_products_list"/>
+                </t>
+            </t>
+        </template>
+
+        <template id="portal_home_my_products" name="Portal My Home : products entry" customize_show="True" inherit_id="portal.portal_my_home" priority="25">
+            <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+                <t t-call="portal.portal_docs_entry">
+                    <t t-set="title">Products</t>
+                    <t t-set="url" t-value="'/my/products'"/>
+                    <t t-set="placeholder_count" t-value="'products_count'"/>
+                </t>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

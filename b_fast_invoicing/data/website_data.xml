@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <record id="menu_website_fast_invoicing_id" model="website.menu">
+            <field name="name">Fast Invoicing</field>
+            <field name="url">/autofactura/client</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">35</field>
+        </record>
+    </data>
+</odoo>

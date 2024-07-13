@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="w_sync_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">w_sync.res.config.settings.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//div[hasclass('settings')]" position="inside">
+                     <div class="app_settings_block" data-string="W_SYNC_GENERIC" string="W_SYNC_GENERIC" data-key="w_sync_generic">
+                         <h2>Synchronization Api Key</h2>
+                         <div class="row mt16 o_settings_container" id="w_sync_generic_settings">
+                             <div class="col-12 col-lg-6 o_setting_box" id="w_sync_generic_setting">
+                                 <div class="">
+                                     <field name="api_key" class="o_light_label" style="width: 68%"/>
+                                     <button name="generate_secret_key" string="Generate Api Secret Key" type="object" class="oe_link" icon="fa-arrow-right"/>
+                                 </div>
+                            </div>
+                        </div>
+                         <h2>Generate Logs for the synchronization process</h2>
+                         <div class="row mt16 o_settings_container" id="w_sync_generic_settings">
+                             <div class="col-12 col-lg-6 o_setting_box" id="w_sync_generic_setting">
+                                 <div class="">
+                                     <label for="generate_logs"></label>
+                                     <field name="generate_logs" class="o_light_label" style="width: 68%"/>
+                                 </div>
+                            </div>
+                        </div>
+                     </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_w_sync_generic_config_settings" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'w_sync_generic'}</field>
+        </record>
+
+        <menuitem id="menu_w_sync_generic_general_settings"
+            name="Settings"
+            parent="syncro_menu_config"
+            sequence="0"
+            action="action_w_sync_generic_config_settings"
+            groups="base.group_system"/>
+</odoo>

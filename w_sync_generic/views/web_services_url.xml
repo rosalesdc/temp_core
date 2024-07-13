@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="web_service_url_tree_view" model="ir.ui.view">
+        <field name="name">web.service.url.tree</field>
+        <field name="model">web.service.url</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="active" widget="boolean_toggle" />
+                <field name="name"/>
+                <field name="url"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="web_service_url_form_view" model="ir.ui.view">
+        <field name="name">web.service.url.form</field>
+        <field name="model">web.service.url</field>
+        <field name="arch" type="xml">
+            <form string="Web Service">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="url"/>
+                        <field name="need_confirmation"/>
+                        <field name="url_confirmation" attrs="{'required': [('need_confirmation', '=', True)], 'invisible': [('need_confirmation' , '!=', True)]}"/>
+                        <field name="url_send"/>
+                        <field name="need_authentication"/>
+                        <field name="authentication_mode" attrs="{'required': [('need_authentication', '=', True)], 'invisible': [('need_authentication' , '!=', True)]}"/>
+                        <field name="api_key" attrs="{'required': [('need_authentication', '=', True), ('authentication_mode', '=', 'api_key')], 'invisible': ['|',('need_authentication', '!=', True), ('authentication_mode', '!=', 'api_key')]}"/>
+                        <field name="username" attrs="{'required': [('need_authentication', '=', True), ('authentication_mode', '=', 'user_pass')], 'invisible': ['|',('need_authentication', '!=', True), ('authentication_mode', '!=', 'user_pass')]}"/>
+                        <field name="password" attrs="{'required': [('need_authentication', '=', True), ('authentication_mode', '=', 'user_pass')], 'invisible': ['|',('need_authentication', '!=', True), ('authentication_mode', '!=', 'user_pass')]}" password="True"/>
+                    </group>
+                    <notebook>
+                        <page string="Header Lines">
+                            <field name="header_line_ids" colspan="4" nolabel="1">
+                                <tree string="Header Lines" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="value"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_web_service_url" model="ir.actions.act_window">
+        <field name="name">Web Services</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">web.service.url</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Web Service"
+        id="menu_web_service_url_config"
+        parent="syncro_menu_config"
+        action="action_web_service_url"
+        sequence="2"/>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_type_operation_sat,access_type_operation_sat,model_type_operation_sat,base.group_user,1,0,0,0
+access_sat_documents,access_sat_documents,model_sat_documents,l10n_mx_sat_sync.group_sat_documents,1,1,1,1
+access_sat_documents_range_download,access_sat_documents_range_download,model_sat_documents_range_download,l10n_mx_sat_sync.group_sat_documents,1,1,1,1

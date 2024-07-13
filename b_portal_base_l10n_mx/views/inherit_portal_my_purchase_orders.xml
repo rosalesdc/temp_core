@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="portal_import_xml_modal">
+            <div class="modal fade" id="add_xml_modal" tabindex="-1" aria-labelledby="portalModalImportXmlLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="portalModalImportXmlLabel">Load from XML or compressed file</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
+                        </div>
+
+                        <div class="modal-body">
+                            <form id="myForm">
+                                <div class="mb-3">
+                                    <h4 class="col-sm-12">
+                                        <label class="form-label">Purchase orders:</label>
+                                        <label class="form-label" id="purchase_order_name"/>
+                                    </h4>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="hidden" id="purchase_order_name"/>
+                                    <input type="hidden" id="purchase_order_id"/>
+                                    <input type="file" class="form-control" id="my-file-selector-portal" accept=".xml, .zip"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" id="label-file-selector" style="overflow: hidden;"/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="submit_button_portal" class="btn btn-primary" type="submit">Import</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portal_message_modal" class="modal background-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" id="Head">
+                                <h4 class="modal-title" id="title_response">Info</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
+                            </div>
+                            <div id="messages" class="modal-body">
+                                <p id="message_response">Response</p>
+                                <span/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="inherit_purchase_orders_b_portal_base_l10n_mx" inherit_id="purchase.portal_my_purchase_orders">
+            <xpath expr="//tr[@class='active']/th[4]" position="replace">
+                <th>Num Invoices</th>
+                <th class="text-right">Total</th>
+                <th>Invoice</th>
+            </xpath>
+            <xpath expr="//tr/td[4]" position="replace">
+                <td>
+                    <a t-attf-href="/my/invoices/#{str(order.invoice_ids.id) if order.invoice_count == 1 else ''}">
+                        <span t-esc="order.invoice_count"/>
+                    </a>
+                </td>
+                <td class="text-right">
+                    <span t-field="order.amount_total"/>
+                </td>
+                <td id="td_add_xml">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_xml_modal" id="add_xml_button" name="add_xml_button"
+                            t-att-poid="order.id" t-att-poname="order.name">
+                        Add XML
+                    </button>
+                </td>
+            </xpath>
+            <xpath expr="//t[@t-if='orders']" position="before">
+                <t t-call="b_portal_base_l10n_mx.portal_import_xml_modal"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

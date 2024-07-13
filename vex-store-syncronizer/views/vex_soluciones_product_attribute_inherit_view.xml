@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="vex-store-syncronizer_replace_attribute_values" model="ir.ui.view">
+        <field name="name">vex.store.syncronizer.replace.attribute.values</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.attribute_tree_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="store" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

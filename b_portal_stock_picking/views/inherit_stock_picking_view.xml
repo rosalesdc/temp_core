@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="b_inherit_stock_picking_view_form" model="ir.ui.view">
+            <field name="name">b.inherit.stock.picking.view.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <field name="purchase_id" invisible="1"/>
+                    <page name="portal_info" string="Datos para el portal" attrs="{'invisible': [('purchase_id', '=', False)]}">
+                        <group name="main_group">
+                            <group name="group_left">
+                                <field name="invoiced" invisible="1"/>
+                                <field name="vat_emisor"/>
+                                <field name="vat_receptor"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+
+        <record id="view_pos_pos_inv_ref_form" model="ir.ui.view">
+            <field name="name">pos.order.inv.ref.inherit</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='pos_reference']" position="after">
+                    <label for="invoicing_ref"/>
+                    <div class="o_row">
+                        <field name="invoicing_ref" readonly="1"/>
+                        <button type="object" name="generate_invoicing_ref"
+                                class="btn-sm btn-link mb4 fa fa-barcode"
+                                aria-label="Generate Ref"
+                                title="Generate Ref"
+                                attrs="{'invisible':[('invoicing_ref', '!=', False)]}"/>
+                    </div>
+                    <label for="from_auto_invoice"/>
+                    <div class="o_row">
+                        <field name="from_auto_invoice" readonly="1"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_pos_order_filter" model="ir.ui.view">
+            <field name="name">pos.order.search ai</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+            <field name="arch" type="xml">
+                <filter name="order_month" position="after">
+                    <separator/>
+                    <filter name="is_auto_invoice" string="From AF"
+                            domain="[('from_auto_invoice', '=', True)]"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_tree_view_product" model="ir.ui.view">
+        <field name="name">product.template.view.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="instance_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="product_template_only_form_view_product" model="ir.ui.view">
+        <field name="name">product.template.view.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            
+            <xpath expr="//div[@name='options']" position="replace">
+                <div name="options">
+                    <span class="d-inline-block">
+                        <field name="sale_ok" on_change="1" />
+                        <label for="sale_ok" />
+                    </span>
+                    <span class="d-inline-block">
+                        <field name="purchase_ok" />
+                        <label for="purchase_ok" />
+                    </span>
+                    <span>
+                        <field name="is_package" />
+                        <label for="is_package" />
+                    </span>
+                    <span>
+                        <field name="export_store" />
+                        <label for="export_store"></label>
+                    </span>
+                    <span>
+                        <field name="instance_ids" widget="many2many_tags"/>
+                        <label for="instance_ids" />
+                    </span>
+                </div>
+            </xpath>
+            
+            <xpath expr="//page[@name='invoicing']" position="after">
+                <page name="unit_products" string="Productos Incluidos en el Paquete"
+                    attrs="{'invisible':[('is_package','=',False)]}">
+                    <field name="product_unit_ids" nolabel="1" mode="tree,kanban">
+                        <tree editable="bottom">
+                            <control>
+                                <create name="add_product_control" string="Add a product" />
+                            </control>
+                            <field name="product_id" />
+                            <field name="permalink" widget="url" readonly="1" />
+                            <field name="quantity" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

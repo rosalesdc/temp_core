@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="model_access_vex_meli_order_tag" model="ir.model.access">
+        <field name="name">model.access.vex.meli.order.tag</field>
+        <field name="model_id" ref="odoo-mercadolibre.model_vex_meli_order_tag"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+    <record id="model_access_vex_meli_payments" model="ir.model.access">
+        <field name="name">model.access.vex.meli.payments</field>
+        <field name="model_id" ref="odoo-mercadolibre.model_vex_meli_payments"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>    
+    <record id="model_access_vex_meli_payments_available_action" model="ir.model.access">
+        <field name="name">model.access.vex.meli.payments.available.action</field>
+        <field name="model_id" ref="odoo-mercadolibre.model_vex_meli_payments_available_action"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+    <record id="model_access_vex_product_publication" model="ir.model.access">
+        <field name="name">model.access.vex.product.publication</field>
+        <field name="model_id" ref="odoo-mercadolibre.model_vex_product_publications"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+    <record id="model_access_vex_restapi_list_meli" model="ir.model.access">
+        <field name="name">model.access.vex.restapi.list.meli</field>
+        <field name="model_id" ref="odoo-mercadolibre.model_vex_restapi_list_meli"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="perm_read" eval="1"/>
+    </record>
+</odoo>

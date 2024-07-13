@@ -1,0 +1,78 @@
+<odoo>
+    <record id="res_config_settings_view_form_website_account" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.website.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='purchase_setting_container']" position="after">
+                <h2>Portal Provider</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         title="If installed, the product variants will be added to purchase orders through a grid entry.">
+                        <div class="o_setting_right_pane">
+                            <label for="portal_xml_state"/>
+                            <div class="text-muted">
+                                Default XML state in portal provider
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="portal_xml_state" class="o_light_label" widget="radio"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_config_settings_view_b_portal_base_l10n_mx" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.b_portal_base_l10n_mx</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='analytic']" position="after">
+                <h2>CFDI check options</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="Extra Validations Sale">
+                        <div class="o_setting_left_pane">
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="activate_optional_sale_validations_line" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="activate_optional_sale_validations_line"/>
+                            <div class="text-muted">
+                                Check Invoice lines.
+                                <ul>
+                                    <li>quantity</li>
+                                    <li>price unit</li>
+                                    <li>product</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="activate_optional_sale_validations_line_leght" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="activate_optional_sale_validations_line_leght"/>
+                            <div class="text-muted">
+                                Number of lines.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

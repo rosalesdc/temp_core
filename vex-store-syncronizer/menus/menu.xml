@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_view_vex_instance" model="ir.actions.act_window">
+        <field name="name">Instance</field>
+        <field name="res_model">vex.instance</field>
+        <field name="view_mode">kanban,form</field>
+    </record>
+
+    <record id="action_view_vex_restapi_list" model="ir.actions.act_window">
+        <field name="name">Control Panel</field>
+        <field name="res_model">vex.restapi.list</field>
+        <field name="view_mode">kanban,form</field>
+    </record>
+
+    <record id="action_view_vex_import" model="ir.actions.act_window">
+        <field name="name">Import</field>
+        <field name="res_model">vex.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_view_vex_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">vex.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="res_id" ref="vex-store-syncronizer.vex_config_settigns"/>
+    </record>
+
+    <menuitem 
+        id="main_vex_store_syncronizer"
+        name="Store Syncronizer"
+        action="vex-store-syncronizer.action_view_vex_instance" 
+        />
+    
+    <menuitem 
+        id="menu_vex_instance"
+        name="Instances"
+        parent="vex-store-syncronizer.main_vex_store_syncronizer"
+        action="vex-store-syncronizer.action_view_vex_instance" 
+        sequence="1"
+        />
+
+    <!-- <menuitem 
+        id="menu_vex_control_panel"
+        name="Control Panel"
+        parent="vex-store-syncronizer.main_vex_store_syncronizer"
+        action="vex-store-syncronizer.action_view_vex_restapi_list" 
+        sequence="2"
+        /> -->
+    
+    <!-- <menuitem 
+        id="menu_vex_action"
+        name="Action"
+        parent="vex-store-syncronizer.main_vex_store_syncronizer"
+        sequence="3"/>  -->
+<!--     
+    <menuitem 
+        id="menu_vex_import_update"
+        name="Import/Update"
+        parent="vex-store-syncronizer.menu_vex_action"
+        action="vex-store-syncronizer.action_view_vex_import"
+        sequence="1"/> -->
+    
+    <menuitem 
+        id="menu_vex_config_settings"
+        name="Settings"
+        parent="vex-store-syncronizer.main_vex_store_syncronizer"
+        action="vex-store-syncronizer.action_view_vex_config_settings"
+        sequence="4"/> 
+
+    <!-- Datos Luis -->
+
+    <!-- Gridstack -->
+        <!-- ACTION CLIENT OWL -->
+    <!-- <record model="ir.actions.client" id="welcome">
+        <field name="name">Dashboard Mercadolibre</field>
+        <field name="tag">vex-store-syncronizer.welcome</field>
+    </record> -->
+
+ 	<!-- MENU ROOT -->
+        <!-- <menuitem name="WhatsApp Suite" id="whatsapp_suite.menu_root" groups="base.group_user"/> -->
+
+        <!-- MENU NAV -->
+    <!-- <menuitem 
+        name="Dashboard Mercadolibre" 
+        id="vex-w_s-dashboard" 
+        parent="main_vex_store_syncronizer" 
+        action="vex-store-syncronizer.welcome" 
+        sequence="1" /> -->
+    
+</odoo>

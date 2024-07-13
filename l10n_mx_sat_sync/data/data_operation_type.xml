@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="operation_estandar" model="type.operation.sat">
+      <field name="name">Estándar</field>
+      <field name="code">8</field>
+    </record>
+    <record id="operation_4294967296" model="type.operation.sat">
+      <field name="name">Acreditamiento de IEPS</field>
+      <field name="code">4294967296</field>
+    </record>
+    <record id="operation_8388608" model="type.operation.sat">
+      <field name="name">Aerolíneas</field>
+      <field name="code">8388608</field>
+    </record>
+    <record id="operation_70368744177664" model="type.operation.sat">
+      <field name="name">Carta Porte</field>
+      <field name="code">70368744177664</field>
+    </record>
+    <record id="operation_140737488355328" model="type.operation.sat">
+      <field name="name">Carta Porte 2.0</field>
+      <field name="code">140737488355328</field>
+    </record>
+    <record id="operation_1073741824" model="type.operation.sat">
+      <field name="name">Certificado de Destrucción</field>
+      <field name="code">1073741824</field>
+    </record>
+    <record id="operation_17179869184" model="type.operation.sat">
+      <field name="name">Comercio Exterior</field>
+      <field name="code">17179869184</field>
+    </record>
+    <record id="operation_274877906944" model="type.operation.sat">
+      <field name="name">Comercio Exterior 1.1</field>
+      <field name="code">274877906944</field>
+    </record>
+    <record id="operation_4" model="type.operation.sat">
+      <field name="name">Compra Venta de Divisas</field>
+      <field name="code">4</field>
+    </record>
+    <record id="operation_16777216" model="type.operation.sat">
+      <field name="name">Consumo de Combustibles</field>
+      <field name="code">16777216</field>
+    </record>
+    <record id="operation_8796093022208" model="type.operation.sat">
+      <field name="name">Consumo De Combustibles 1.1</field>
+      <field name="code">8796093022208</field>
+    </record>
+    <record id="operation_64" model="type.operation.sat">
+      <field name="name">Donatarias</field>
+      <field name="code">64</field>
+    </record>
+    <record id="operation_256" model="type.operation.sat">
+      <field name="name">Estado De Cuenta Bancario</field>
+      <field name="code">256</field>
+    </record>
+    <record id="operation_4398046511104" model="type.operation.sat">
+      <field name="name">Estado de Cuenta Combustibles 1.2</field>
+      <field name="code">4398046511104</field>
+    </record>
+    <record id="operation_8589934592" model="type.operation.sat">
+      <field
+      name="name"
+    >Estado de cuenta de combustibles de monederos electrónicos.</field>
+      <field name="code">8589934592</field>
+    </record>
+    <record id="operation_17592186044416" model="type.operation.sat">
+      <field name="name">Gastos de Hnamerocarburos</field>
+      <field name="code">17592186044416</field>
+    </record>
+    <record id="operation_68719476736" model="type.operation.sat">
+      <field name="name">INE 1.1</field>
+      <field name="code">68719476736</field>
+    </record>
+    <record id="operation_35184372088832" model="type.operation.sat">
+      <field name="name">Ingresos de Hnamerocarburos</field>
+      <field name="code">64</field>
+    </record>
+    <record id="operation_1024" model="type.operation.sat">
+      <field
+      name="name"
+    >Instituciones Educativas Privadas (Pago de colegiatura)</field>
+      <field name="code">1024</field>
+    </record>
+    <record id="operation_4096" model="type.operation.sat">
+      <field name="name">Leyendas Fiscales</field>
+      <field name="code">64</field>
+    </record>
+    <record id="operation_524288" model="type.operation.sat">
+      <field name="name">Mis Cuentas</field>
+      <field name="code">524288</field>
+    </record>
+    <record id="operation_67108864" model="type.operation.sat">
+      <field name="name">Notarios Públicos</field>
+      <field name="code">67108864</field>
+    </record>
+    <record id="operation_536870912" model="type.operation.sat">
+      <field name="name">Obras de artes y antigüedades</field>
+      <field name="code">536870912</field>
+    </record>
+    <record id="operation_2048" model="type.operation.sat">
+      <field name="name">Otros Derechos e Impuestos</field>
+      <field name="code">2048</field>
+    </record>
+    <record id="operation_4194304" model="type.operation.sat">
+      <field name="name">Pago en Especie</field>
+      <field name="code">4194304</field>
+    </record>
+    <record id="operation_8192" model="type.operation.sat">
+      <field name="name">Persona Física Integrante de Coordinado</field>
+      <field name="code">8192</field>
+    </record>
+    <record id="operation_1125899906842624" model="type.operation.sat">
+      <field name="name">Recepcion de Pagos</field>
+      <field name="code">1125899906842624</field>
+    </record>
+    <record id="operation_549755813888" model="type.operation.sat">
+      <field name="name">Recepción de Pagos</field>
+      <field name="code">549755813888</field>
+    </record>
+    <record id="operation_128" model="type.operation.sat">
+      <field name="name">Recibo de donativo</field>
+      <field name="code">128</field>
+    </record>
+    <record id="operation_1048576" model="type.operation.sat">
+      <field name="name">Recibo de Pago de Salarios</field>
+      <field name="code">1048576</field>
+    </record>
+    <record id="operation_137438953472" model="type.operation.sat">
+      <field name="name">Recibo de Pago de Salarios 1.2</field>
+      <field name="code">137438953472</field>
+    </record>
+    <record id="operation_32" model="type.operation.sat">
+      <field name="name">Sector de Ventas al Detalle (Detallista)</field>
+      <field name="code">32</field>
+    </record>
+    <record id="operation_268435456" model="type.operation.sat">
+      <field name="name">Servicios de construcción</field>
+      <field name="code">268435456</field>
+    </record>
+    <record id="operation_16384" model="type.operation.sat">
+      <field name="name">SPEI de Tercero a Tercero</field>
+      <field name="code">16384</field>
+    </record>
+    <record id="operation_2147483648" model="type.operation.sat">
+      <field name="name">Sustitución y renovación vehicular</field>
+      <field name="code">2147483648</field>
+    </record>
+    <record id="operation_32768" model="type.operation.sat">
+      <field name="name">Terceros</field>
+      <field name="code">32768</field>
+    </record>
+    <record id="operation_2199023255552" model="type.operation.sat">
+      <field name="name">Timbre Fiscal Digital</field>
+      <field name="code">2199023255552</field>
+    </record>
+    <record id="operation_16" model="type.operation.sat">
+      <field name="name">Turista o Pasajero Extranjero</field>
+      <field name="code">16</field>
+    </record>
+    <record id="operation_33554432" model="type.operation.sat">
+      <field name="name">Vales de Despensa</field>
+      <field name="code">33554432</field>
+    </record>
+    <record id="operation_134217728" model="type.operation.sat">
+      <field name="name">Vehículo Usado</field>
+      <field name="code">134217728</field>
+    </record>
+    <record id="operation_2097152" model="type.operation.sat">
+      <field name="name">Venta de Vehiculos</field>
+      <field name="code">2097152</field>
+    </record>
+</odoo>

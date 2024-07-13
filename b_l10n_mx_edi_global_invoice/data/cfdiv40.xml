@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="global_cfdiv40" inherit_id="l10n_mx_edi_40.cfdiv40">
+
+            <!--  inherit node: Receptor-->
+            <xpath expr="//*[name()='cfdi:Receptor']" position="attributes">
+                <attribute name="t-att-UsoCFDI">'S01' if record.l10n_mx_edi_global_invoice else record.l10n_mx_edi_usage if record.l10n_mx_edi_usage != 'P01' else 'S01'</attribute>
+                <attribute name="t-att-ResidenciaFiscal">customer_fiscal_residence if not record.l10n_mx_edi_global_invoice else None</attribute>
+                <attribute name="t-att-RegimenFiscalReceptor">'616' if record.l10n_mx_edi_global_invoice else fiscal_regime</attribute>
+                <attribute name="t-att-DomicilioFiscalReceptor">issued_address.zip or supplier.zip if record.l10n_mx_edi_global_invoice else customer.zip if customer.country_id.code == 'MX' else issued_address.zip or supplier.zip</attribute>
+            </xpath>
+
+            <!-- inherit node: Comprobante -->
+            <xpath expr="//*[name()='cfdi:Comprobante']" position="attributes">
+                <attribute name="t-att-Exportacion">'01' if record.l10n_mx_edi_global_invoice else l10n_mx_edi_external_trade_type</attribute>
+                <attribute name="t-att-CondicionesDePago">format_string(record.invoice_payment_term_id.name, 1000) if not record.l10n_mx_edi_global_invoice else None</attribute>
+                <attribute name="t-att-MetodoPago">'PUE' if record.l10n_mx_edi_global_invoice else payment_policy</attribute>
+            </xpath>
+
+            <!-- inherit node: Concepto -->
+            <xpath expr="//*[name()='cfdi:Concepto']" position="attributes">
+                <attribute name="t-att-ClaveProdServ">'01010101' if record.l10n_mx_edi_global_invoice else line.product_id.unspsc_code_id.code</attribute>
+                <attribute name="t-att-ClaveUnidad">'ACT' if record.l10n_mx_edi_global_invoice else line.product_uom_id.unspsc_code_id.code</attribute>
+                <attribute name="t-att-Unidad">format_string(line.product_uom_id.name, 20).upper() if line.product_uom_id.name and not record.l10n_mx_edi_global_invoice else None</attribute>
+                <attribute name="t-att-Descripcion">'Venta' if record.l10n_mx_edi_global_invoice else format_string(line.name, 1000)</attribute>
+            </xpath>
+
+            <!-- inherit node: Comprobante -->
+            <xpath expr="//t[@t-if='origin_uuids']" position="before">
+                <t t-if="record.l10n_mx_edi_global_invoice">
+                    <cfdi:InformacionGlobal xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+                        t-att-Periodicidad="record.l10n_mx_edi_periodicidad"
+                        t-att-Meses="record.l10n_mx_edi_meses"
+                        t-att-Año="record.l10n_mx_edi_global_information_year"/>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

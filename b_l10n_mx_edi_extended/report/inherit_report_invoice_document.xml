@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="b_inherit_report_invoice_edi_info" inherit_id="account.report_invoice_document">
+            <xpath expr="//th[@name='th_taxes']" position="before">
+                <th name="th_tax_object" t-if="o.move_type in ('out_invoice', 'out_refund')" class="text-start"><span>Tax Object</span></th>
+                <th name="th_tax_code" t-if="o.move_type in ('out_invoice', 'out_refund')" class="text-start"><span>Tax</span></th>
+                <th name="th_tax_code" t-if="o.move_type in ('out_invoice', 'out_refund')" class="text-start"><span>Tax Amount</span></th>
+            </xpath>
+            <xpath expr="//td[@t-if='display_discount']" position="after">
+                <td name="td_tax_object" t-if="o.move_type in ('out_invoice', 'out_refund')">
+                    <span class="text-nowrap" t-esc="o._l10n_mx_edi_get_tax_objected()"/>
+                </td>
+                <td name="td_tax_code" t-if="o.move_type in ('out_invoice', 'out_refund')">
+                    <span t-esc="', '.join(map(lambda x: get_tax_code((x.invoice_repartition_line_ids.tag_ids[0].name or x.name)), line.tax_ids))"/>
+                </td>
+                <td name="td_tax_amount" t-if="o.move_type in ('out_invoice', 'out_refund')">
+                    <t t-set="tax_amount" t-value="o.get_amount_tax_line(tax_details, line)"/>
+                    <span t-if="tax_amount != 0" t-esc="'%.*f' % (o.currency_id.decimal_places, tax_amount)"/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

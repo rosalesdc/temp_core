@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="b_portal_base_l10n_mx_import_xml_view_form">
+            <field name="name">import.xml.wizard</field>
+            <field name="model">import.xml</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Upload">
+                    <h2>Upload your XML file to attach</h2>
+                    <group>
+                        <field name="filename" invisible="1"/>
+                        <field name="file_xml" filename="filename"/>
+                        <field name="invoice_state" string="Default State"/>
+                    </group>
+                    <footer>
+                        <button name="import_file" string="Import" type="object" class="btn-primary"/>
+                        <button string="Close" class="btn-secundary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="b_portal_base_l10n_mx_success_import">
+            <field name="name">import.xml.wizard</field>
+            <field name="model">import.xml</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Upload">
+                    <h2>File attached successfully</h2>
+                    <footer>
+                        <button string="Close" class="btn-primary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_launch_wizard_import_xml" model="ir.actions.act_window">
+            <field name="name">Import XML</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="b_portal_base_l10n_mx_import_xml_view_form"/>
+            <field name="res_model">import.xml</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

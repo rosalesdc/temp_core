@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--  inherit account move form view -->
+        <record id="b_inherit_account_move_view_form_adds_global_invoice_edi_features" model="ir.ui.view">
+            <field name="name">b.inherit.account.move.view.global.invoice.edi.features</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="b_l10n_mx_edi_extended.b_inherit_account_move_view_form_adds_mx_edi_features"/>
+            <field name="arch" type="xml">
+                <!-- pos global sat fields -->
+                <xpath expr="//group[@name='main_group']" position="inside">
+                    <field name="l10n_mx_edi_global_invoice" widget="boolean_toggle" attrs="{'invisible': ['|', ('country_code', '!=', 'MX'), ('move_type', '!=', 'out_invoice')], 'readonly': [('edi_state', '=', 'sent')]}"/>
+                    <field name="l10n_mx_edi_periodicidad" attrs="{'required': [('l10n_mx_edi_global_invoice', '=', True)], 'readonly': [('edi_state', '=', 'sent')], 'invisible': [('l10n_mx_edi_global_invoice', '=', False)]}"/>
+                    <field name="l10n_mx_edi_meses" attrs="{'required': [('l10n_mx_edi_global_invoice', '=', True)], 'readonly': [('edi_state', '=', 'sent')], 'invisible': [('l10n_mx_edi_global_invoice', '=', False)]}"/>
+                    <field name="l10n_mx_edi_global_information_year" attrs="{'required': [('l10n_mx_edi_global_invoice', '=', True)], 'readonly': [('edi_state', '=', 'sent')], 'invisible': [('l10n_mx_edi_global_invoice', '=', False)]}"/>
+                    <field name="l10n_mx_edi_valid_global_partner_invoice" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="b_inherit_account_move_view_form_alerts" model="ir.ui.view">
+            <field name="name">b.inherit.account.move.view.form.alters</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="before">
+                    <field name="l10n_mx_edi_global_invoice_from_sales" invisible="1"/>
+                    <div class="alert alert-danger" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', ('l10n_mx_edi_global_invoice', '=', False), ('l10n_mx_edi_valid_global_partner_invoice', '=', True)]}">
+                        This invoice is configured to generate a global invoice. A global invoice requieres that the receptor name be: PUBLICO EN GENERAL and the VAT: XAXX010101000,
+                        if any of these data are not like them, the global invoice won't be signed by SAT.
+                        Please, configure a partner with the correct data.
+                    </div>
+                </xpath>
+
+                <xpath expr="//page[@id='aml_tab']" position="before">
+                    <page name="global_invoice_lines" string="Global Invoice Lines" attrs="{'invisible': ['|', '|', ('l10n_mx_edi_global_invoice', '=', False), ('l10n_mx_edi_global_invoice_from_sales', '=', False), ('move_type', '!=', 'out_invoice')]}">
+                        <field name="l10n_mx_edi_sale_global_lines" widget="section_and_note_one2many" mode="tree">
+                            <tree editable="bottom" string="Lines" default_order="sequence, id">
+                                <control>
+                                    <create name="add_line_control" string="Add a line" context="{'default_display_type': 'product'}"/>
+                                    <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                                    <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                                </control>
+
+                                <field name="sequence" widget="handle"/>
+                                <field name="product_id" optional="show" widget="many2one_barcode" domain="context.get('default_move_type') in ('out_invoice', 'out_refund', 'out_receipt') and [('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)] or [('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
+                                <field name="name" widget="section_and_note_text" optional="show"/>
+                                <field name="quantity" optional="show"/>
+                                <field name="product_uom_id" string="UoM" groups="uom.group_uom" optional="show"/>
+                                <field name="price_unit" string="Price"/>
+                                <field name="discount" string="Disc.%" optional="hide"/>
+                                <field name="tax_ids" widget="many2many_tags" invisible="1"/>
+                                <field name="has_global_taxes" invisible="1"/>
+                                <field name="sale_grouped_taxes" invisible="1"/>
+                                <field name="price_subtotal" string="Subtotal" sum="Sutotal"  groups="account.group_show_line_subtotals_tax_excluded"/>
+                                <field name="price_total" string="Total" sum="Total" groups="account.group_show_line_subtotals_tax_included"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="company_currency_id" invisible="1"/>
+                                <field name="display_type" force_save="1" invisible="1"/>
+                                <field name="product_uom_id" invisible="1"/>
+                            </tree>
+                        </field>
+                     </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

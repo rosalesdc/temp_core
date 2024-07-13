@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="b_inherit_report_invoice_global_information" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@id='informations']" position="before">
+                <!-- taxes methods -->
+                <t t-set="get_tax_code" t-value="o.get_tax_code()"/>
+                <t t-set="tax_details" t-value="o.get_invoice_taxes()"/>
+                <div class="row" t-if="o.l10n_mx_edi_global_invoice and o.move_type in ('out_invoice', 'out_refund')">
+                    <div class="col-7"/>
+                    <div class="col-5" align="left">
+                        <b><span class="text-left">CFDI global information</span></b><br/>
+                        <b><span>Periodicity: </span></b>
+                        <span t-field="o.l10n_mx_edi_periodicidad"/><br/>
+                        <b><span>Month: </span></b>
+                        <span t-field="o.l10n_mx_edi_meses"/><br/>
+                        <b><span>Year: </span></b>
+                        <span t-field="o.l10n_mx_edi_global_information_year"/>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="//th[@name='th_description']" position="before">
+                <th t-if="o.l10n_mx_edi_global_invoice" name="th_no_identification" class="text-start"><span>No Identification</span></th>
+            </xpath>
+            <xpath expr="//td[@name='account_invoice_line_name']" position="before">
+                <td t-if="o.l10n_mx_edi_global_invoice" name="td_no_identification"><span t-field="line.name" t-options="{'widget': 'text'}"/></td>
+            </xpath>
+
+            <xpath expr="//th[@name='th_description']" position="after">
+                <th t-if="o.l10n_mx_edi_global_invoice" name="th_clave_unidad" class="text-start"><span>Unit Key</span></th>
+            </xpath>
+            <xpath expr="//td[@name='account_invoice_line_name']" position="after">
+                <td t-if="o.l10n_mx_edi_global_invoice" name="td_no_identification"><span t-esc="'ACT'" t-options="{'widget': 'text'}"/></td>
+            </xpath>
+
+            <xpath expr="//td[@name='account_invoice_line_name']//span" position="attributes">
+                <attribute name="t-field"></attribute>
+                <attribute name="t-esc">'Venta' if o.l10n_mx_edi_global_invoice else line.name</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

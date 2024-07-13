@@ -1,0 +1,547 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b_l10n_mx_edi_global_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-23 07:40+0000\n"
+"PO-Revision-Date: 2024-02-23 07:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_report_invoice_global_information
+msgid ""
+"<b><span class=\"text-left\">CFDI global information</span></b><br/>\n"
+"                        <b><span>Periodicity: </span></b>"
+msgstr ""
+"<b><span class=\"text-left\">Información del CFDI Global</span></b><br/>\n"
+"                        <b><span>Periodicidad: </span></b>"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_report_invoice_global_information
+msgid ""
+"<br/>\n"
+"                        <b><span>Month: </span></b>"
+msgstr ""
+"<br/>\n"
+"                        <b><span>Mes: </span></b>"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_report_invoice_global_information
+msgid ""
+"<br/>\n"
+"                        <b><span>Year: </span></b>"
+msgstr ""
+"<br/>\n"
+"                        <b><span>Año: </span></b>"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_report_invoice_global_information
+msgid "<span>No Identification</span>"
+msgstr "<span>No Identificación</span>"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_report_invoice_global_information
+msgid "<span>Unit Key</span>"
+msgstr "<span>Clave Unidad</span>"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Add a line"
+msgstr "Añadir una línea"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Add a note"
+msgstr "Añadir una nota"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Add a section"
+msgstr "Añadir una sección"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__04
+msgid "April"
+msgstr "Abril"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__08
+msgid "August"
+msgstr "Agosto"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_periodicidad__05
+msgid "Bimonthly"
+msgstr "Bimestral"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_periodicidad__03
+msgid "Biweekly"
+msgstr "Quincenal"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__company_id
+msgid "Company"
+msgstr "Compañia"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__company_currency_id
+msgid "Company Currency"
+msgstr "Moneda de la compañia"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__cogs
+msgid "Cost of Goods Sold"
+msgstr "Costo de bienes vendidos"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_periodicidad__01
+msgid "Daily"
+msgstr "Diario"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__12
+msgid "December"
+msgstr "Diciembre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Disc.%"
+msgstr "Desc.%"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__discount
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__display_type
+msgid "Display Type"
+msgstr "Tipo de línea"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model,name:b_l10n_mx_edi_global_invoice.model_account_edi_format
+msgid "EDI format"
+msgstr "Formato EDI"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__epd
+msgid "Early Payment Discount"
+msgstr "Descuento por pago anticipado"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__02
+msgid "February"
+msgstr "Febrero"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Global Invoice Lines"
+msgstr "Líneas factura global"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_global_invoice
+msgid "Global invoice"
+msgstr "CFDI Global"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__has_global_taxes
+msgid "Global taxes"
+msgstr "Impuestos globales"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__sale_grouped_taxes
+msgid "Grouped taxes"
+msgstr "Impuestos agrupados"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__id
+msgid "ID"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_global_invoice
+msgid "Indicates that the document is a global invoice"
+msgstr "Indica que el documento es un CFDI Global."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_global_invoice_line__tax_line_id
+msgid "Indicates that this journal item is a tax line"
+msgstr "Indica si la entrada de diario es una línea de impuesto"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_meses
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_meses
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_meses
+msgid ""
+"Indicates the month or the months related to the CFDI global information."
+msgstr ""
+"Indica el mes o los meses relacionados al node Información Global del CFDI."
+
+#. module: b_l10n_mx_edi_global_invoice
+#. odoo-python
+#: code:addons/b_l10n_mx_edi_global_invoice/models/inherit_account_move.py:0
+#, python-format
+msgid "Invoice year"
+msgstr "Año de la factura"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__01
+msgid "January"
+msgstr "Enero"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__13
+msgid "January-February"
+msgstr "Enero-Febrero"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model,name:b_l10n_mx_edi_global_invoice.model_account_move
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__move_id
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__07
+msgid "July"
+msgstr "Julio"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__16
+msgid "July-August"
+msgstr "Julio-Agosto"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__06
+msgid "June"
+msgstr "Junio"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_global_invoice_from_sales
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_global_invoice_from_sales
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_global_invoice_from_sales
+msgid "L10N Mx Edi Global Invoice From Sales"
+msgstr "Factura global de ordenes de venta"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_sale_global_lines
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_sale_global_lines
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_sale_global_lines
+msgid "L10N Mx Edi Sale Global Lines"
+msgstr "Líneas de factura global de ordenes de venta"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__name
+msgid "Label"
+msgstr "Etiqueta"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model,name:b_l10n_mx_edi_global_invoice.model_global_invoice_line
+msgid "Lines for concepts of global invoice"
+msgstr "Lineas para los conceptos de CFDI global"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__03
+msgid "March"
+msgstr "Marzo"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__14
+msgid "March-April"
+msgstr "Marzo-Abril"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__05
+msgid "May"
+msgstr "Mayo"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__15
+msgid "May-June"
+msgstr "Mayo-Junio"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_periodicidad__04
+msgid "Monthly"
+msgstr "Mensual"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_meses
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_meses
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_meses
+msgid "Months"
+msgstr "Meses"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__line_note
+msgid "Note"
+msgstr "Nota"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__11
+msgid "November"
+msgstr "Noviembre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__18
+msgid "November-December"
+msgstr "Noviembre-Diciembre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__10
+msgid "October"
+msgstr "Octubre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__tax_line_id
+msgid "Originator Tax"
+msgstr "Impuesto de originador"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__tax_repartition_line_id
+msgid "Originator Tax Distribution Line"
+msgstr "Línea de distribución de impuesto originadora"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__payment_term
+msgid "Payment Term"
+msgstr "Termino de pago"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_periodicidad
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_periodicidad
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_periodicidad
+msgid "Periodicity"
+msgstr "Periodicidad"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Price"
+msgstr "Precio"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__product_id
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__product
+msgid "Product"
+msgstr "Producto"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__rounding
+msgid "Rounding"
+msgstr "Redondeo"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__line_section
+msgid "Section"
+msgstr "Sección"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__09
+msgid "September"
+msgstr "Septiembre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_meses__17
+msgid "September-October"
+msgstr "Septiembre-Octubre"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__sequence
+msgid "Sequence"
+msgstr "Sequencia"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__price_subtotal
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Subtotal"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Sutotal"
+msgstr "Subtotal"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__global_invoice_line__display_type__tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_global_invoice_line__tax_repartition_line_id
+msgid ""
+"Tax distribution line that caused the creation of this move line, if any"
+msgstr ""
+"Línea de distribución de impuestos que provocó la creación de esta línea de movimiento, si la hubiera"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__tax_ids
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: b_l10n_mx_edi_global_invoice
+#. odoo-python
+#: code:addons/b_l10n_mx_edi_global_invoice/models/inherit_account_move.py:0
+#, python-format
+msgid ""
+"The invoice cannot be post, due to the selected partner does not have the "
+"correct information required for the CFDI, check the warning message and "
+"select a correct partner or fix the information."
+msgstr ""
+"La factura no puede ser publicada, debido a que el cliente que se ha "
+"seleccionado no tiene la información requeridad para el CFDI de factura "
+"global, verifique el mensaje de información que se muestra en el formulario "
+"de la factura y seleccione un cliente con la información correcta o corrija "
+"la información."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_global_invoice_line__quantity
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+"La cantidad opcional expresada por esta línea, por ejemplo: número de producto vendido. "
+"La cantidad no es un requisito legal pero es muy útil para algunos informes."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_valid_global_partner_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_valid_global_partner_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_valid_global_partner_invoice
+msgid ""
+"The selected partner has to be consistent with the partner that a global "
+"invoice requires"
+msgstr ""
+"El cliente seleccionado tiene que ser consistente con el cliente que una "
+"factura global require."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_global_information_year
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_global_information_year
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_global_information_year
+msgid ""
+"The value of this field must be equal to the current year or the immediately"
+" previous year. For validating the current year or the immediately preceding"
+" year should be considered the one registered in the invoice date."
+msgstr ""
+"El valor para este campo debe ser igual al año actual o al año inmediato "
+"anterior.  Para validar el año actual o el año inmediato anterior, se debe "
+"de considerarel año de la fecha de factura registrada."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid ""
+"This invoice is configured to generate a global invoice. A global invoice requieres that the receptor name be: PUBLICO EN GENERAL and the VAT: XAXX010101000,\n"
+"                        if any of these data are not like them, the global invoice won't be signed by SAT.\n"
+"                        Please, configure a partner with the correct data."
+msgstr ""
+"Esta factura esta configurada para generar una factura global. Una factura global requiere que el nombre del receptor sea: PUBLICO EN GENERAL y el RFC: XAXX010101000,\n"
+"                        si alguno de estos datos son diferentes, la factura global no será firmada por el SAT.\n"
+"                        Por favor, configure el cliente con la información correcta."
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__price_total
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "Total"
+msgstr ""
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__move_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__price_unit
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_global_invoice_line__product_uom_id
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model_terms:ir.ui.view,arch_db:b_l10n_mx_edi_global_invoice.b_inherit_account_move_view_form_alerts
+msgid "UoM"
+msgstr "UoM"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_valid_global_partner_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_valid_global_partner_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_valid_global_partner_invoice
+msgid "Valid partner"
+msgstr "Cliente valido"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields.selection,name:b_l10n_mx_edi_global_invoice.selection__account_move__l10n_mx_edi_periodicidad__02
+msgid "Weekly"
+msgstr "Semanal"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_global_information_year
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_global_information_year
+#: model:ir.model.fields,field_description:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_global_information_year
+msgid "Year"
+msgstr "Año"
+
+#. module: b_l10n_mx_edi_global_invoice
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_bank_statement_line__l10n_mx_edi_periodicidad
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_move__l10n_mx_edi_periodicidad
+#: model:ir.model.fields,help:b_l10n_mx_edi_global_invoice.field_account_payment__l10n_mx_edi_periodicidad
+msgid "the period to which the global CFDI information."
+msgstr "el período al que pertenece la información del CFDI global."

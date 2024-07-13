@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_history_synchro_tree" model="ir.ui.view">
+        <field name="name">view.history.synchro.log.tree</field>
+        <field name="model">history.synchro.log</field>
+        <field name="arch" type="xml">
+            <tree create="false"  delete="true">
+                <field name="trace"/>
+                <field name="action_type"/>
+                <field name="external_id"/>
+                <field name="odoo_id"/>
+                <field name="name"/>
+                <field name="title"/>
+                <field name="values_from_origin"/>
+                <field name="values_to_destiny"/>
+                <field name="date_write"/>
+                <field name="date_sync"/>
+                <field name="state"/>
+                <field name="error_message"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_history_synchro_form" model="ir.ui.view">
+        <field name="name">view.history.synchro.log.form</field>
+        <field name="model">history.synchro.log</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false" delete="true" duplicate="false" >
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="action_type"/>
+                            <field name="name"/>
+                            <field name="title"/>
+                            <field name="model"/>
+                            <field name="trace"/>
+                            <field name="external_id"/>
+                            <field name="odoo_id"/>
+                        </group>
+                        <group>
+                            <field name="state"/>
+                            <field name="error_message"/>
+                            <field name="date_write"/>
+                            <field name="date_sync"/>
+                            <field name="ip"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="values_from_origin"/>
+                        </group>
+                        <group>
+                           <field name="values_to_destiny"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_history_synchro" model="ir.actions.act_window">
+        <field name="name">History Syncronizations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">history.synchro.log</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="APP Synchro"
+        id="menu_wedoo_app_synchro"
+        web_icon="w_sync_generic,static/description/icon.png"
+        sequence="50"/>
+
+    <menuitem name="Search"
+        id="menu_wedoo_synchro_search"
+        parent="menu_wedoo_app_synchro"
+        sequence="2" />
+
+    <menuitem
+        id="data_synchro"
+        name="History Synchronization"
+        parent="menu_wedoo_synchro_search"
+        action="action_history_synchro"
+        sequence="27" />
+
+    <menuitem
+        id="syncro_menu_config"
+        name="Configuration"
+        parent="menu_wedoo_app_synchro"
+        sequence="25"/>
+</odoo>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="synchro_obj_tree_view" model="ir.ui.view">
+        <field name="name">synchro.obj.tree</field>
+        <field name="model">synchro.obj</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="priority" widget="handle"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="synchro_mode"/>
+                <field name="synchro_priority"/>
+                <field name="odoo_model"/>
+                <field name="external_model"/>
+                <field name="ws_url_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="synchro_obj_form_view" model="ir.ui.view">
+        <field name="name">synchro.obj.form</field>
+        <field name="model">synchro.obj</field>
+        <field name="arch" type="xml">
+            <form string="Synchro Objects">
+                <sheet>
+                    <div class="oe_button_box oe_inline" name="button_box" >
+                         <button
+                             class="oe_stat_button"
+                             type="object"
+                             name="nothing_to_do"
+                             icon="fa-clock-o"
+                             groups="w_sync_generic.group_w_sync_administrator">
+                            <field string="Last synchro" name="date_last_synchro" widget="datetime" />
+                         </button>
+                         <button
+                            type="object"
+                            name="run_via_button"
+                            string="Synchro"
+                            icon="fa-refresh"
+                            class="btn-link"
+                            groups="w_sync_generic.group_w_sync_administrator"
+                            attrs="{'invisible': [('synchro_mode', '!=', 'via_cron')]}"
+                        />
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" required="True"/>
+                            <field name="direction" required="True"/>
+                            <field name="priority" invisible="True"/>
+                        </group>
+                        <group>
+                            <field name="ws_url_id" required="True"/>
+                            <field name="synchro_mode" required="True"/>
+                            <field name="synchro_priority" attrs="{'invisible': ['|', ('synchro_mode', '!=', 'via_cron'), ('direction', '!=', 'bidirectional')], 'required': [('synchro_mode', '=', 'via_cron'), ('direction', '=', 'bidirectional')]}"/>
+                        </group>
+                    </group>
+                    <newline/>
+                    <group>
+                        <group>
+                            <field name="odoo_model" required="1" options="{'no_create_edit':True}"/>
+                            <field name="reference_field_odoo" required="1" options="{'no_create_edit':True}" />
+                            <field name="model_unlinked" attrs="{'invisible': [('synchro_mode', '!=', 'via_cron')]}" domain="[('model','=','model.records.unlinked')]" options="{'no_create_edit':True}"/>
+                            <field name="send_type" widget="radio" attrs="{'invisible': ['|', ('synchro_mode', '!=', 'via_cron'), ('direction', '=', 'ext2odoo')]}"/>
+                        </group>
+                        <group>
+                            <field name="external_model" required="1" options="{'no_create_edit':True}"/>
+                            <field name="reference_field_ext" options="{'no_create_edit':True}"/>
+                            <field name="domain" attrs="{'invisible': [('synchro_mode', '!=', 'via_cron')]}"/>
+                            <field name="limit" attrs="{'invisible': [('synchro_mode', '!=', 'via_cron')]}"/>
+                        </group>
+                    </group>
+                    <newline/>
+                    <notebook>
+                        <page string="Models and fields">
+                            <field name="models_ids" nolabel="1">
+                                <tree editable="bottom" >
+                                    <field name="activo" widget="boolean_toggle"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name_f" options="{'no_create_edit':True}"/>
+                                    <field name="external_field" options="{'no_create_edit':True}"/>
+                                    <field name="reference_field" />
+                                    <field name="details" optional="hide" />
+                                </tree>
+                            </field>
+                            <field name="description" placeholder="Description" />
+                        </page>
+                        <page string="API" attrs="{'invisible': ['|', ('synchro_mode', '!=', 'real_time'), ('direction', 'not in', ['ext2odoo', 'bidirectional'])]}">
+                            <div class="alert alert-info mt8" role="alert">
+                                <p>
+                                    <strong>Add in each request.</strong><br/>
+                                    <strong>Header : {"Apikey":"xxxxxxxxxxx","Content-Type":"application/json"}</strong>
+                                </p>
+                            </div>
+                            <field name="api_ids" nolabel="1" force_save="1">
+                                <tree decoration-muted="activ==False" create="0" delete="0">
+                                    <field name="action" readonly="1"/>
+                                    <field name="method" readonly="1"/>
+                                    <field name="name" readonly="1"/>
+                                    <field name="description" readonly="1"/>
+                                    <field name="context" readonly="1"/>
+                                    <field name="activ" readonly="0" force_save="1" widget="boolean_toggle"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="action" readonly="1"/>
+                                            <field name="method" readonly="1"/>
+                                            <field name="name" readonly="1"/>
+                                            <field name="description" readonly="1"/>
+                                        </group>
+                                         <notebook>
+                                              <page string="Context">
+                                                    <field name="context" nolabel="1" widget="ace" options="{'mode': 'python'}"/>
+                                                </page>
+                                         </notebook>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Python Code" name='code' attrs="{'invisible': [('direction', 'not in', ['ext2odoo', 'bidirectional'])]}">
+                            <field name="code" widget="ace" nolabel="1" options="{'mode': 'python'}" placeholder="Enter python code name here."/>
+                        </page>
+                         <page string="Help" name="help_info" autofocus="autofocus" attrs="{'invisible': [('direction', 'not in', ['ext2odoo', 'bidirectional'])]}">
+                                 <div style="margin-top: 4px;">
+                                    <h3>Help with Python expressions</h3>
+                                    <p>Various fields may use Python code or Python expressions. The following variables can be used:</p>
+                                    <ul>
+                                        <li><code>env</code>: Odoo Environment on which the action is triggered</li>
+                                        <li><code>model</code>: Odoo Model of the record on which the action is triggered; is a void recordset</li>
+                                        <li><code>record</code>: record on which the action is triggered; may be be void</li>
+                                        <li><code>UserError</code>: Warning Exception to use with <code>raise</code></li>
+                                    </ul>
+                                    <div>
+                                        <p>Example of Python code</p>
+                                        <code style="white-space: pre-wrap">
+partner_name = record.name + '_code'
+env['res.partner'].create({'name': partner_name})
+                                        </code>
+                                    </div>
+                                </div>
+                            </page>
+                    </notebook>
+                    <!--<newline/>-->
+                    <!--<group>-->
+                        <!--<field name="description" placeholder="Description" />-->
+                    <!--</group>-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_synchro_obj_url" model="ir.actions.act_window">
+        <field name="name">Synchro Objects</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">synchro.obj</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Synchro Objects"
+        id="menu_synchro_obj_config"
+        parent="syncro_menu_config"
+        action="action_synchro_obj_url"
+        sequence="3"/>
+</odoo>
