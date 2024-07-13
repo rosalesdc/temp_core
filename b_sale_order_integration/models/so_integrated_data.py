@@ -156,12 +156,14 @@ class SoIntegratedData(models.Model):
                 shipping_address_id = self.env['res.partner'].create(
                     dict_shipping
                 )
+        logging.info(("end partner FUNCTION----------------"))
         return parent.id, invoice_address_id.id, shipping_address_id.id
 
     def product_process(self):
         '''Validate products data to create/update records
         -Returns a dictionary with code-identifiers so as not to be looked up later.
         '''
+        logging.info(("INIT products FUNCTION----------------"))
         dict_prod = {}
         for prod in self.products:
             logging.warning(("Products -------------1"))
