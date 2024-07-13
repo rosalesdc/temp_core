@@ -111,7 +111,9 @@ class SoIntegratedData(models.Model):
             record.name = order_id.arx_name
             order_id.action_confirm()
             logging.info(("Order confirmed"))
+            logging.info(("Payment_data----------------%s"%(record.payment)))
             if self.payment:
+                logging.info(("Payment_INIT----------------"))
                 record.payment_process(order_id)
                 logging.info(("Payment created"))
         return res
@@ -209,14 +211,19 @@ class SoIntegratedData(models.Model):
     def payment_process(self, order):
         '''Creates the payment associated with the sale order
         '''
+        logging.info(("Payment_data 1----------------"))
         pay_dict = self.payment
         pay_dict['partner_id'] = order.partner_id.id
         pay_dict['sale_order_id'] = order.id
+        logging.info(("Payment_dict----------------%s"%(pay_dict)))
         new_payment = self.env['account.payment'].create(
             pay_dict
         )
+        logging.info(("Payment_CRETAEDD ----------------"))
         new_payment.action_post()
+        logging.info(("Payment_POST ----------------"))
         order.payment_arx = new_payment.id
+        logging.info(("ORDER----------------%s"%(order.payment_arx)))
 
     def msj_validation(self, move):
         '''Validates the status of the received invoice(s)
