@@ -157,9 +157,9 @@ class SoIntegratedData(models.Model):
         '''Validate products data to create/update records
         -Returns a dictionary with code-identifiers so as not to be looked up later.
         '''
-        logging.info(("INIT products FUNCTION----------------%s"%(self.products)))
+        logging.info(("INIT products FUNCTION----------------%s"%(self.productos)))
         dict_prod = {}
-        for prod in self.products:
+        for prod in self.productos:
             logging.warning(("Products -------------1"))
             product_id = self.env['product.product'].search(
                 [('default_code', '=', prod['default_code'])])
