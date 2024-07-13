@@ -99,6 +99,7 @@ class SoIntegratedData(models.Model):
             logging.info(("Order_data----------------%s"%(record.sale_order)))
             logging.info(("Lines_data----------------%s"%(record.sale_order_line)))
             logging.info(("Payment_data----------------%s"%(record.payment)))
+            logging.info(("END PROCEESS--------------------"))
             #prods = record.product_process()
             #logging.info(("Products created"))
             #order_id = record.sale_order_process(
